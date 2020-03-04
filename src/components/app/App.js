@@ -1,10 +1,11 @@
 import React from "react";
-import "./styles/App.css";
+import "./App.css";
+import Header from "../header/Header";
 
 function App() {
     return (
         <div>
-            <h1>Snowshop</h1>
+            <Header />
         </div>
     );
 }
