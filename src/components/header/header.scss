@@ -30,13 +30,19 @@
 
 .contact-container {
     margin: auto;
+    padding: 0;
     display: flex;
     flex-flow: column;
     font-size: 0.7rem;
     font-weight: 700;
-
+    div {
+        display: flex;
+        // border: 2px solid red;
+        padding: 0;
+        margin: 0;
+    }
     p {
-        margin: 5px 0;
+        margin: 0;
     }
 }
 

@@ -2,6 +2,7 @@ import React from "react";
 import logo from "./../../assets/images/logo.png";
 import SearchBar from "./SearchBar";
 import "./header.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Header() {
     return (
@@ -29,17 +30,23 @@ function Header() {
                 >
                     <SearchBar />
                     <div className="contact-container">
-                        <p>420 213 769</p>
-                        <p>shop@snowshop.pl</p>
+                        <div className="contant-phone">
+                            <FontAwesomeIcon icon="phone-alt" />
+                            <p>420 213 769</p>
+                        </div>
+                        <div className="contact-mail">
+                            <FontAwesomeIcon icon="envelope" />
+                            <p>shop@snowshop.pl</p>
+                        </div>
                     </div>
 
                     <div className="login">
-                        <span>X</span>
+                        <FontAwesomeIcon icon="user" />
                         <p>Login</p>
                     </div>
 
                     <div className="shopping-cart">
-                        <span>X</span>
+                        <FontAwesomeIcon icon="shopping-cart" />
                         <p>Basket</p>
                     </div>
                 </div>
