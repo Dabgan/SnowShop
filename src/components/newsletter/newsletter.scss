@@ -1,0 +1,20 @@
+.newsletter-container {
+    // width: 100%;
+    border: 2px solid red;
+    padding: 20px;
+    justify-content: center;
+    height: 600px;
+    background: #e7e7e9;
+    display: flex;
+
+    img {
+        border: 2px solid yellow;
+        height: 100%;
+    }
+}
+
+.newsletter-form {
+    border: 2px solid green;
+    width: 400px;
+    padding: 20px;
+}
