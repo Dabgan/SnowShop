@@ -1,0 +1,27 @@
+.daily-promotion {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    border: 2px solid black;
+    background: #cccccc;
+    img {
+        flex: 2 0 auto;
+        border: 2px solid red;
+    }
+}
+
+.daily-promotion-timer {
+    border: 2px solid green;
+    flex: 0 1 250px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.daily-promotion-info {
+    flex: 1 1 auto;
+    border: 2px solid grey;
+}

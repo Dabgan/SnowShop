@@ -1,13 +1,16 @@
 import React from "react";
 import logo from "./../../assets/images/logo.png";
+import SearchBar from "./SearchBar";
+import "./header.css";
 
 function Header() {
     return (
         <header>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <a className="navbar-brand" href="/#">
-                    <img src={logo} alt="logo" width="150px" />
+                <a className="navbar-brand mx-3" href="/#">
+                    <img src={logo} alt="logo" className="logo" />
                 </a>
+
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -24,28 +27,21 @@ function Header() {
                     className="collapse navbar-collapse"
                     id="navbarSupportedContent"
                 >
-                    <ul className="navbar-nav mr-auto">
-                        <li className="nav-item">
-                            <a href="/#" className="nav-link">
-                                About Us
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="/#" className="nav-link">
-                                About Us
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="/#" className="nav-link">
-                                About Us
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="/#" className="nav-link">
-                                About Us
-                            </a>
-                        </li>
-                    </ul>
+                    <SearchBar />
+                    <div className="contact-container">
+                        <p>420 213 769</p>
+                        <p>shop@snowshop.pl</p>
+                    </div>
+
+                    <div className="login">
+                        <span>X</span>
+                        <p>Login</p>
+                    </div>
+
+                    <div className="shopping-cart">
+                        <span>X</span>
+                        <p>Basket</p>
+                    </div>
                 </div>
             </nav>
         </header>
