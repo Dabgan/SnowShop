@@ -3,10 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function SearchBar() {
     return (
-        <div className="search-bar">
+        <form className="search-bar">
             <input type="text" placeholder="Search" />
-            <FontAwesomeIcon icon="search" />
-        </div>
+            <button type="submit" className="search-icon">
+                <FontAwesomeIcon icon="search" />
+            </button>
+        </form>
     );
 }
 

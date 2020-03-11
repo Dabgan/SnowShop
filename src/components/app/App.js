@@ -8,7 +8,7 @@ import {
     faPhoneAlt,
     faEnvelope
 } from "@fortawesome/free-solid-svg-icons";
-// import { fas } from "@fortawesome/free-solid-svg-icons";
+// import { far } from "@fortawesome/free-regular-svg-icons";
 
 import Header from "../header/Header";
 import Navbar from "../navbar/Navbar";
