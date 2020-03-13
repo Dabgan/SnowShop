@@ -8,7 +8,6 @@ import {
     faPhoneAlt,
     faEnvelope
 } from "@fortawesome/free-solid-svg-icons";
-// import { far } from "@fortawesome/free-regular-svg-icons";
 
 import Header from "../header/Header";
 import Navbar from "../navbar/Navbar";
@@ -21,11 +20,11 @@ function App() {
     return (
         <>
             <Header />
-            {/* <Navbar />
-            <Banner />
-            <FeaturedProducts />
-            <DailyPromotion />
-            <Newsletter /> */}
+            {/* <Navbar /> */}
+            {/* <Banner /> */}
+            {/* <FeaturedProducts /> */}
+            {/* <DailyPromotion /> */}
+            {/* <Newsletter /> */}
         </>
     );
 }

@@ -1,0 +1,43 @@
+.login,
+.shopping-cart {
+    padding: 10px;
+    height: 70px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+    user-select: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    p {
+        margin: 0;
+    }
+    svg {
+        font-size: 2rem;
+    }
+    &:hover {
+        background: #bbbbbb;
+    }
+}
+
+.login {
+    margin-left: 100px;
+}
+
+/* ---------------------------------------------------
+    MEDIA QUERIES
+----------------------------------------------------- */
+
+@media (min-width: 320px) and (max-width: 1181px) {
+    .login,
+    .shopping-cart {
+        p {
+            display: none;
+        }
+    }
+    .login {
+        margin-left: 0px;
+    }
+}
