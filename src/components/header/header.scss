@@ -1,9 +1,10 @@
-.navbar {
-    max-height: 80px;
+.header-top {
+    max-height: 70px;
 }
 .logo {
     height: 60px;
     user-select: none;
+    margin: 0 auto !important;
 }
 
 /* ---------------------------------------------------
@@ -11,20 +12,21 @@
 ----------------------------------------------------- */
 
 @media (min-width: 1181px) {
-    .navbar {
+    .header-top {
         justify-content: center !important;
     }
-    .navbar-collapse {
+    .header-top-menu {
         flex-grow: 0 !important;
     }
 }
 
 @media (min-width: 320px) and (max-width: 1181px) {
-    .navbar {
+    .header-top {
         flex-wrap: nowrap !important;
     }
-    .navbar-collapse {
+    .header-top-menu {
         display: flex !important;
+        flex: 0 !important;
         justify-content: flex-end;
     }
     .contact-container {

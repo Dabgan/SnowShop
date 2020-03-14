@@ -5,6 +5,7 @@ import SearchBar from "./search bar/SearchBar";
 import ContactComponent from "./contact info/ContactComponent";
 import MobileHeaderIcon from "./mobile icon/MobileHeaderIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import CategoriesMenu from "./categories menu/CategoriesMenu";
 
 export class Header extends Component {
     state = {
@@ -23,15 +24,23 @@ export class Header extends Component {
         const { expandSearchWidget } = this;
         return (
             <header>
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <nav className="header-top navbar navbar-expand-lg navbar-light bg-light">
+                    <button
+                        class="navbar-toggler bg-secondary"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                     <a className="navbar-brand mx-3" href="/#">
                         <img src={logo} alt="logo" className="logo" />
                     </a>
 
-                    <div
-                        className="collapse navbar-collapse"
-                        id="navbarSupportedContent"
-                    >
+                    <div className="header-top-menu collapse navbar-collapse">
                         <SearchBar />
                         <div className="contact-container">
                             <ContactComponent
@@ -76,6 +85,7 @@ export class Header extends Component {
                         </button>
                     </form>
                 </div>
+                <CategoriesMenu />
             </header>
         );
     }
