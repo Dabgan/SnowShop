@@ -19,7 +19,7 @@ function App() {
     return (
         <>
             <Header />
-            {/* <Banner /> */}
+            <Banner />
             {/* <FeaturedProducts /> */}
             {/* <DailyPromotion /> */}
             {/* <Newsletter /> */}
