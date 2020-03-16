@@ -1,4 +1,5 @@
 .featured-products {
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6,9 +7,6 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   margin: 40px 0;
   background-color: #ffffff;
 }
@@ -39,4 +37,13 @@
 /* ---------------------------------------------------
     MEDIA QUERIES
 ----------------------------------------------------- */
+@media (min-width: 320px) and (max-width: 580px) {
+  .featured-products-tiles {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    margin: 10px;
+  }
+}
 /*# sourceMappingURL=featuredProducts.css.map */

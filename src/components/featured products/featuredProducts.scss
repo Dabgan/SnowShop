@@ -1,7 +1,7 @@
 .featured-products {
+    padding: 10px;
     display: flex;
     flex-flow: column;
-    align-items: flex-end;
     margin: 40px 0;
     background-color: #ffffff;
     p {
@@ -27,8 +27,9 @@
     MEDIA QUERIES
 ----------------------------------------------------- */
 
-@media (min-width: 1181px) {
-}
-
-@media (min-width: 320px) and (max-width: 1181px) {
+@media (min-width: 320px) and (max-width: 580px) {
+    .featured-products-tiles {
+        flex-flow: row wrap;
+        margin: 10px;
+    }
 }

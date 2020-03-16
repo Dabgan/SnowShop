@@ -32,8 +32,10 @@
     MEDIA QUERIES
 ----------------------------------------------------- */
 
-@media (min-width: 1181px) {
-}
-
-@media (min-width: 320px) and (max-width: 1181px) {
+@media (min-width: 320px) and (max-width: 580px) {
+    .product-tile {
+        margin: 15px auto;
+        width: 180px;
+        padding: 15px;
+    }
 }
