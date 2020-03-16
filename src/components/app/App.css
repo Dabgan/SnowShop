@@ -11,4 +11,9 @@
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
+
+.main-container {
+  max-width: 1180px;
+  margin: auto;
+}
 /*# sourceMappingURL=App.css.map */

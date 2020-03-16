@@ -19,10 +19,12 @@ function App() {
     return (
         <>
             <Header />
-            <Banner />
-            {/* <FeaturedProducts /> */}
-            {/* <DailyPromotion /> */}
-            {/* <Newsletter /> */}
+            <div className="main-container">
+                {/* <Banner /> */}
+                <FeaturedProducts />
+                {/* <DailyPromotion /> */}
+                {/* <Newsletter /> */}
+            </div>
         </>
     );
 }

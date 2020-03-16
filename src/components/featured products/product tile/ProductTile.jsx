@@ -1,4 +1,5 @@
 import React from "react";
+import "./productTile.css";
 
 function ProductTile({ productImg, productTitle, price }) {
     return (

@@ -1,13 +1,13 @@
 .banner {
-  padding: 40px 0;
-  width: 100%;
-  background: #f9f9f9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
+  padding: 40px 0;
+  background: #f9f9f9;
 }
 
 .banner img {
@@ -16,8 +16,10 @@
   -webkit-filter: opacity(90%);
           filter: opacity(90%);
   cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: -webkit-filter 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-filter 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
 .banner img:hover {

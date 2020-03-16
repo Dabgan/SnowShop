@@ -1,16 +1,16 @@
 .banner {
-    padding: 40px 0;
-    width: 100%;
-    background: #f9f9f9;
-    // border: 2px solid #2ce90a;
     display: flex;
     justify-content: center;
+    width: 100%;
+    padding: 40px 0;
+    background: #f9f9f9;
     img {
         max-width: 100%;
         border-radius: 5px;
         filter: opacity(90%);
         cursor: pointer;
-        transition: all 0.3s ease-in-out;
+        transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out,
+            box-shadow 0.3s ease-in-out;
         &:hover {
             filter: opacity(100%);
             transform: scale(1.02);
