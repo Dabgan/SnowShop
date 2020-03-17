@@ -26,7 +26,7 @@ export class Header extends Component {
             <header>
                 <nav className="header-top navbar navbar-expand-lg navbar-light bg-light">
                     <button
-                        class="navbar-toggler bg-secondary"
+                        className="navbar-toggler bg-secondary"
                         type="button"
                         data-toggle="collapse"
                         data-target="#navbarSupportedContent"
@@ -34,7 +34,7 @@ export class Header extends Component {
                         aria-expanded="false"
                         aria-label="Toggle navigation"
                     >
-                        <span class="navbar-toggler-icon"></span>
+                        <span className="navbar-toggler-icon"></span>
                     </button>
                     <a className="navbar-brand mx-3" href="/#">
                         <img src={logo} alt="logo" className="logo" />

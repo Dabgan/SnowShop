@@ -3,8 +3,8 @@ import "./featuredProducts.css";
 import ProductTile from "./product tile/ProductTile";
 import image3 from "./../../assets/images/products/product3.jpg";
 import image4 from "./../../assets/images/products/product4.jpg";
-import image5 from "./../../assets/images/products/product5.jpg";
 import image6 from "./../../assets/images/products/product6.jpg";
+import image7 from "./../../assets/images/products/product7.jpg";
 
 function FeaturedProducts() {
     const price = "$199,99";
@@ -25,7 +25,7 @@ function FeaturedProducts() {
                     price={price}
                 />
                 <ProductTile
-                    productImg={image5}
+                    productImg={image7}
                     productTitle={productTitle}
                     price={price}
                 />

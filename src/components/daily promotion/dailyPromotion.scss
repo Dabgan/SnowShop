@@ -1,27 +1,72 @@
 .daily-promotion {
     display: flex;
     width: 100%;
-    height: 400px;
-    padding: 20px;
     border: 2px solid black;
-    background: #cccccc;
+    margin-top: 50px;
+    background: #ffffff;
+}
+.daily-promotion-item {
+    // border: 2px solid #2ce90a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 50px;
+    margin: 0 auto;
     img {
-        flex: 2 0 auto;
-        border: 2px solid red;
+        max-width: 100%;
     }
 }
 
 .daily-promotion-timer {
-    border: 2px solid green;
-    flex: 0 1 250px;
-    font-size: 1.8rem;
-    font-weight: 600;
+    // border: 2px solid #069cc8;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    width: 250px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 auto;
 }
 .daily-promotion-info {
-    flex: 1 1 auto;
-    border: 2px solid grey;
+    // border: 2px solid #f11b1b;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 400px;
+    margin: 5px auto;
+}
+.daily-description {
+    // border: 2px solid #069cc8;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.daily-price {
+    // border: 2px solid #f11b1b;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+.daily-btn {
+    display: flex;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 7px 20px;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease-in-out;
+    svg {
+        margin-left: 10px;
+    }
+    &:hover {
+        background: #c3c3c3;
+    }
+}
+.text-gradient {
+    background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

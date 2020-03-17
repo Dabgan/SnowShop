@@ -6,7 +6,8 @@ import {
     faShoppingCart,
     faSearch,
     faPhoneAlt,
-    faEnvelope
+    faEnvelope,
+    faLongArrowAltRight
 } from "@fortawesome/free-solid-svg-icons";
 
 import Header from "../header/Header";
@@ -18,15 +19,22 @@ import Newsletter from "../newsletter/Newsletter";
 function App() {
     return (
         <>
-            <Header />
+            {/* <Header /> */}
             <div className="main-container">
                 {/* <Banner /> */}
-                <FeaturedProducts />
-                {/* <DailyPromotion /> */}
+                {/* <FeaturedProducts /> */}
+                <DailyPromotion />
                 {/* <Newsletter /> */}
             </div>
         </>
     );
 }
-library.add(faUser, faShoppingCart, faSearch, faPhoneAlt, faEnvelope);
+library.add(
+    faUser,
+    faShoppingCart,
+    faSearch,
+    faPhoneAlt,
+    faEnvelope,
+    faLongArrowAltRight
+);
 export default App;
