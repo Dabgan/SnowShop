@@ -29,7 +29,7 @@ export class DailyPromotion extends Component {
                         <span className="price-crossed">$699,99</span>
                     </span>
 
-                    <button className="daily-btn">
+                    <button className="my-btn daily-btn">
                         Check promotion{" "}
                         <FontAwesomeIcon icon="long-arrow-alt-right" />
                     </button>

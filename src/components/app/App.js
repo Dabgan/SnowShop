@@ -24,7 +24,7 @@ function App() {
                 <Banner />
                 <FeaturedProducts />
                 <DailyPromotion />
-                {/* <Newsletter /> */}
+                <Newsletter />
             </div>
         </>
     );

@@ -8,9 +8,29 @@
 *::after {
     box-sizing: inherit;
 }
-.root {
-}
+
 .main-container {
     max-width: 1180px;
     margin: auto;
+}
+
+.my-btn {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 7px 20px;
+    box-shadow: 1px 1px 2px 1px #cecece;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out,
+        background-color 0.3s ease-in-out;
+    svg {
+        margin-left: 10px;
+    }
+    &:hover {
+        box-shadow: 3px 3px 4px 2px #cecece;
+        transform: translateY(-3px);
+        background: #e9e9e9;
+    }
 }
