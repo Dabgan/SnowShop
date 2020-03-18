@@ -6,16 +6,16 @@
     margin: 0 15px;
     padding: 15px;
     background-color: #ffffff;
-    font-size: 0.8rem;
-    border: 1px groove #000000;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    box-shadow: 2px 2px 3px 3px #cecece;
     cursor: pointer;
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
     img {
         max-width: 100%;
     }
     &:hover {
-        box-shadow: 1px 1px 2px 1px #b1b1b1, -1px -1px 2px 1px #b1b1b1,
-            -1px 1px 2px 1px #b1b1b1, 1px -1px 2px 1px #b1b1b1;
+        box-shadow: 4px 4px 6px 6px #cecece;
         transform: translateY(-5px);
     }
 }

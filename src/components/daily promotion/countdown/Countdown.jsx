@@ -9,7 +9,7 @@ export class Countdown extends Component {
 
     setCountdownTimer = () => {
         const { hours, minutes, seconds } = this.state;
-        if (hours === 0) {
+        if (hours === 0 && minutes === 0 && seconds === 0) {
             this.timerReset();
         } else if (minutes === 0 && seconds === 0) {
             this.decrementTimerHours();

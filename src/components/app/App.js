@@ -19,10 +19,10 @@ import Newsletter from "../newsletter/Newsletter";
 function App() {
     return (
         <>
-            {/* <Header /> */}
+            <Header />
             <div className="main-container">
-                {/* <Banner /> */}
-                {/* <FeaturedProducts /> */}
+                <Banner />
+                <FeaturedProducts />
                 <DailyPromotion />
                 {/* <Newsletter /> */}
             </div>
