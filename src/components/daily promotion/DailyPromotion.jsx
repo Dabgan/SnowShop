@@ -2,41 +2,18 @@ import React, { Component } from "react";
 import "./dailyPromotion.css";
 import dailyItem from "./../../assets/images/products/product5.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-// const time = new Date();
-// const timer = `${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`;
+import Countdown from "./countdown/Countdown";
 
 export class DailyPromotion extends Component {
-    state = {
-        timer: 100,
-        hours: 24,
-        minutes: 59,
-        seconds: 59
-    };
-
-    changeSmth = () => {
-        const { hours, minutes, seconds } = this.state;
-        return this.setState(prevState => ({ timer: prevState.timer - 1 }));
-    };
-
-    componentDidMount() {
-        setInterval(this.changeSmth, 1000);
-    }
-
     render() {
-        const { hours, minutes, seconds, timer } = this.state;
         return (
             <div className="daily-promotion">
                 <div id="final-countdown" className="daily-promotion-timer">
-                    <div onClick={this.changeSmth}>
+                    <div>
                         <span className="text-gradient h2">#</span>
                         DailyPromotion
                     </div>
-                    <p id="time-left" className="text-gradient h1">
-                        {this.state.timer}
-                        {/* {hours}:{minutes}:{seconds} */}
-                        {/* 100 */}
-                    </p>
+                    <Countdown />
                 </div>
                 <div className="daily-promotion-item">
                     <img src={dailyItem} alt="daily promotion item" />
@@ -47,7 +24,11 @@ export class DailyPromotion extends Component {
                         Goggles + Helmet + Shoes +{" "}
                         <span className="text-gradient">Gloves FREE</span>
                     </div>
-                    <span className="daily-price text-gradient">$399,99</span>
+                    <span className="daily-price">
+                        <span className="text-gradient">$399,99</span>
+                        <span className="price-crossed">$699,99</span>
+                    </span>
+
                     <button className="daily-btn">
                         Check promotion{" "}
                         <FontAwesomeIcon icon="long-arrow-alt-right" />

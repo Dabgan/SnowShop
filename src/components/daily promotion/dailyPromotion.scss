@@ -6,7 +6,6 @@
     background: #ffffff;
 }
 .daily-promotion-item {
-    // border: 2px solid #2ce90a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +17,6 @@
 }
 
 .daily-promotion-timer {
-    // border: 2px solid #069cc8;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -29,7 +27,6 @@
     margin: 0 auto;
 }
 .daily-promotion-info {
-    // border: 2px solid #f11b1b;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -38,15 +35,20 @@
     margin: 5px auto;
 }
 .daily-description {
-    // border: 2px solid #069cc8;
     text-align: center;
     font-size: 1.2rem;
     font-weight: 500;
 }
 .daily-price {
-    // border: 2px solid #f11b1b;
     font-weight: 600;
     font-size: 1.7rem;
+}
+.price-crossed {
+    margin-left: 20px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #858585;
+    text-decoration: line-through;
 }
 .daily-btn {
     display: flex;

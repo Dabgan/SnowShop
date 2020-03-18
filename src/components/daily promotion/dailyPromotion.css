@@ -77,6 +77,14 @@
   font-size: 1.7rem;
 }
 
+.price-crossed {
+  margin-left: 20px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #858585;
+  text-decoration: line-through;
+}
+
 .daily-btn {
   display: -webkit-box;
   display: -ms-flexbox;
