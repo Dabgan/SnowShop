@@ -6,15 +6,28 @@
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 15px;
-    // box-shadow: 2px 2px 3px 3px #cecece;
 }
 .newsletter-form {
-    border: 2px solid #069cc8;
+    width: 650px;
     padding: 40px;
     input {
-        width: 400px;
         padding: 10px;
         border-radius: 5px;
         font-size: 1.1rem;
+    }
+}
+.newsletter-header {
+    font-size: 2rem;
+    font-weight: 600;
+}
+/* ---------------------------------------------------
+    MEDIA QUERIES
+----------------------------------------------------- */
+@media (min-width: 320px) and (max-width: 1181px) {
+    .newsletter-container {
+        height: auto;
+        margin: 40px 20px;
+        padding: 0px 0px;
+        background-size: cover;
     }
 }
