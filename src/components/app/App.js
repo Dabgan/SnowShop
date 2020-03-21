@@ -7,14 +7,25 @@ import {
     faSearch,
     faPhoneAlt,
     faEnvelope,
-    faLongArrowAltRight
+    faLongArrowAltRight,
+    faChevronCircleUp,
+    faChevronUp,
+    faArrowAltCircleUp
 } from "@fortawesome/free-solid-svg-icons";
+import {
+    faGithub,
+    faFacebook,
+    faLinkedin
+} from "@fortawesome/free-brands-svg-icons";
+
+import { faArrowAltCircleUp as CircleUpTwo } from "@fortawesome/free-regular-svg-icons";
 
 import Header from "../header/Header";
 import FeaturedProducts from "../featured products/FeaturedProducts";
 import Banner from "../banner/Banner";
 import DailyPromotion from "../daily promotion/DailyPromotion";
 import Newsletter from "../newsletter/Newsletter";
+import Footer from "../footer/Footer";
 
 function App() {
     return (
@@ -26,6 +37,7 @@ function App() {
                 <DailyPromotion />
                 <Newsletter />
             </div>
+            <Footer />
         </>
     );
 }
@@ -35,6 +47,13 @@ library.add(
     faSearch,
     faPhoneAlt,
     faEnvelope,
-    faLongArrowAltRight
+    faLongArrowAltRight,
+    faGithub,
+    faFacebook,
+    faLinkedin,
+    faChevronUp,
+    faArrowAltCircleUp,
+    faChevronCircleUp,
+    CircleUpTwo
 );
 export default App;
