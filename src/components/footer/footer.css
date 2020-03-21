@@ -107,6 +107,13 @@ html {
 /* ---------------------------------------------------
     MEDIA QUERIES
 ----------------------------------------------------- */
+@media (min-width: 1181px) and (max-width: 1500px) {
+  .to-top-btn {
+    top: 10px;
+    right: 30px;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 1181px) {
   .footer-nav {
     -webkit-box-flex: 1;

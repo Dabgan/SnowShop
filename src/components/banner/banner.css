@@ -7,7 +7,6 @@
           justify-content: center;
   width: 100%;
   padding: 40px 0;
-  background: #f9f9f9;
 }
 
 .banner img {
@@ -29,5 +28,14 @@
           transform: scale(1.02);
   -webkit-box-shadow: 3px 3px 10px 10px #dddddd;
           box-shadow: 3px 3px 10px 10px #dddddd;
+}
+
+/* ---------------------------------------------------
+    MEDIA QUERIES
+----------------------------------------------------- */
+@media (min-width: 320px) and (max-width: 1181px) {
+  .banner {
+    padding: 20px 15px;
+  }
 }
 /*# sourceMappingURL=banner.css.map */

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Footer() {
     return (
-        <footer class="footer py-4 bg-dark text-white-50">
+        <footer className="footer py-4 bg-dark text-white-50">
             <div className="footer-container">
                 <div className="footer-nav">
                     <div className="footer-nav-item">About</div>
@@ -21,7 +21,7 @@ function Footer() {
                     <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" />
                 </div>
             </div>
-            <div class="footer-copyright">
+            <div className="footer-copyright">
                 <small>Copyright &copy; Gabriel Daniluk</small>
             </div>
             <a href="/#">
