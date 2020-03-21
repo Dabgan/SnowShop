@@ -26,10 +26,7 @@ function Footer() {
             </div>
             <a href="/#">
                 <button className=" to-top-btn">
-                    <FontAwesomeIcon
-                        icon={["far", "arrow-alt-circle-up"]}
-                        size="2x"
-                    />
+                    <FontAwesomeIcon icon="chevron-circle-up" size="3x" />
                 </button>
             </a>
         </footer>

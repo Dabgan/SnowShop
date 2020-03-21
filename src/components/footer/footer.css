@@ -57,15 +57,15 @@ html {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  cursor: pointer;
 }
 
 .footer-socials svg {
   margin: 10px;
-  -webkit-transition: color 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  cursor: pointer;
+  -webkit-transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .footer-socials svg:hover {
@@ -87,9 +87,21 @@ html {
 
 .to-top-btn {
   position: absolute;
-  top: 20px;
-  right: 150px;
-  padding: 5px;
+  top: 30%;
+  right: 100px;
+  border: none;
+  background: inherit;
+  color: #868686;
+  -webkit-transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.to-top-btn:hover {
+  color: #ffffff;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 /* ---------------------------------------------------

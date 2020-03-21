@@ -7,7 +7,7 @@ function Newsletter() {
             <form className="newsletter-form">
                 <p className="newsletter-header">
                     How about <span className="text-gradient">10%</span> off to
-                    your next order?
+                    your first order?
                 </p>
                 <div className="newsletter-description">
                     <p>

@@ -8,17 +8,13 @@ import {
     faPhoneAlt,
     faEnvelope,
     faLongArrowAltRight,
-    faChevronCircleUp,
-    faChevronUp,
-    faArrowAltCircleUp
+    faChevronCircleUp
 } from "@fortawesome/free-solid-svg-icons";
 import {
     faGithub,
     faFacebook,
     faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
-
-import { faArrowAltCircleUp as CircleUpTwo } from "@fortawesome/free-regular-svg-icons";
 
 import Header from "../header/Header";
 import FeaturedProducts from "../featured products/FeaturedProducts";
@@ -51,9 +47,6 @@ library.add(
     faGithub,
     faFacebook,
     faLinkedin,
-    faChevronUp,
-    faArrowAltCircleUp,
-    faChevronCircleUp,
-    CircleUpTwo
+    faChevronCircleUp
 );
 export default App;
