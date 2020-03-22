@@ -11,6 +11,10 @@
           justify-content: center;
 }
 
+.navbar-nav > a:hover {
+  text-decoration: none;
+}
+
 .categories-item {
   display: -webkit-box;
   display: -ms-flexbox;

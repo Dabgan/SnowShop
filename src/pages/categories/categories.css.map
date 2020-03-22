@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,mBAAmB,CAAC;EAEhB,OAAO,EAAE,IAAI;CAChB;;AAID,AAAA,cAAc,CAAC;EACX,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,QAAQ;EACrB,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;EAChB,UAAU,ECdI,MAAM;EDepB,aAAa,EAAE,GAAG;EAClB,UAAU,EAAE,mBAAmB;CAClC;;AACD,AAAA,mBAAmB,CAAC;EAChB,MAAM,EAAE,iBAAiB;EACzB,IAAI,EAAE,QAAQ;CACjB",
+    "sources": [
+        "categories.scss",
+        "../../styles/global_variables.module.scss"
+    ],
+    "names": [],
+    "file": "categories.css"
+}

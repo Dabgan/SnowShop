@@ -10,11 +10,11 @@ function CategoriesMenu() {
                 id="navbarSupportedContent"
             >
                 <ul className="navbar-nav">
-                    <CategoriesMenuItem name={"Snowboard"} />
-                    <CategoriesMenuItem name={"Boots"} />
-                    <CategoriesMenuItem name={"Goggles"} />
-                    <CategoriesMenuItem name={"Gloves"} />
-                    <CategoriesMenuItem name={"Helmets"} />
+                    <CategoriesMenuItem name={"snowboard"} />
+                    <CategoriesMenuItem name={"boots"} />
+                    <CategoriesMenuItem name={"goggles"} />
+                    <CategoriesMenuItem name={"gloves"} />
+                    <CategoriesMenuItem name={"helmets"} />
                 </ul>
             </div>
         </div>

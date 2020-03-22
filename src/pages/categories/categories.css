@@ -1,0 +1,29 @@
+.category-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.category-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  background: yellow;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 2px #f354f3;
+          box-shadow: 2px 2px 2px #f354f3;
+}
+
+.products-container {
+  border: 2px solid #069cc8;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+/*# sourceMappingURL=categories.css.map */

@@ -7,6 +7,13 @@
     justify-content: center;
 }
 
+// Link styles
+.navbar-nav > a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 .categories-item {
     display: flex;
     justify-content: center;

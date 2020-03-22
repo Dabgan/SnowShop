@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
     faUser,
@@ -22,19 +23,28 @@ import Banner from "../banner/Banner";
 import DailyPromotion from "../daily promotion/DailyPromotion";
 import Newsletter from "../newsletter/Newsletter";
 import Footer from "../footer/Footer";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import SnowboardCategory from "../../pages/categories/snowboard/SnowboardCategory";
 
 function App() {
     return (
-        <>
+        <Router>
             <Header />
-            <div className="main-container">
-                <Banner />
-                <FeaturedProducts />
-                <DailyPromotion />
-                <Newsletter />
-            </div>
+            <Switch>
+                <div className="main-container">
+                    <Route path="/" exact>
+                        <Banner />
+                        <FeaturedProducts />
+                        <DailyPromotion />
+                        <Newsletter />
+                    </Route>
+                    <Route path="/snowboard">
+                        <SnowboardCategory />
+                    </Route>
+                </div>
+            </Switch>
             <Footer />
-        </>
+        </Router>
     );
 }
 library.add(
