@@ -1,12 +1,12 @@
 import React from "react";
-import FilterContainer from "../FilterContainer";
+import FiltersContainer from "../filters/FiltersContainer";
 import ProductsContainer from "../ProductsContainer";
-import "../categories.css";
+import "../filters/filtersContainer.css";
 
 function SnowboardCategory() {
     return (
         <div className="category-container">
-            <FilterContainer />
+            <FiltersContainer />
             <ProductsContainer />
         </div>
     );

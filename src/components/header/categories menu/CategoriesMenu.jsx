@@ -1,5 +1,5 @@
 import React from "react";
-import "./categories.css";
+import "./categoriesMenu.css";
 import CategoriesMenuItem from "./CategoriesMenuItem";
 
 function CategoriesMenu() {

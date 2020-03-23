@@ -8,11 +8,6 @@
 }
 
 // Link styles
-.navbar-nav > a {
-    &:hover {
-        text-decoration: none;
-    }
-}
 
 .categories-item {
     display: flex;
@@ -24,7 +19,11 @@
     font-size: 1.2rem;
     font-weight: 600;
     list-style: none;
-    cursor: pointer;
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 .categories-link {
     color: #ffffff;
@@ -33,6 +32,7 @@
     letter-spacing: 0.1em;
     padding: 5px;
     position: relative;
+    cursor: pointer;
     &::after {
         background: none repeat scroll 0 0 transparent;
         bottom: 0;

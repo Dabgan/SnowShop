@@ -1,3 +1,5 @@
+@import "../../styles/global_variables.module.scss";
+
 html {
     scroll-behavior: smooth;
 }
@@ -45,7 +47,7 @@ html {
     max-width: 1180px;
     margin: 20px auto 0;
     padding: 10px 20px 0;
-    border-top: 1px solid #868686;
+    border-top: 1px solid $footer-text-color;
     text-align: right;
 }
 .to-top-btn {
@@ -55,7 +57,7 @@ html {
 
     border: none;
     background: inherit;
-    color: #868686;
+    color: $footer-text-color;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
     &:hover {
         color: #ffffff;

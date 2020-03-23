@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 function CategoriesMenuItem(props) {
     const { name } = props;
     return (
-        <Link to={`/${name}`}>
-            <li className="nav-item categories-item">
+        <li className="nav-item categories-item">
+            <Link to={`/${name}`}>
                 <a href="/#" className="categories-link">
                     {name}
                 </a>
-            </li>
-        </Link>
+            </Link>
+        </li>
     );
 }
 

@@ -11,10 +11,6 @@
           justify-content: center;
 }
 
-.navbar-nav > a:hover {
-  text-decoration: none;
-}
-
 .categories-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -31,7 +27,10 @@
   font-size: 1.2rem;
   font-weight: 600;
   list-style: none;
-  cursor: pointer;
+}
+
+.categories-item a:hover {
+  text-decoration: none;
 }
 
 .categories-link {
@@ -41,6 +40,7 @@
   letter-spacing: 0.1em;
   padding: 5px;
   position: relative;
+  cursor: pointer;
 }
 
 .categories-link::after {
@@ -70,4 +70,4 @@
 /* ---------------------------------------------------
     MEDIA QUERIES
 ----------------------------------------------------- */
-/*# sourceMappingURL=categories.css.map */
+/*# sourceMappingURL=categoriesMenu.css.map */
