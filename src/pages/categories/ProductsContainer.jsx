@@ -1,17 +1,21 @@
 import React from "react";
+import "./productsContainer.css";
 
 function ProductsContainer() {
     return (
-        <div className="products-container">
+        <section className="products-container">
+            <h1 className="category-title">Snowboards</h1>
             <div className="sorting-container">
-                <select name="" id="">
-                    <option value="mark1">mark1</option>
-                    <option value="mark2">mark2</option>
-                    <option value="mark3">mark3</option>
+                <span>Sort by:</span>
+                <select className="sortbar" name="sortbar" id="sortbar">
+                    <option value="desc">Price: descending</option>
+                    <option value="asc">Price: ascending</option>
+                    <option value="az">Name: A to Z</option>
+                    <option value="za">Name: Z to A</option>
                 </select>
             </div>
             <div className="products">
-                <div>
+                {/* <div>
                     <h1>Product1</h1>
                 </div>
                 <div>
@@ -19,9 +23,9 @@ function ProductsContainer() {
                 </div>
                 <div>
                     <h1>Product3</h1>
-                </div>
+                </div> */}
             </div>
-        </div>
+        </section>
     );
 }
 
