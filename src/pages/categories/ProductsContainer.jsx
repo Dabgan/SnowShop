@@ -1,7 +1,12 @@
 import React from "react";
 import "./productsContainer.css";
+import ProductTile from "../../components/featured products/product tile/ProductTile";
+import image3 from "../../assets/images/products/product3.jpg";
 
 function ProductsContainer() {
+    const price = "$199,99";
+    const productTitle = "Snowboard Pulsar HiperX model 3";
+
     return (
         <section className="products-container">
             <h1 className="category-title">Snowboards</h1>
@@ -14,16 +19,43 @@ function ProductsContainer() {
                     <option value="za">Name: Z to A</option>
                 </select>
             </div>
-            <div className="products">
-                {/* <div>
-                    <h1>Product1</h1>
-                </div>
-                <div>
-                    <h1>Product2</h1>
-                </div>
-                <div>
-                    <h1>Product3</h1>
-                </div> */}
+            <div className="category-products">
+                <ProductTile
+                    productImg={image3}
+                    productTitle={productTitle}
+                    price={price}
+                    newClass="category-tile"
+                />
+                <ProductTile
+                    productImg={image3}
+                    productTitle={productTitle}
+                    price={price}
+                    newClass="category-tile"
+                />
+                <ProductTile
+                    productImg={image3}
+                    productTitle={productTitle}
+                    price={price}
+                    newClass="category-tile"
+                />
+                <ProductTile
+                    productImg={image3}
+                    productTitle={productTitle}
+                    price={price}
+                    newClass="category-tile"
+                />
+                <ProductTile
+                    productImg={image3}
+                    productTitle={productTitle}
+                    price={price}
+                    newClass="category-tile"
+                />
+                <ProductTile
+                    productImg={image3}
+                    productTitle={productTitle}
+                    price={price}
+                    newClass="category-tile"
+                />
             </div>
         </section>
     );
