@@ -5,10 +5,8 @@ function CategoriesMenuItem(props) {
     const { name } = props;
     return (
         <li className="nav-item categories-item">
-            <Link to={`/${name}`}>
-                <a href="/#" className="categories-link">
-                    {name}
-                </a>
+            <Link to={`/${name}`} className="categories-link">
+                {name}
             </Link>
         </li>
     );

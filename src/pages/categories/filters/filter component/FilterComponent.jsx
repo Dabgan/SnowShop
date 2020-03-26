@@ -8,7 +8,7 @@ function FilterComponent({ filterName, filterLabels }) {
             <p>{filterName}:</p>
             <ul>
                 {filterLabels.map(label => (
-                    <FilterItem name={label} />
+                    <FilterItem name={label.name} key={label.id} />
                 ))}
             </ul>
         </div>

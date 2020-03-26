@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./dailyPromotion.css";
-import dailyItem from "./../../assets/images/products/product5.jpg";
+import dailyItem from "./../../assets/images/products/snowboard_set.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Countdown from "./countdown/Countdown";
 

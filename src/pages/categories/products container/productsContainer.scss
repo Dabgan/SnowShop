@@ -1,4 +1,4 @@
-@import "../../styles/global_variables.module.scss";
+@import "../../../styles/global_variables.module.scss";
 
 .products-container {
     flex: 1;
@@ -6,8 +6,8 @@
 .category-title {
     font-size: 2.2rem;
     padding: 0 0 10px 10px;
-    // text-align: center;
     border-bottom: 1px solid $shadow-color;
+    text-transform: capitalize;
 }
 .sorting-container {
     display: flex;
