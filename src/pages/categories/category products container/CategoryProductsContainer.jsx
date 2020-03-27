@@ -1,9 +1,9 @@
 import React from "react";
-import "./productsContainer.css";
+import "./categoryProductsContainer.css";
 import ProductTile from "../../../components/featured products/product tile/ProductTile";
-import image3 from "../../../assets/images/products/goggles1.jpg";
+// import image3 from "../../../assets/images/products/goggles1.jpg";
 
-function ProductsContainer({ name, photo, items }) {
+function CategoryProductsContainer({ name, photo, items }) {
     const price = "$199,99";
     const productTitle = "Snowboard Pulsar HiperX model 3";
 
@@ -39,4 +39,4 @@ function ProductsContainer({ name, photo, items }) {
     );
 }
 
-export default ProductsContainer;
+export default CategoryProductsContainer;

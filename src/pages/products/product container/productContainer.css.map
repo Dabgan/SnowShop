@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACf,MAAM,EAAE,iBAAiB;CAC5B;;AACD,AAAA,wBAAwB,CAAC;EACrB,MAAM,EAAE,iBAAiB;CAC5B;;AACD,AAAA,uBAAuB,CAAC;EACpB,MAAM,EAAE,iBAAiB;CAC5B;;AACD,AAAA,oBAAoB,CAAC;EACjB,MAAM,EAAE,iBAAiB;CAC5B",
+    "sources": [
+        "productContainer.scss"
+    ],
+    "names": [],
+    "file": "productContainer.css"
+}

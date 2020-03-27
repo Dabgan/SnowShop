@@ -25,6 +25,7 @@ import Newsletter from "../newsletter/Newsletter";
 import Footer from "../footer/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import CategoryComponent from "../../pages/categories/CategoryComponent";
+import ProductComponent from "../../pages/products/ProductComponent";
 
 function App() {
     const categories = [
@@ -56,6 +57,9 @@ function App() {
                                 />
                             </Route>
                         ))}
+                        <Route path="/product">
+                            <ProductComponent />
+                        </Route>
                     </div>
                 </>
             </Switch>
