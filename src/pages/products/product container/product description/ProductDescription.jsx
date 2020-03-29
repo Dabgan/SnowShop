@@ -2,10 +2,17 @@ import React from "react";
 import "./productDescription.css";
 
 const ProductDescription = () => {
+    const productDetails = [
+        { name: "Mark", value: "GHyper X 3", id: 1 },
+        { name: "Lens Style", value: "Spherical", id: 2 },
+        { name: "Lens Color", value: "Mirror Coated/Clear", id: 3 },
+        { name: "Fit", value: "Youth/Adult", id: 4 }
+    ];
+
     return (
         <div className="product-description col-md-12">
             <ul className="nav nav-tabs" id="myTab" role="tablist">
-                <li className="description-item nav-item">
+                <li className=" nav-item">
                     <a
                         className="description-link nav-link active"
                         id="description-tab"
@@ -18,7 +25,7 @@ const ProductDescription = () => {
                         Description
                     </a>
                 </li>
-                <li className="description-item nav-item">
+                <li className=" nav-item">
                     <a
                         className="description-link nav-link"
                         id="product-details-tab"
@@ -52,6 +59,21 @@ const ProductDescription = () => {
                         quaerat voluptatem.
                     </p>
                     <p>
+                        The extra long elastic strap for any helmet
+                        compatibility.It makes these the perfect goggles
+                        suitable for both men, women & youth. Et harum quidem
+                        rerum facilis est et expedita distinctio. Nam libero
+                        tempore, cum soluta nobis est eligendi optio cumque
+                        nihil impedit quo minus id quod maxime placeat facere
+                        possimus, omnis voluptas assumenda est, omnis dolor
+                        repellendus. Temporibus autem quibusdam et aut officiis
+                        debitis aut rerum necessitatibus saepe eveniet ut et
+                        voluptates repudiandae sint et molestiae non recusandae.
+                        Itaque earum rerum hic tenetur a sapiente delectus, ut
+                        aut reiciendis voluptatibus maiores alias consequatur
+                        aut perferendis doloribus asperiores repellat
+                    </p>
+                    <p>
                         The inner lens is made by Italian high-end CP material,
                         the outer lens comes with solid impact-resistance for
                         its unique intensive technology. The top vent holes
@@ -67,35 +89,16 @@ const ProductDescription = () => {
                     role="tabpanel"
                     aria-labelledby="product-details-tab"
                 >
-                    <div className="row details-row">
-                        <div className="col-md-3 details-column">Mark:</div>
-                        <div className="col-md-3 details-column">
-                            GHyper X 3
+                    {productDetails.map(details => (
+                        <div className="row details-row" key={details.id}>
+                            <div className="col-md-3 details-column">
+                                {details.name}:
+                            </div>
+                            <div className="col-md-3 details-column">
+                                {details.value}
+                            </div>
                         </div>
-                    </div>
-
-                    <div className="row details-row">
-                        <div className="col-md-3 details-column">
-                            Lens Style:
-                        </div>
-                        <div className="col-md-3 details-column">Spherical</div>
-                    </div>
-
-                    <div className="row details-row">
-                        <div className="col-md-3 details-column">
-                            Lens Color:
-                        </div>
-                        <div className="col-md-3 details-column">
-                            Mirror Coated/Clear
-                        </div>
-                    </div>
-
-                    <div className="row details-row">
-                        <div className="col-md-3 details-column">Fit:</div>
-                        <div className="col-md-3 details-column">
-                            Youth/Adult
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>

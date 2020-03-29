@@ -28,9 +28,8 @@
 }
 
 .details-column {
+  padding: 5px;
   background-color: #f9f9f9;
   border-bottom: 1px solid #cecece;
-  padding: 5px;
-  margin: 0 20px;
 }
 /*# sourceMappingURL=productDescription.css.map */
