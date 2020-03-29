@@ -1,21 +1,27 @@
 .product-name {
-  font-size: 2rem;
-  margin: 20px 0;
+  margin: 20px 0 20px 20px;
+  font-size: 1.8rem;
 }
 
 .product-info-price {
-  margin-bottom: 20px;
+  margin: 0 0 20px 20px;
+  font-size: 1.8rem;
+}
+
+.product-info-price-crossed {
+  color: #868686;
+  font-size: 1.2rem;
+  text-decoration: line-through;
 }
 
 .product-properties {
   margin: 0;
   padding: 10px;
   border-top: 1px solid #cecece;
-  font-size: 1.3rem;
 }
 
 .product-properties svg {
-  color: #343a40;
   margin-right: 15px;
+  color: #343a40;
 }
 /*# sourceMappingURL=productProperties.css.map */

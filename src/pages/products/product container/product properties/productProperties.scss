@@ -1,31 +1,24 @@
 @import "../../../../styles/global_variables.module.scss";
 
-.product-info-container {
-    // border: 2px solid #2ce90a;
-}
 .product-name {
-    font-size: 2rem;
-    margin: 20px 0;
+    margin: 20px 0 20px 20px;
+    font-size: 1.8rem;
 }
 .product-info-price {
-    margin-bottom: 20px;
+    margin: 0 0 20px 20px;
+    font-size: 1.8rem;
+}
+.product-info-price-crossed {
+    color: $footer-text-color;
+    font-size: 1.2rem;
+    text-decoration: line-through;
 }
 .product-properties {
     margin: 0;
     padding: 10px;
     border-top: 1px solid $shadow-color;
-    font-size: 1.3rem;
     svg {
-        color: $tertiary-color;
         margin-right: 15px;
+        color: $tertiary-color;
     }
-}
-.product-availability {
-    // margin: 0;
-}
-.delivery-info-price {
-    // margin: 0;
-}
-.delivery-info-date {
-    // margin: 0;
 }

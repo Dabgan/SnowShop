@@ -1,0 +1,36 @@
+.product-description {
+  margin-top: 50px;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+.description-link {
+  color: #868686;
+  font-weight: 600;
+}
+
+.description-link:hover {
+  color: inherit;
+}
+
+.description-tab {
+  padding: 20px;
+  font-size: 1rem;
+}
+
+.details-row {
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.details-row :first-child {
+  font-weight: 600;
+}
+
+.details-column {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #cecece;
+  padding: 5px;
+  margin: 0 20px;
+}
+/*# sourceMappingURL=productDescription.css.map */

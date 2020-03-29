@@ -13,17 +13,22 @@ const ProductActions = () => {
         return setQuantity(parseInt(inputValue));
     };
 
+    const handleQuantityDecrement = () => {
+        setQuantity(prevQuantity =>
+            prevQuantity > 1 ? prevQuantity - 1 : prevQuantity
+        );
+    };
+
+    const handleQuantityIncrement = () => {
+        return setQuantity(prevQuantity => prevQuantity + 1);
+    };
+
     return (
         <div className="product-actions">
             <div className="product-quantity">
                 <button
-                    onClick={() =>
-                        setQuantity(prevQuantity =>
-                            prevQuantity > 1 ? prevQuantity - 1 : prevQuantity
-                        )
-                    }
-                    className="quantity-btn decrement-quantity"
-                    id="decrement-quantity"
+                    onClick={handleQuantityDecrement}
+                    className="quantity-btn"
                 >
                     -
                 </button>
@@ -33,11 +38,8 @@ const ProductActions = () => {
                     onChange={e => formatQuantity(e)}
                 />
                 <button
-                    onClick={() =>
-                        setQuantity(prevQuantity => prevQuantity + 1)
-                    }
-                    className="quantity-btn increment-quantity"
-                    id="increment-quantity"
+                    onClick={handleQuantityIncrement}
+                    className="quantity-btn"
                 >
                     +
                 </button>
