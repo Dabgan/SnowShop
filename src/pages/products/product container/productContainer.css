@@ -1,16 +1,16 @@
 .product-container {
-  border: 2px solid #f11b1b;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
 }
 
-.product-photo-container {
-  border: 2px solid #069cc8;
-}
-
-.product-info-container {
-  border: 2px solid #2ce90a;
+.product-photo-container img {
+  width: 100%;
 }
 
 .product-description {
-  border: 2px solid #f11b1b;
+  margin-top: 50px;
+  padding: 20px;
+  border-top: 2px solid #cecece;
 }
 /*# sourceMappingURL=productContainer.css.map */

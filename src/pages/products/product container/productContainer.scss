@@ -1,12 +1,21 @@
+@import "../../../styles/global_variables.module.scss";
+
 .product-container {
-    border: 2px solid #f11b1b;
+    // border: 2px solid #f11b1b;
+    background-color: $page-background-color;
+    border-radius: 10px;
+    padding: 20px;
 }
 .product-photo-container {
-    border: 2px solid #069cc8;
+    // border: 2px solid #069cc8;
+    img {
+        width: 100%;
+    }
 }
-.product-info-container {
-    border: 2px solid #2ce90a;
-}
+
 .product-description {
-    border: 2px solid #f11b1b;
+    margin-top: 50px;
+    padding: 20px;
+    // border: 2px solid #f11b1b;
+    border-top: 2px solid $shadow-color;
 }

@@ -1,48 +1,73 @@
 import React from "react";
 import "./productContainer.css";
+import ProductProperties from "./product properties/ProductProperties";
 
 const ProductContainer = ({ photo }) => {
-    const deliveryDate = "30.03.2020";
     return (
         <div className="product-container row">
             <div className="product-photo-container col-md-6">
                 <img src={photo} alt="a product" />
             </div>
-            <div className="product-info-container col-md-6">
-                <h1 className="product-name">Random Goggles 3X</h1>
-                <h2 className="">$199.99</h2>
-                <div className="product-availability">In Store</div>
-                <div className="delivery-info">
-                    <p>Free delivery</p>
-                    <p>At you place on {deliveryDate}</p>
-                </div>
-                <div className="product-actions">
-                    <div className="product-quantity">
-                        <button>-</button>
-                        <input type="text" value="1" />
-                        <button>+</button>
-                    </div>
-                    <button className="my-btn add-to-cart-btn">
-                        Add to cart
-                    </button>
-                </div>
-            </div>
+            <ProductProperties />
             <div className="product-description col-md-12">
-                <p>
-                    Nowoczesne, komfortowe, regulowane płetwy przeznaczone do
-                    snorkelingu i łatwych, rekreacyjnych nurkowań. Ich
-                    kompaktowa budowa, a w szczególności niewielka długość piór
-                    powoduje, że są to doskonałe płetwy dla osób, które często
-                    podróżują i zależy im na niewielkich gabarytach i masie
-                    bagażu. Zmniejszone pióra sprawiają również, że płetwy
-                    WOMBAT sprawdzą się również w treningu na basenie. Płetwy
-                    WOMBAT cechują się dużą stabilnością podczas pływania,
-                    dzięki otworom w piórach, które odprowadzają część wody, a
-                    także dzięki elastycznym elementom, które w trakcie ruchu
-                    płetwy w wodzie, kierują ją wzdłuż piór. Z kolei gumowane
-                    wzmocnienia po bokach piór zwiększają ich elastyczność i
-                    chronią płetwy przed uszkodzeniami.
-                </p>
+                <ul className="nav nav-tabs" id="myTab" role="tablist">
+                    <li className="nav-item">
+                        <a
+                            className="nav-link active"
+                            id="description-tab"
+                            data-toggle="tab"
+                            href="#description"
+                            role="tab"
+                            aria-controls="description"
+                            aria-selected="true"
+                        >
+                            Description
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a
+                            className="nav-link"
+                            id="product-details-tab"
+                            data-toggle="tab"
+                            href="#product-details"
+                            role="tab"
+                            aria-controls="product-details"
+                            aria-selected="false"
+                        >
+                            Product Details
+                        </a>
+                    </li>
+                </ul>
+                <div className="tab-content" id="myTabContent">
+                    <div
+                        className="tab-pane fade show active"
+                        id="description"
+                        role="tabpanel"
+                        aria-labelledby="description-tab"
+                    >
+                        <p>
+                            Random Goggles 3X featured with anti-fog, anti-wind
+                            and 100% UV protection to protect your eyes when
+                            skiing, snowboarding, snowmobiling and other snow
+                            sports. Nemo enim ipsam voluptatem quia voluptas sit
+                            aspernatur aut odit aut fugit, sed quia consequuntur
+                            magni dolores eos qui ratione voluptatem sequi
+                            nesciunt. Neque porro quisquam est, qui dolorem
+                            ipsum quia dolor sit amet, consectetur, adipisci
+                            velit, sed quia non numquam eius modi tempora
+                            incidunt ut labore et dolore magnam aliquam quaerat
+                            voluptatem.
+                        </p>
+                    </div>
+                    <div
+                        className="tab-pane fade"
+                        id="product-details"
+                        role="tabpanel"
+                        aria-labelledby="product-details-tab"
+                    >
+                        <p>xDDDDDDDDDDDDDD</p>
+                    </div>
+                </div>
             </div>
         </div>
     );

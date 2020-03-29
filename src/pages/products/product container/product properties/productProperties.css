@@ -1,0 +1,21 @@
+.product-name {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.product-info-price {
+  margin-bottom: 20px;
+}
+
+.product-properties {
+  margin: 0;
+  padding: 10px;
+  border-top: 1px solid #cecece;
+  font-size: 1.3rem;
+}
+
+.product-properties svg {
+  color: #343a40;
+  margin-right: 15px;
+}
+/*# sourceMappingURL=productProperties.css.map */

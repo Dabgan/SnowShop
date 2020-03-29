@@ -9,7 +9,10 @@ import {
     faPhoneAlt,
     faEnvelope,
     faLongArrowAltRight,
-    faChevronCircleUp
+    faChevronCircleUp,
+    faArchive,
+    faTruck,
+    faClock
 } from "@fortawesome/free-solid-svg-icons";
 import {
     faGithub,
@@ -77,6 +80,9 @@ library.add(
     faGithub,
     faFacebook,
     faLinkedin,
-    faChevronCircleUp
+    faChevronCircleUp,
+    faArchive,
+    faTruck,
+    faClock
 );
 export default App;

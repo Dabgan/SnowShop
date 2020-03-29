@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACf,MAAM,EAAE,iBAAiB;CAC5B;;AACD,AAAA,wBAAwB,CAAC;EACrB,MAAM,EAAE,iBAAiB;CAC5B;;AACD,AAAA,uBAAuB,CAAC;EACpB,MAAM,EAAE,iBAAiB;CAC5B;;AACD,AAAA,oBAAoB,CAAC;EACjB,MAAM,EAAE,iBAAiB;CAC5B",
+    "mappings": "AAEA,AAAA,kBAAkB,CAAC;EAEf,gBAAgB,ECJI,OAAO;EDK3B,aAAa,EAAE,IAAI;EACnB,OAAO,EAAE,IAAI;CAChB;;AACD,AAEI,wBAFoB,CAEpB,GAAG,CAAC;EACA,KAAK,EAAE,IAAI;CACd;;AAGL,AAAA,oBAAoB,CAAC;EACjB,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,IAAI;EAEb,UAAU,EAAE,GAAG,CAAC,KAAK,CCbV,OAAO;CDcrB",
     "sources": [
-        "productContainer.scss"
+        "productContainer.scss",
+        "../../../styles/global_variables.module.scss"
     ],
     "names": [],
     "file": "productContainer.css"
