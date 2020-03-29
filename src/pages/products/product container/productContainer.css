@@ -4,7 +4,15 @@
   border-radius: 10px;
 }
 
+.product-photo-container {
+  cursor: pointer;
+}
+
 .product-photo-container img {
+  width: 100%;
+}
+
+.modal-body img {
   width: 100%;
 }
 /*# sourceMappingURL=productContainer.css.map */
