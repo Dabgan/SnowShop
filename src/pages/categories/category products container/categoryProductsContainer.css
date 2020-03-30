@@ -26,6 +26,10 @@
   color: #868686;
 }
 
+.category-products-counter {
+  margin: 0 auto 0 10px;
+}
+
 .sortbar {
   width: 250px;
   padding: 8px;

@@ -1,7 +1,6 @@
 import React from "react";
 import "./categoryProductsContainer.css";
 import ProductTile from "../../../components/featured products/product tile/ProductTile";
-// import image3 from "../../../assets/images/products/goggles1.jpg";
 
 function CategoryProductsContainer({ name, photo, items }) {
     const price = "$199,99";
@@ -26,6 +25,9 @@ function CategoryProductsContainer({ name, photo, items }) {
         <section className="products-container">
             <h1 className="category-title">{name}</h1>
             <div className="sorting-container">
+                <span className="category-products-counter">
+                    Found {items} products in this category
+                </span>
                 <span>Sort by:</span>
                 <select className="sortbar" name="sortbar" id="sortbar">
                     <option value="desc">Price: descending</option>

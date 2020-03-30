@@ -38,14 +38,28 @@
           transform: translateY(-5px);
 }
 
+.product-img-container {
+  min-height: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .product-info {
   margin: 20px 0;
 }
 
 .product-price {
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-weight: 600;
+  font-size: 1.3rem;
   text-align: right;
+}
+
+.product-price-crossed {
+  color: #868686;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: line-through;
 }
 
 /* ---------------------------------------------------

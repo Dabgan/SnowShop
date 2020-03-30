@@ -21,7 +21,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import Header from "../header/Header";
-import FeaturedProducts from "../featured products/FeaturedProducts";
+import DisplayProducts from "../featured products/DisplayProducts";
 import Banner from "../banner/Banner";
 import DailyPromotion from "../daily promotion/DailyPromotion";
 import Newsletter from "../newsletter/Newsletter";
@@ -47,7 +47,8 @@ function App() {
                     <div className="main-container">
                         <Route path="/" exact>
                             <Banner />
-                            <FeaturedProducts />
+                            <DisplayProducts title={"Featured products"} />
+
                             <DailyPromotion />
                             <Newsletter />
                         </Route>
