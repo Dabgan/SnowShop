@@ -29,6 +29,7 @@ import Footer from "../footer/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import CategoryComponent from "../../pages/categories/CategoryComponent";
 import ProductComponent from "../../pages/products/ProductComponent";
+import About from "../../pages/informations/About/About";
 
 function App() {
     const categories = [
@@ -63,6 +64,9 @@ function App() {
                         ))}
                         <Route path="/product">
                             <ProductComponent />
+                        </Route>
+                        <Route path="/about">
+                            <About />
                         </Route>
                     </div>
                 </>

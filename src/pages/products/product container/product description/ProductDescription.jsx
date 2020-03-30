@@ -46,6 +46,7 @@ const ProductDescription = () => {
                     role="tabpanel"
                     aria-labelledby="description-tab"
                 >
+                    <h2 className="h3 my-3">Most important features</h2>
                     <p>
                         Random Goggles 3X featured with anti-fog, anti-wind and
                         100% UV protection to protect your eyes when skiing,
@@ -58,6 +59,9 @@ const ProductDescription = () => {
                         modi tempora incidunt ut labore et dolore magnam aliquam
                         quaerat voluptatem.
                     </p>
+                    <h2 className="h3 my-3">
+                        Other cool stuff about this product
+                    </h2>
                     <p>
                         The extra long elastic strap for any helmet
                         compatibility.It makes these the perfect goggles
@@ -73,6 +77,10 @@ const ProductDescription = () => {
                         aut reiciendis voluptatibus maiores alias consequatur
                         aut perferendis doloribus asperiores repellat
                     </p>
+                    <h2 className="h3 my-3">
+                        Why you should buy{" "}
+                        <span className="text-gradient">this</span> product?
+                    </h2>
                     <p>
                         The inner lens is made by Italian high-end CP material,
                         the outer lens comes with solid impact-resistance for

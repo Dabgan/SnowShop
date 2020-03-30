@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./productActions.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ProductActions = () => {
     const [quantity, setQuantity] = useState(1);
@@ -44,7 +45,10 @@ const ProductActions = () => {
                     +
                 </button>
             </div>
-            <button className="my-btn add-to-cart-btn">Add to cart</button>
+            <button className="my-btn add-to-cart-btn">
+                Add to cart
+                <FontAwesomeIcon icon="shopping-cart" />
+            </button>
         </div>
     );
 };

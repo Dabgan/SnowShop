@@ -1,19 +1,30 @@
 import React from "react";
 import "./footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 function Footer() {
+    const footerLinks = [
+        { name: "about", path: "about" },
+        { name: "contact", path: "contact" },
+        { name: "shipping", path: "shipping" },
+        { name: "blog", path: "blog" },
+        { name: "payment methods", path: "payment" },
+        { name: "privacy & cookies", path: "privacy" },
+        { name: "terms & conditions", path: "terms" }
+    ];
+
     return (
         <footer className="footer py-4 bg-dark text-white-50">
             <div className="footer-container">
                 <div className="footer-nav">
-                    <div className="footer-nav-item">About</div>
-                    <div className="footer-nav-item">Contact</div>
-                    <div className="footer-nav-item">Shipping</div>
-                    <div className="footer-nav-item">Blog</div>
-                    <div className="footer-nav-item">Payment methods</div>
-                    <div className="footer-nav-item">Privacy & Cookies</div>
-                    <div className="footer-nav-item">Terms & Conditions</div>
+                    {footerLinks.map(link => (
+                        <div className="footer-nav-item">
+                            <Link to={`/${link.path}`} className="footer-link">
+                                {link.name}
+                            </Link>
+                        </div>
+                    ))}
                 </div>
                 <div className="footer-socials">
                     <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
