@@ -1,1 +1,7 @@
-/* No CSS *//*# sourceMappingURL=about.css.map */
+.information-page-container {
+  margin: 20px;
+  padding: 50px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=about.css.map */

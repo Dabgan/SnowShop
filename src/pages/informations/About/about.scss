@@ -1,1 +1,8 @@
 @import "../../../styles/global_variables.module.scss";
+
+.information-page-container {
+    margin: 20px;
+    padding: 50px;
+    background-color: $page-background-color;
+    border-radius: 10px;
+}

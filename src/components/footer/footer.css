@@ -39,13 +39,13 @@ html {
   margin: 10px;
   text-align: center;
   text-transform: capitalize;
-  cursor: pointer;
 }
 
 .footer-link {
   color: inherit;
   -webkit-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .footer-link:hover {
