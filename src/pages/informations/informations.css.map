@@ -2,9 +2,9 @@
     "version": 3,
     "mappings": "AAEA,AAAA,2BAA2B,CAAC;EACxB,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI;EACb,gBAAgB,ECLI,OAAO;EDM3B,aAAa,EAAE,IAAI;CACtB",
     "sources": [
-        "about.scss",
-        "../../../styles/global_variables.module.scss"
+        "informations.scss",
+        "../../styles/global_variables.module.scss"
     ],
     "names": [],
-    "file": "about.css"
+    "file": "informations.css"
 }

@@ -30,6 +30,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import CategoryComponent from "../../pages/categories/CategoryComponent";
 import ProductComponent from "../../pages/products/ProductComponent";
 import About from "../../pages/informations/About/About";
+import Contact from "../../pages/informations/Contact/Contact";
 
 function App() {
     const categories = [
@@ -67,6 +68,9 @@ function App() {
                         </Route>
                         <Route path="/about">
                             <About />
+                        </Route>
+                        <Route path="/contact">
+                            <Contact />
                         </Route>
                     </div>
                 </>

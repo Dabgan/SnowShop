@@ -1,5 +1,5 @@
 import React from "react";
-import "./about.css";
+import "./../informations.css";
 import Newsletter from "../../../components/newsletter/Newsletter";
 
 const About = () => {
