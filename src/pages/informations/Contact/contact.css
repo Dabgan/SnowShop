@@ -1,1 +1,36 @@
-/* No CSS *//*# sourceMappingURL=contact.css.map */
+.contact-snow-shop .contact-container {
+  font-size: 1.1rem;
+  font-weight: 500;
+  width: auto;
+}
+
+.contact-snow-shop .contact-container svg {
+  margin-right: 20px;
+  font-size: 2rem;
+}
+
+.contact-real p {
+  margin-left: 10px;
+}
+
+.contact-real .footer-socials {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.contact-real .footer-socials svg:hover {
+  color: #343a40;
+}
+
+/* ---------------------------------------------------
+    MEDIA QUERIES
+----------------------------------------------------- */
+@media (min-width: 320px) and (max-width: 1181px) {
+  .contact-snow-shop .contact-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

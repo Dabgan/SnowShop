@@ -1,1 +1,42 @@
 @import "../../../styles/global_variables.module.scss";
+
+.contact-snow-shop {
+    .contact-container {
+        font-size: 1.1rem;
+        font-weight: 500;
+        width: auto;
+        svg {
+            margin-right: 20px;
+            font-size: 2rem;
+        }
+    }
+}
+
+.contact-real {
+    p {
+        margin-left: 10px;
+    }
+    .footer-socials {
+        justify-content: flex-start;
+        svg {
+            &:hover {
+                color: $tertiary-color;
+            }
+        }
+    }
+}
+.contact-form {
+    // border: 2px solid #f11b1b;
+}
+
+/* ---------------------------------------------------
+    MEDIA QUERIES
+----------------------------------------------------- */
+
+@media (min-width: 320px) and (max-width: 1181px) {
+    .contact-snow-shop {
+        .contact-container {
+            display: flex;
+        }
+    }
+}

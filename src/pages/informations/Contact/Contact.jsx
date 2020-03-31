@@ -1,5 +1,6 @@
 import React from "react";
 import "./../informations.css";
+import "./contact.css";
 import ContactComponent from "../../../components/header/contact info/ContactComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContactForm from "./contact form/ContactForm";
@@ -7,20 +8,24 @@ import ContactForm from "./contact form/ContactForm";
 const Contact = () => {
     return (
         <>
-            <div className="information-page-container">
-                <div className="contact-snow-shop">
-                    <h1 className="h2">Contact Snowshop</h1>
-                    Call us:
-                    <ContactComponent icon="phone-alt" info="420 213 769" />
-                    Or send an email:
-                    <ContactComponent icon="envelope" info="shop@snowshop.pl" />
+            <div className="">
+                <div className="contact-snow-shop information-page-container">
+                    <h1 className="h2 mb-3">Contact Snowshop</h1>
+
+                    <div className="contact-container">
+                        <ContactComponent icon="phone-alt" info="420 213 769" />
+                        <ContactComponent
+                            icon="envelope"
+                            info="shop@snowshop.pl"
+                        />
+                    </div>
                 </div>
 
-                <div className="contact-real">
-                    <h2 className="h4">Real contact</h2>
+                <div className="contact-real information-page-container">
+                    <h2 className="h2 mb-3">Real contact</h2>
                     <p>
-                        Ok, these information above are fake. You can find and
-                        contact me here:
+                        Okey, those informations above are fake. You can find
+                        and contact me here:
                     </p>
 
                     <div className="footer-socials">
@@ -30,7 +35,7 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className="row">
+                <div className="contact-form information-page-container">
                     <h2 className="h2">Or you can send me an email:</h2>
                     <ContactForm />
                 </div>
