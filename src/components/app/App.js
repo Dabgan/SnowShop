@@ -31,6 +31,7 @@ import CategoryComponent from "../../pages/categories/CategoryComponent";
 import ProductComponent from "../../pages/products/ProductComponent";
 import About from "../../pages/informations/About/About";
 import Contact from "../../pages/informations/Contact/Contact";
+import InformationComponent from "../../pages/informations/others/InformationComponent";
 
 function App() {
     const categories = [
@@ -39,6 +40,14 @@ function App() {
         { name: "goggles", items: 5, id: 2 },
         { name: "gloves", items: 4, id: 3 },
         { name: "helmets", items: 2, id: 4 }
+    ];
+
+    const otherRoutes = [
+        { name: "shipping", path: "shipping" },
+        { name: "blog", path: "blog" },
+        { name: "payment methods", path: "payment" },
+        { name: "privacy & cookies", path: "privacy" },
+        { name: "terms & conditions", path: "terms" }
     ];
 
     return (
@@ -72,6 +81,11 @@ function App() {
                         <Route path="/contact">
                             <Contact />
                         </Route>
+                        {otherRoutes.map(link => (
+                            <Route path={`/${link.path}`}>
+                                <InformationComponent headerName={link.name} />
+                            </Route>
+                        ))}
                     </div>
                 </>
             </Switch>

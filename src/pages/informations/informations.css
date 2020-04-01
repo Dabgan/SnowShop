@@ -4,4 +4,8 @@
   background-color: #ffffff;
   border-radius: 10px;
 }
+
+.information-page-container h1 {
+  text-transform: capitalize;
+}
 /*# sourceMappingURL=informations.css.map */
