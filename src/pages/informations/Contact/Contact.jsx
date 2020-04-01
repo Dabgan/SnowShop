@@ -36,7 +36,7 @@ const Contact = () => {
                 </div>
 
                 <div className="contact-form information-page-container">
-                    <h2 className="h2">Or you can send me an email:</h2>
+                    <h2 className="h2">Or send me an email:</h2>
                     <ContactForm />
                 </div>
             </div>
