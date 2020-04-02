@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export class Countdown extends Component {
     state = {
-        hours: 1,
+        hours: 4,
         minutes: 59,
         seconds: 59
     };

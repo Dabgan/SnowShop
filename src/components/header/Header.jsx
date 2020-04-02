@@ -36,7 +36,7 @@ export class Header extends Component {
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <a className="navbar-brand mx-3" href="/#">
+                    <a className="navbar-brand mx-3" href="/">
                         <img src={logo} alt="logo" className="logo" />
                     </a>
 
