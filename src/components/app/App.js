@@ -43,11 +43,11 @@ function App() {
     ];
 
     const otherRoutes = [
-        { name: "shipping", path: "shipping" },
-        { name: "blog", path: "blog" },
-        { name: "payment methods", path: "payment" },
-        { name: "privacy & cookies", path: "privacy" },
-        { name: "terms & conditions", path: "terms" }
+        { name: "shipping", path: "shipping", id: 0 },
+        { name: "blog", path: "blog", id: 1 },
+        { name: "payment methods", path: "payment", id: 2 },
+        { name: "privacy & cookies", path: "privacy", id: 3 },
+        { name: "terms & conditions", path: "terms", id: 4 }
     ];
 
     return (
@@ -82,7 +82,7 @@ function App() {
                             <Contact />
                         </Route>
                         {otherRoutes.map(link => (
-                            <Route path={`/${link.path}`}>
+                            <Route path={`/${link.path}`} key={link.id}>
                                 <InformationComponent headerName={link.name} />
                             </Route>
                         ))}

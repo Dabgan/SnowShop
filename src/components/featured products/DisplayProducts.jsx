@@ -16,25 +16,29 @@ function FeaturedProducts({ title }) {
             img: image1,
             title: productTitle,
             price: price,
-            crossedPrice: crossedPrice
+            crossedPrice: crossedPrice,
+            id: 0
         },
         {
             img: image2,
             title: productTitle,
             price: price,
-            crossedPrice: crossedPrice
+            crossedPrice: crossedPrice,
+            id: 1
         },
         {
             img: image3,
             title: productTitle,
             price: price,
-            crossedPrice: crossedPrice
+            crossedPrice: crossedPrice,
+            id: 2
         },
         {
             img: image4,
             title: productTitle,
             price: price,
-            crossedPrice: crossedPrice
+            crossedPrice: crossedPrice,
+            id: 3
         }
     ];
 
@@ -48,6 +52,7 @@ function FeaturedProducts({ title }) {
                         productTitle={product.title}
                         price={product.price}
                         crossedPrice={product.crossedPrice}
+                        key={product.id}
                     />
                 ))}
             </div>

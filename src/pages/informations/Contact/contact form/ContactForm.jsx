@@ -52,7 +52,7 @@ const ContactForm = () => {
                         onKeyUp={e =>
                             testValue(
                                 e.target,
-                                /^([\w\.-])+@([a-zA-Z0-9-]+)\.([a-z\.]+)$/g
+                                /^([\w.-])+@([a-zA-Z0-9-]+)\.([a-z.]+)$/g
                             )
                         }
                     />

@@ -1,3 +1,10 @@
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
 .header-top {
   max-height: 70px;
 }

@@ -4,7 +4,7 @@ import CategoriesMenuItem from "./CategoriesMenuItem";
 
 function CategoriesMenu() {
     return (
-        <div className="header-categories navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className=" navbar navbar-expand-lg navbar-dark bg-dark header-categories">
             <div
                 className="header-categories-menu collapse navbar-collapse "
                 id="navbarSupportedContent"
