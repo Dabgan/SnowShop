@@ -7,7 +7,7 @@ function ProductTile({
     productTitle,
     price,
     crossedPrice,
-    newClass = ""
+    newClass = "",
 }) {
     return (
         <Link to="/product" className={`product-tile ${newClass}`}>
@@ -16,9 +16,9 @@ function ProductTile({
             </div>
             <div className="product-info">{productTitle}</div>
             <div className="product-price product-price-crossed">
-                {crossedPrice}
+                ${crossedPrice}
             </div>
-            <div className="product-price">{price}</div>
+            <div className="product-price">${price}</div>
         </Link>
     );
 }

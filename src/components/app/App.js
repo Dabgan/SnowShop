@@ -12,12 +12,12 @@ import {
     faChevronCircleUp,
     faArchive,
     faTruck,
-    faClock
+    faClock,
 } from "@fortawesome/free-solid-svg-icons";
 import {
     faGithub,
     faFacebook,
-    faLinkedin
+    faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
 import Header from "../header/Header";
@@ -39,7 +39,7 @@ function App() {
         { name: "boots", items: 3, id: 1 },
         { name: "goggles", items: 5, id: 2 },
         { name: "gloves", items: 4, id: 3 },
-        { name: "helmets", items: 2, id: 4 }
+        { name: "helmets", items: 2, id: 4 },
     ];
 
     const otherRoutes = [
@@ -47,7 +47,7 @@ function App() {
         { name: "blog", path: "blog", id: 1 },
         { name: "payment methods", path: "payment", id: 2 },
         { name: "privacy & cookies", path: "privacy", id: 3 },
-        { name: "terms & conditions", path: "terms", id: 4 }
+        { name: "terms & conditions", path: "terms", id: 4 },
     ];
 
     return (
@@ -63,7 +63,7 @@ function App() {
                             <DailyPromotion />
                             <Newsletter />
                         </Route>
-                        {categories.map(category => (
+                        {categories.map((category) => (
                             <Route path={`/${category.name}`} key={category.id}>
                                 <CategoryComponent
                                     categoryName={category.name}
@@ -81,7 +81,7 @@ function App() {
                         <Route path="/contact">
                             <Contact />
                         </Route>
-                        {otherRoutes.map(link => (
+                        {otherRoutes.map((link) => (
                             <Route path={`/${link.path}`} key={link.id}>
                                 <InformationComponent headerName={link.name} />
                             </Route>

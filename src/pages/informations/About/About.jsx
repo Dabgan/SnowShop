@@ -1,10 +1,12 @@
 import React from "react";
 import "./../informations.css";
 import Newsletter from "../../../components/newsletter/Newsletter";
+import ScrollToTopOnMount from "../../../components/ScrollToTopOnMount";
 
 const About = () => {
     return (
         <>
+            <ScrollToTopOnMount />
             <div className="information-page-container">
                 <h1 className="h3 mb-4">About us</h1>
                 <p>

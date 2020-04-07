@@ -4,10 +4,12 @@ import "./contact.css";
 import ContactComponent from "../../../components/header/contact info/ContactComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContactForm from "./contact form/ContactForm";
+import ScrollToTopOnMount from "../../../components/ScrollToTopOnMount";
 
 const Contact = () => {
     return (
         <>
+            <ScrollToTopOnMount />
             <div className="">
                 <div className="contact-snow-shop information-page-container">
                     <h1 className="h2 mb-3">Contact Snowshop</h1>

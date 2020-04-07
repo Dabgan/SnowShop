@@ -7,7 +7,7 @@ import MobileHeaderIcon from "./mobile icon/MobileHeaderIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CategoriesMenu from "./categories menu/CategoriesMenu";
 
-export class Header extends Component {
+class Header extends Component {
     state = {
         isSearchWidgetVisible: "none"
     };
