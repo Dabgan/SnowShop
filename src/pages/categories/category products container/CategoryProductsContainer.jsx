@@ -1,32 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./categoryProductsContainer.css";
 import ProductTile from "../../../components/featured products/product tile/ProductTile";
+import { ProductsContext } from "../../../components/app/App";
 
-function CategoryProductsContainer({ name, photo, items }) {
-    const price = "$199,99";
-    const productTitle = "Snowboard Pulsar HiperX model 3";
-
-    const renderItems = () => {
-        let products = [];
-        for (let i = 0; i < items; i++) {
-            products.push(
-                <ProductTile
-                    productImg={photo}
-                    productTitle={productTitle}
-                    price={price}
-                    newClass="category-tile"
-                />
-            );
-        }
-        return products;
-    };
+function CategoryProductsContainer({ name }) {
+    const products = useContext(ProductsContext);
 
     return (
         <section className="products-container">
             <h1 className="category-title">{name}</h1>
             <div className="sorting-container">
                 <span className="category-products-counter">
-                    Found {items} products in this category
+                    Found{" "}
+                    {
+                        products.filter((product) => {
+                            return product.category === name;
+                        }).length
+                    }{" "}
+                    products in this category
                 </span>
                 <span>Sort by:</span>
                 <select className="sortbar" name="sortbar" id="sortbar">
@@ -36,7 +27,22 @@ function CategoryProductsContainer({ name, photo, items }) {
                     <option value="za">Name: Z to A</option>
                 </select>
             </div>
-            <div className="category-products">{renderItems()}</div>
+            <div className="category-products">
+                {products
+                    .filter((product) => {
+                        return product.category === name;
+                    })
+                    .map((product) => (
+                        <ProductTile
+                            productImg={product.img}
+                            productTitle={product.title}
+                            price={product.price}
+                            crossedPrice={product.crossedPrice}
+                            key={product.id}
+                            newClass="category-tile"
+                        />
+                    ))}
+            </div>
         </section>
     );
 }

@@ -8,7 +8,7 @@ function FeaturedProducts({ title, products }) {
             <p className="h3">{title}: </p>
 
             <div className="featured-products-tiles">
-                {products.map((product) => (
+                {products.slice(0, 4).map((product) => (
                     <ProductTile
                         productImg={product.img}
                         productTitle={product.title}

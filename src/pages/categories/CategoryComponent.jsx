@@ -2,19 +2,14 @@ import React from "react";
 import FiltersContainer from "./filters/FiltersContainer";
 import CategoryProductsContainer from "./category products container/CategoryProductsContainer";
 import "./filters/filtersContainer.css";
-import photo from "../../assets/images/products/helmet.jpg";
 import ScrollToTopOnMount from "../../components/ScrollToTopOnMount";
 
-const CategoryComponent = ({ categoryName, numberOfItems }) => {
+const CategoryComponent = ({ categoryName }) => {
     return (
         <div className="category-container">
             <ScrollToTopOnMount />
             <FiltersContainer name={categoryName} />
-            <CategoryProductsContainer
-                name={categoryName}
-                photo={photo}
-                items={numberOfItems}
-            />
+            <CategoryProductsContainer name={categoryName} />
         </div>
     );
 };
