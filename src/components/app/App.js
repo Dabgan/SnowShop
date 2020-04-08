@@ -1,24 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import firebase from "../../firebase.js";
 import "./App.css";
-
-import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-    faUser,
-    faShoppingCart,
-    faSearch,
-    faPhoneAlt,
-    faEnvelope,
-    faLongArrowAltRight,
-    faChevronCircleUp,
-    faArchive,
-    faTruck,
-    faClock,
-} from "@fortawesome/free-solid-svg-icons";
-import {
-    faGithub,
-    faFacebook,
-    faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { library } from "../../fontAwesomeIcons";
 
 import Header from "../header/Header";
 import DisplayProducts from "../featured products/DisplayProducts";
@@ -26,7 +10,6 @@ import Banner from "../banner/Banner";
 import DailyPromotion from "../daily promotion/DailyPromotion";
 import Newsletter from "../newsletter/Newsletter";
 import Footer from "../footer/Footer";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import CategoryComponent from "../../pages/categories/CategoryComponent";
 import ProductComponent from "../../pages/products/ProductComponent";
 import About from "../../pages/informations/About/About";
@@ -34,32 +17,99 @@ import Contact from "../../pages/informations/Contact/Contact";
 import InformationComponent from "../../pages/informations/others/InformationComponent";
 
 function App() {
-    const categories = [
-        { name: "snowboard", items: 6, id: 0 },
-        { name: "boots", items: 3, id: 1 },
-        { name: "goggles", items: 5, id: 2 },
-        { name: "gloves", items: 4, id: 3 },
-        { name: "helmets", items: 2, id: 4 },
-    ];
+    const [products, setProducts] = useState([]);
+    const [otherRoutes, setOtherRoutes] = useState([]);
+    const [categories, setCategories] = useState([]);
 
-    const otherRoutes = [
-        { name: "shipping", path: "shipping", id: 0 },
-        { name: "blog", path: "blog", id: 1 },
-        { name: "payment methods", path: "payment", id: 2 },
-        { name: "privacy & cookies", path: "privacy", id: 3 },
-        { name: "terms & conditions", path: "terms", id: 4 },
-    ];
+    useEffect(() => {
+        const productsRef = firebase.database().ref("products");
+        productsRef.on("value", (snapshot) => {
+            let databaseProducts = snapshot.val();
+            let newProducts = [];
+            for (let dbProduct in databaseProducts) {
+                newProducts.push({
+                    id: dbProduct,
+                    img: databaseProducts[dbProduct].img,
+                    title: databaseProducts[dbProduct].title,
+                    price: databaseProducts[dbProduct].price,
+                    crossedPrice: databaseProducts[dbProduct].crossedPrice,
+                });
+            }
+            setProducts(newProducts);
+        });
+    }, []);
+
+    useEffect(() => {
+        const routesRef = firebase.database().ref("other routes");
+        routesRef.on("value", (snapshot) => {
+            let databaseRoutes = snapshot.val();
+            let newRoutes = [];
+            for (let dbRoute in databaseRoutes) {
+                newRoutes.push({
+                    id: dbRoute,
+                    name: databaseRoutes[dbRoute].name,
+                    path: databaseRoutes[dbRoute].path,
+                });
+            }
+            setOtherRoutes(newRoutes);
+        });
+    }, []);
+
+    useEffect(() => {
+        const categoriesRef = firebase.database().ref("categories");
+        categoriesRef.on("value", (snapshot) => {
+            let databaseCategories = snapshot.val();
+            let newCategories = [];
+            for (let dbCategory in databaseCategories) {
+                newCategories.push({
+                    id: dbCategory,
+                    name: databaseCategories[dbCategory].name,
+                    items: databaseCategories[dbCategory].items,
+                });
+            }
+            console.log(newCategories);
+            console.log("załadowano kategorie", categories);
+            setCategories(newCategories);
+        });
+    }, []);
+
+    // const addProduct = () => {
+    //     const productsRef = firebase.database().ref("products");
+    //     const product = {
+    //         img: image4,
+    //         title: "Helmet Pulsar 2020",
+    //         price: 79.99,
+    //         crossedPrice: 129.99,
+    //     };
+    //     productsRef.push(product);
+    // };
+
+    const addCategory = () => {
+        const productsRef = firebase.database().ref("categories");
+        // const product = {
+        //     img: image4,
+        //     title: "Helmet Pulsar 2020",
+        //     price: 79.99,
+        //     crossedPrice: 129.99,
+        // };
+        productsRef.push(categories[6]);
+    };
 
     return (
         <Router>
             <Header />
+            <button className="my-btn" onClick={() => addCategory()}>
+                Add Product to database
+            </button>
             <Switch>
                 <>
                     <div className="main-container">
                         <Route path="/" exact>
                             <Banner />
-                            <DisplayProducts title={"Featured products"} />
-
+                            <DisplayProducts
+                                title={"Featured products"}
+                                products={products}
+                            />
                             <DailyPromotion />
                             <Newsletter />
                         </Route>
@@ -93,19 +143,5 @@ function App() {
         </Router>
     );
 }
-library.add(
-    faUser,
-    faShoppingCart,
-    faSearch,
-    faPhoneAlt,
-    faEnvelope,
-    faLongArrowAltRight,
-    faGithub,
-    faFacebook,
-    faLinkedin,
-    faChevronCircleUp,
-    faArchive,
-    faTruck,
-    faClock
-);
+
 export default App;

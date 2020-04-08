@@ -1,94 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./displayProducts.css";
 import ProductTile from "./product tile/ProductTile";
-// import image1 from "./../../assets/images/products/snowboard_boots.jpg";
-// import image2 from "./../../assets/images/products/snowboard.jpg";
-// import image3 from "./../../assets/images/products/goggles2.jpg";
-// import image4 from "./../../assets/images/products/helmet.jpg";
-import firebase from "../../firebase.js";
 
-function FeaturedProducts({ title }) {
-    const price = "$199,99";
-    const crossedPrice = "$299.99";
-    const productTitle = "Snowboard Pulsar HiperX model 3";
-
-    const [products, setProducts] = useState([]);
-
-    useEffect(() => {
-        const productsRef = firebase.database().ref("products");
-        productsRef.on("value", (snapshot) => {
-            let databaseProducts = snapshot.val();
-            let newProducts = [];
-            for (let dbProduct in databaseProducts) {
-                newProducts.push({
-                    id: dbProduct,
-                    img: databaseProducts[dbProduct].img,
-                    title: databaseProducts[dbProduct].title,
-                    price: databaseProducts[dbProduct].price,
-                    crossedPrice: databaseProducts[dbProduct].crossedPrice,
-                });
-            }
-            setProducts(newProducts);
-        });
-        // const product = {
-        //     img: image4,
-        //     title: "Helmet Pulsar 2020",
-        //     price: 79.99,
-        //     crossedPrice: 129.99,
-        // };
-        // productsRef.push(product);
-    }, []);
-
-    // const productsInfo = [
-    //     {
-    //         img: image1,
-    //         title: productTitle,
-    //         price: price,
-    //         crossedPrice: crossedPrice,
-    //         id: 0,
-    //     },
-    //     {
-    //         img: image2,
-    //         title: productTitle,
-    //         price: price,
-    //         crossedPrice: crossedPrice,
-    //         id: 1,
-    //     },
-    //     {
-    //         img: image3,
-    //         title: productTitle,
-    //         price: price,
-    //         crossedPrice: crossedPrice,
-    //         id: 2,
-    //     },
-    //     {
-    //         img: image4,
-    //         title: productTitle,
-    //         price: price,
-    //         crossedPrice: crossedPrice,
-    //         id: 3,
-    //     },
-    // ];
-
-    console.table(products);
-
-    const addProduct = () => {
-        // const productsRef = firebase.database().ref("products");
-        // const product = {
-        //     img: image4,
-        //     title: "Helmet Pulsar 2020",
-        //     price: 79.99,
-        //     crossedPrice: 129.99,
-        // };
-        // productsRef.push(product);
-    };
-
+function FeaturedProducts({ title, products }) {
     return (
         <div className="featured-products">
             <p className="h3">{title}: </p>
-            <button className="my-btn" onClick={() => addProduct()}>
-                Add Product to database
-            </button>
+
             <div className="featured-products-tiles">
                 {products.map((product) => (
                     <ProductTile
