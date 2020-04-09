@@ -5,19 +5,17 @@ import { ProductsContext } from "../../../components/app/App";
 
 function CategoryProductsContainer({ name }) {
     const products = useContext(ProductsContext);
+    const productsOfThisCategory = products.filter((product) => {
+        return product.category === name;
+    });
 
     return (
         <section className="products-container">
             <h1 className="category-title">{name}</h1>
             <div className="sorting-container">
                 <span className="category-products-counter">
-                    Found{" "}
-                    {
-                        products.filter((product) => {
-                            return product.category === name;
-                        }).length
-                    }{" "}
-                    products in this category
+                    Found {productsOfThisCategory.length} products in this
+                    category
                 </span>
                 <span>Sort by:</span>
                 <select className="sortbar" name="sortbar" id="sortbar">
@@ -28,20 +26,16 @@ function CategoryProductsContainer({ name }) {
                 </select>
             </div>
             <div className="category-products">
-                {products
-                    .filter((product) => {
-                        return product.category === name;
-                    })
-                    .map((product) => (
-                        <ProductTile
-                            productImg={product.img}
-                            productTitle={product.title}
-                            price={product.price}
-                            crossedPrice={product.crossedPrice}
-                            key={product.id}
-                            newClass="category-tile"
-                        />
-                    ))}
+                {productsOfThisCategory.map((product) => (
+                    <ProductTile
+                        productImg={product.img}
+                        productTitle={product.title}
+                        price={product.price}
+                        crossedPrice={product.crossedPrice}
+                        key={product.id}
+                        newClass="category-tile"
+                    />
+                ))}
             </div>
         </section>
     );

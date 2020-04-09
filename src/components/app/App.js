@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import firebase from "../../firebase.js";
 import "./App.css";
@@ -68,15 +68,11 @@ function App() {
                 newCategories.push({
                     id: dbCategory,
                     name: databaseCategories[dbCategory].name,
-                    items: databaseCategories[dbCategory].items,
                 });
             }
-            console.log(newCategories);
             setCategories(newCategories);
-            console.log("załadowano kategorie", categories);
         });
     }, []);
-
     const addProduct = () => {
         const productsRef = firebase.database().ref("products");
         const product = {
