@@ -1,21 +1,14 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./categoryProductsContainer.css";
 import ProductTile from "../../../components/featured products/product tile/ProductTile";
-import { ProductsContext } from "../../../components/app/App";
 
-function CategoryProductsContainer({ name }) {
-    const products = useContext(ProductsContext);
-    const productsOfThisCategory = products.filter((product) => {
-        return product.category === name;
-    });
-
+function CategoryProductsContainer({ name, filteredProducts }) {
     return (
         <section className="products-container">
             <h1 className="category-title">{name}</h1>
             <div className="sorting-container">
                 <span className="category-products-counter">
-                    Found {productsOfThisCategory.length} products in this
-                    category
+                    Found {filteredProducts.length} products in this category
                 </span>
                 <span>Sort by:</span>
                 <select className="sortbar" name="sortbar" id="sortbar">
@@ -26,7 +19,7 @@ function CategoryProductsContainer({ name }) {
                 </select>
             </div>
             <div className="category-products">
-                {productsOfThisCategory.map((product) => (
+                {filteredProducts.map((product) => (
                     <ProductTile
                         productImg={product.img}
                         productTitle={product.title}

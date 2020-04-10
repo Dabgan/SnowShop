@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./displayProducts.css";
 import ProductTile from "./product tile/ProductTile";
+import { ProductsContext } from "../../components/app/App";
 
-function FeaturedProducts({ title, products }) {
+function FeaturedProducts({ title }) {
+    const products = useContext(ProductsContext);
     return (
         <div className="featured-products">
             <p className="h3">{title}: </p>

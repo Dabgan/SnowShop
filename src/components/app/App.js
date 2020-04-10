@@ -102,18 +102,15 @@ function App() {
         <Router>
             <ProductsContext.Provider value={products}>
                 <Header />
-                <button className="my-btn" onClick={() => addProduct()}>
+                {/* <button className="my-btn" onClick={() => addProduct()}>
                     Add Product to database
-                </button>
+                </button> */}
                 <Switch>
                     <>
                         <div className="main-container">
                             <Route path="/" exact>
                                 <Banner />
-                                <DisplayProducts
-                                    title={"Featured products"}
-                                    products={products}
-                                />
+                                <DisplayProducts title={"Featured products"} />
                                 <DailyPromotion />
                                 <Newsletter />
                             </Route>
