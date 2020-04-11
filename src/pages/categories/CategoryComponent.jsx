@@ -50,6 +50,32 @@ const CategoryComponent = ({ categoryName }) => {
         }
     };
 
+    const sortProductsBySort = (val) => {
+        switch (val) {
+            case "desc":
+                console.log(`sorted by`, val);
+                // sortProductsBy();
+                break;
+            case "asc":
+                console.log(`sorted by`, val);
+                break;
+            case "az":
+                console.log(`sorted by`, val);
+                break;
+            case "za":
+                console.log(`sorted by`, val);
+                break;
+            default:
+                console.log(`xd`);
+        }
+    };
+
+    // const sortProductsBy = (val) => {
+    //     console.log(`sliced`);
+    //     // return productsOfThisCategory.slice(0, 3);
+    //     return filterContext.filterProducts({ filtr: "clear" });
+    // };
+
     const reducer = (state, action) => {
         switch (action.filtr) {
             case "mark":
@@ -58,6 +84,9 @@ const CategoryComponent = ({ categoryName }) => {
                 });
             case "price":
                 return filtrByPrice(state, action);
+            case "sort":
+                sortProductsBySort(action.val);
+                return state;
             case "clear":
                 return productsOfThisCategory;
             default:
@@ -80,10 +109,7 @@ const CategoryComponent = ({ categoryName }) => {
             <div className="category-container">
                 <ScrollToTopOnMount />
                 <FiltersContainer name={categoryName} />
-                <CategoryProductsContainer
-                    name={categoryName}
-                    filteredProducts={filteredProducts}
-                />
+                <CategoryProductsContainer name={categoryName} />
             </div>
         </FilteredProductsContext.Provider>
     );
