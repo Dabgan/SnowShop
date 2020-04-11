@@ -22,13 +22,13 @@ function FiltersContainer({ name }) {
     };
     const uniqueMarks = removeDuplicates(marksInCategory, "name");
 
-    const [inputIsChecked, setinputIsChecked] = useState();
-
     const prices = [
         { name: "$0-99", id: 0 },
         { name: "$99-199", id: 1 },
         { name: "$199-299", id: 2 },
     ];
+
+    const [isChecked, setIsChecked] = useState();
 
     return (
         <aside className="filter-container">
@@ -39,19 +39,18 @@ function FiltersContainer({ name }) {
                     <FilterComponent
                         filterName="mark"
                         filterLabels={uniqueMarks}
-                        isChecked={inputIsChecked}
+                        isChecked={isChecked}
                     />
                 ) : null}
                 <FilterComponent
                     filterName="price"
                     filterLabels={prices}
-                    isChecked={inputIsChecked}
+                    isChecked={isChecked}
                 />
                 <button
                     className="my-btn"
                     onClick={() => {
                         filterContext.filterProducts({ filtr: "clear" });
-                        setinputIsChecked(false);
                     }}
                 >
                     Clear filters

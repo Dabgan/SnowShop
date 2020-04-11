@@ -11,6 +11,7 @@ function FilterComponent({ filterName, filterLabels, isChecked }) {
                     <FilterItem
                         name={label.name}
                         key={label.id}
+                        filterName={filterName}
                         isChecked={isChecked}
                     />
                 ))}
