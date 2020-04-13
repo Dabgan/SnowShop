@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { FilteredProductsContext } from "../../CategoryComponent";
 
-function FilterItem({ name, filterName, isChecked }) {
+function FilterItem({ name, filterName, range }) {
     const filterContext = useContext(FilteredProductsContext);
 
     return (
@@ -9,12 +9,12 @@ function FilterItem({ name, filterName, isChecked }) {
             <input
                 type="radio"
                 name={filterName}
-                // checked={isChecked}
                 onChange={(e) => {
                     console.log(e.target.value);
                     filterContext.filterProducts({
                         name,
                         filtr: filterName,
+                        range,
                     });
                 }}
             />

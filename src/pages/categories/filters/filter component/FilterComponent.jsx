@@ -2,7 +2,7 @@ import React from "react";
 import FilterItem from "./FilterItem";
 import "./filters.css";
 
-function FilterComponent({ filterName, filterLabels, isChecked }) {
+function FilterComponent({ filterName, filterLabels }) {
     return (
         <div className={`filter filter-${filterName}`}>
             <p>{filterName}:</p>
@@ -12,7 +12,7 @@ function FilterComponent({ filterName, filterLabels, isChecked }) {
                         name={label.name}
                         key={label.id}
                         filterName={filterName}
-                        isChecked={isChecked}
+                        range={label.range}
                     />
                 ))}
             </ul>

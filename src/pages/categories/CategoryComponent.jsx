@@ -9,15 +9,38 @@ export const FilteredProductsContext = React.createContext();
 
 const CategoryComponent = ({ categoryName }) => {
     const products = useContext(ProductsContext);
+    const reducer = (state, action) => {
+        switch (action.filtr) {
+            case "mark":
+                return filtrProductsBy(productsOfThisCategory, action, {
+                    type: "name",
+                });
+            case "price":
+                return filtrProductsBy(productsOfThisCategory, action, {
+                    type: "price",
+                    range: action.range,
+                });
+            case "sort":
+                return sortProductsBy(state, action.val);
+            case "clear":
+                return productsOfThisCategory;
+            default:
+                return state;
+        }
+    };
 
-    const sortProductsByParameter = (state, action, param) => {
+    const productsOfThisCategory = products.filter((product) => {
+        return product.category === categoryName;
+    });
+
+    const filtrProductsBy = (state, action, param) => {
         const newState = state.filter((product) => {
             if (param.type === "name") {
                 return product.mark === action.name;
             } else if (param.type === "price") {
                 return (
-                    product.price > param.lowPrice &&
-                    product.price < param.highPrice
+                    product.price > param.range.min &&
+                    product.price < param.range.max
                 );
             }
             return newState;
@@ -25,47 +48,16 @@ const CategoryComponent = ({ categoryName }) => {
         return newState;
     };
 
-    const filtrByPrice = (state, action) => {
-        switch (action.name) {
-            case "$0-99":
-                return sortProductsByParameter(productsOfThisCategory, action, {
-                    type: "price",
-                    lowPrice: 0,
-                    highPrice: 99,
-                });
-            case "$99-199":
-                return sortProductsByParameter(productsOfThisCategory, action, {
-                    type: "price",
-                    lowPrice: 99,
-                    highPrice: 199,
-                });
-            case "$199-299":
-                return sortProductsByParameter(productsOfThisCategory, action, {
-                    type: "price",
-                    lowPrice: 199,
-                    highPrice: 299,
-                });
-            default:
-                return state;
-        }
-    };
-
-    const sortProductsBySort = (state, val) => {
+    const sortProductsBy = (state, val) => {
         const compare = (a, b) => {
             let varA, varB;
-            switch (val) {
-                case "az":
-                case "za":
-                    varA = a.title.toUpperCase();
-                    varB = b.title.toUpperCase();
-                    break;
-                case "asc":
-                case "desc":
-                    varA = a.price;
-                    varB = b.price;
-                    break;
-                default:
-                    return;
+
+            if (val === "az" || val === "za") {
+                varA = a.title.toUpperCase();
+                varB = b.title.toUpperCase();
+            } else if (val === "desc" || val === "asc") {
+                varA = a.price;
+                varB = b.price;
             }
 
             let comparison = 0;
@@ -79,26 +71,6 @@ const CategoryComponent = ({ categoryName }) => {
         return sortedArray;
     };
 
-    const reducer = (state, action) => {
-        switch (action.filtr) {
-            case "mark":
-                return sortProductsByParameter(productsOfThisCategory, action, {
-                    type: "name",
-                });
-            case "price":
-                return filtrByPrice(state, action);
-            case "sort":
-                return sortProductsBySort(state, action.val);
-            case "clear":
-                return productsOfThisCategory;
-            default:
-                return state;
-        }
-    };
-
-    const productsOfThisCategory = products.filter((product) => {
-        return product.category === categoryName;
-    });
     const [filteredProducts, dispatch] = useReducer(
         reducer,
         productsOfThisCategory

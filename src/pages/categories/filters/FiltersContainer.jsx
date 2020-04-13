@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import FilterComponent from "./filter component/FilterComponent";
 import { ProductsContext } from "../../../components/app/App";
 import { FilteredProductsContext } from "../CategoryComponent";
@@ -23,12 +23,10 @@ function FiltersContainer({ name }) {
     const uniqueMarks = removeDuplicates(marksInCategory, "name");
 
     const prices = [
-        { name: "$0-99", id: 0 },
-        { name: "$99-199", id: 1 },
-        { name: "$199-299", id: 2 },
+        { name: "$0-99", id: 0, range: { min: 0, max: 99 } },
+        { name: "$99-199", id: 1, range: { min: 99, max: 199 } },
+        { name: "$199-299", id: 2, range: { min: 199, max: 299 } },
     ];
-
-    const [isChecked, setIsChecked] = useState();
 
     return (
         <aside className="filter-container">
@@ -39,14 +37,9 @@ function FiltersContainer({ name }) {
                     <FilterComponent
                         filterName="mark"
                         filterLabels={uniqueMarks}
-                        isChecked={isChecked}
                     />
                 ) : null}
-                <FilterComponent
-                    filterName="price"
-                    filterLabels={prices}
-                    isChecked={isChecked}
-                />
+                <FilterComponent filterName="price" filterLabels={prices} />
                 <button
                     className="my-btn"
                     onClick={() => {
