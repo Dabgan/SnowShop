@@ -50,31 +50,34 @@ const CategoryComponent = ({ categoryName }) => {
         }
     };
 
-    const sortProductsBySort = (val) => {
-        switch (val) {
-            case "desc":
-                console.log(`sorted by`, val);
-                // sortProductsBy();
-                break;
-            case "asc":
-                console.log(`sorted by`, val);
-                break;
-            case "az":
-                console.log(`sorted by`, val);
-                break;
-            case "za":
-                console.log(`sorted by`, val);
-                break;
-            default:
-                console.log(`xd`);
-        }
-    };
+    const sortProductsBySort = (state, val) => {
+        const compare = (a, b) => {
+            let varA, varB;
+            switch (val) {
+                case "az":
+                case "za":
+                    varA = a.title.toUpperCase();
+                    varB = b.title.toUpperCase();
+                    break;
+                case "asc":
+                case "desc":
+                    varA = a.price;
+                    varB = b.price;
+                    break;
+                default:
+                    return;
+            }
 
-    // const sortProductsBy = (val) => {
-    //     console.log(`sliced`);
-    //     // return productsOfThisCategory.slice(0, 3);
-    //     return filterContext.filterProducts({ filtr: "clear" });
-    // };
+            let comparison = 0;
+            varA > varB ? (comparison = 1) : (comparison = -1);
+            // sort items alphabetically, else invert value (by multiplying by -1)
+            return val === "desc" || val === "az"
+                ? comparison
+                : comparison * -1;
+        };
+        const sortedArray = [...state].sort(compare);
+        return sortedArray;
+    };
 
     const reducer = (state, action) => {
         switch (action.filtr) {
@@ -85,8 +88,7 @@ const CategoryComponent = ({ categoryName }) => {
             case "price":
                 return filtrByPrice(state, action);
             case "sort":
-                sortProductsBySort(action.val);
-                return state;
+                return sortProductsBySort(state, action.val);
             case "clear":
                 return productsOfThisCategory;
             default:

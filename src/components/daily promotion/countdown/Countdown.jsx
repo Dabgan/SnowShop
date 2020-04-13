@@ -4,7 +4,7 @@ export class Countdown extends Component {
     state = {
         hours: 4,
         minutes: 59,
-        seconds: 59
+        seconds: 59,
     };
 
     setCountdownTimer = () => {
@@ -21,23 +21,23 @@ export class Countdown extends Component {
     };
 
     decrementTimerHours = () => {
-        return this.setState(prevState => ({
+        return this.setState((prevState) => ({
             hours: prevState.hours - 1,
             minutes: 59,
-            seconds: 59
+            seconds: 59,
         }));
     };
 
     decrementTimerMinutes = () => {
-        return this.setState(prevState => ({
+        return this.setState((prevState) => ({
             minutes: prevState.minutes - 1,
-            seconds: 59
+            seconds: 59,
         }));
     };
 
     decrementTimerSeconds = () => {
-        return this.setState(prevState => ({
-            seconds: prevState.seconds - 1
+        return this.setState((prevState) => ({
+            seconds: prevState.seconds - 1,
         }));
     };
 
@@ -45,15 +45,18 @@ export class Countdown extends Component {
         this.setState({
             hours: 10,
             minutes: 59,
-            seconds: 59
+            seconds: 59,
         });
     };
 
-    addLeadingZeros = number => {
+    addLeadingZeros = (number) => {
         return number < 10 ? "0" + number : number;
     };
 
     componentDidMount() {
+        setInterval(this.setCountdownTimer, 1000);
+    }
+    componentWillUnmount() {
         setInterval(this.setCountdownTimer, 1000);
     }
     render() {
