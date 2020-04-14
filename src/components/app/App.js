@@ -118,6 +118,7 @@ function App() {
                                 <Route
                                     path={`/${category.name}`}
                                     key={category.id}
+                                    exact
                                 >
                                     <CategoryComponent
                                         categoryName={category.name}
@@ -139,6 +140,15 @@ function App() {
                                     <InformationComponent
                                         headerName={link.name}
                                     />
+                                </Route>
+                            ))}
+                            {/* Here all the products paths are rendered */}
+                            {products.map((product) => (
+                                <Route
+                                    path={`/${product.category}/${product.id}`}
+                                    key={product.id}
+                                >
+                                    <ProductComponent productInfo={product} />
                                 </Route>
                             ))}
                         </div>

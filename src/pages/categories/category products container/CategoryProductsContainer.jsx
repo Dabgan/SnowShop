@@ -42,6 +42,7 @@ function CategoryProductsContainer({ name }) {
                         crossedPrice={product.crossedPrice}
                         key={product.id}
                         newClass="category-tile"
+                        productPath={`/${product.category}/${product.id}`}
                     />
                 ))}
             </div>

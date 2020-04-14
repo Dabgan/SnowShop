@@ -17,6 +17,7 @@ function FeaturedProducts({ title }) {
                         price={product.price}
                         crossedPrice={product.crossedPrice}
                         key={product.id}
+                        productPath={`/${product.category}/${product.id}`}
                     />
                 ))}
             </div>

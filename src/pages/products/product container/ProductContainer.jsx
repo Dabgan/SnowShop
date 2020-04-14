@@ -2,9 +2,8 @@ import React from "react";
 import "./productContainer.css";
 import ProductProperties from "./product properties/ProductProperties";
 import ProductDescription from "./product description/ProductDescription";
-import photo from "../../../assets/images/products/goggles2.jpg";
 
-const ProductContainer = () => {
+const ProductContainer = ({ productInfo }) => {
     return (
         <div className="product-container row">
             <div
@@ -13,10 +12,10 @@ const ProductContainer = () => {
                 data-toggle="modal"
                 data-target="#exampleModal"
             >
-                <img src={photo} alt="a product" />
+                <img src={productInfo.img} alt="a product" />
             </div>
-            <ProductProperties />
-            <ProductDescription />
+            <ProductProperties productInfo={productInfo} />
+            <ProductDescription productInfo={productInfo} />
             {/* Modal */}
             <div
                 className="modal fade"
@@ -32,7 +31,7 @@ const ProductContainer = () => {
                 >
                     <div className="modal-content">
                         <div className="modal-body">
-                            <img src={photo} alt="a product" />
+                            <img src={productInfo.img} alt="a product" />
                         </div>
                     </div>
                 </div>
