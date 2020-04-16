@@ -2,7 +2,6 @@ import React, { useContext, useReducer } from "react";
 import FiltersContainer from "./filters/FiltersContainer";
 import CategoryProductsContainer from "./category products container/CategoryProductsContainer";
 import "./filters/filtersContainer.css";
-import ScrollToTopOnMount from "../../components/ScrollToTopOnMount";
 import { ProductsContext } from "../../components/app/App";
 
 export const FilteredProductsContext = React.createContext();
@@ -81,7 +80,7 @@ const CategoryComponent = ({ categoryName }) => {
             value={{ filteredProducts, filterProducts: dispatch }}
         >
             <div className="category-container">
-                <ScrollToTopOnMount />
+                {/* <ScrollToTopOnMount /> */}
                 <FiltersContainer name={categoryName} />
                 <CategoryProductsContainer name={categoryName} />
             </div>

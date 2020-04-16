@@ -1,0 +1,38 @@
+@import "../../../styles/global_variables.module.scss";
+
+.basket-summary {
+    // border: 2px solid #069cc8;
+    // display: flex;
+    // flex-flow: column;
+    // align-items: center;
+}
+.summary-info {
+    // border: 2px solid #f11b1b;
+    font-size: 1rem;
+    display: flex;
+    flex-flow: column;
+}
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+}
+.cost-products {
+    // border: 2px solid #069cc8;
+}
+.cost-delivery {
+    // border: 2px solid #2ce90a;
+}
+.cost-discounts {
+    // border: 2px solid #f11b1b;
+}
+.cost-total {
+    margin-top: 20px;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-top: 2px solid #000000;
+}
+.basket-summary-btn {
+    // margin: 0;
+    align-self: flex-end;
+}

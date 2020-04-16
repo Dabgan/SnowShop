@@ -1,5 +1,6 @@
 .login,
 .shopping-cart {
+    color: inherit;
     padding: 10px;
     height: 70px;
     display: flex;
@@ -19,6 +20,8 @@
     }
     &:hover {
         background: #bbbbbb;
+        color: inherit;
+        text-decoration: none;
     }
 }
 

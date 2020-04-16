@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./displayProducts.css";
-import ProductTile from "./product tile/ProductTile";
+import ProductTile from "../product tile/ProductTile";
 import { ProductsContext } from "../../components/app/App";
 
 function FeaturedProducts({ title }) {

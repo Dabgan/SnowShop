@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./categoryProductsContainer.css";
-import ProductTile from "../../../components/featured products/product tile/ProductTile";
+import ProductTile from "../../../components/product tile/ProductTile";
 import { FilteredProductsContext } from "../CategoryComponent";
 
 function CategoryProductsContainer({ name }) {

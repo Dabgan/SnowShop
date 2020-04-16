@@ -6,22 +6,25 @@ import ContactComponent from "./contact info/ContactComponent";
 import MobileHeaderIcon from "./mobile icon/MobileHeaderIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CategoriesMenu from "./categories menu/CategoriesMenu";
+import { Link } from "react-router-dom";
 
 class Header extends Component {
     state = {
-        isSearchWidgetVisible: "none"
+        isSearchWidgetVisible: "none",
     };
 
     expandSearchWidget = () => {
         const isVisible = this.state.isSearchWidgetVisible;
         return this.setState({
-            isSearchWidgetVisible: isVisible === "none" ? "block" : "none"
+            isSearchWidgetVisible: isVisible === "none" ? "block" : "none",
         });
     };
 
+    showBasket = () => {};
+
     render() {
         const { isSearchWidgetVisible } = this.state;
-        const { expandSearchWidget } = this;
+        const { expandSearchWidget, showBasket } = this;
         return (
             <header>
                 <nav className="header-top navbar navbar-expand-lg navbar-light bg-light">
@@ -64,17 +67,26 @@ class Header extends Component {
                             icon="user"
                             info="Login"
                         />
-                        <MobileHeaderIcon
+                        {/* <MobileHeaderIcon
                             className="shopping-cart"
                             icon="shopping-cart"
                             info="Basket"
-                        />
+                            handleClickMobileSearch={showBasket}
+                        /> */}
+                        <Link
+                            to="/basket"
+                            className="shopping-cart"
+                            onClick={showBasket}
+                        >
+                            <FontAwesomeIcon icon="shopping-cart" />
+                            <p>Basket</p>
+                        </Link>
                     </div>
                 </nav>
                 <div
                     id="mobileSearchWidget"
                     style={{
-                        display: isSearchWidgetVisible
+                        display: isSearchWidgetVisible,
                     }}
                     className={"mobile-search-widget navbar-light bg-light"}
                 >

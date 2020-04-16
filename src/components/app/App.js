@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import firebase from "../../firebase.js";
 import "./App.css";
-import { library } from "../../fontAwesomeIcons";
+// import { library } from "../../fontAwesomeIcons";
+import Routes from "../Routes.jsx";
 
 import Header from "../header/Header";
 import DisplayProducts from "../featured products/DisplayProducts";
@@ -12,14 +13,10 @@ import Newsletter from "../newsletter/Newsletter";
 import Footer from "../footer/Footer";
 import CategoryComponent from "../../pages/categories/CategoryComponent";
 import ProductComponent from "../../pages/products/ProductComponent";
-import About from "../../pages/informations/About/About";
-import Contact from "../../pages/informations/Contact/Contact";
-import InformationComponent from "../../pages/informations/others/InformationComponent";
-import image from "../../assets/images/products/snowboard_set.jpg";
+// import image from "../../assets/images/products/snowboard_set.jpg";
 
 function App() {
     const [products, setProducts] = useState([]);
-    const [otherRoutes, setOtherRoutes] = useState([]);
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
@@ -44,22 +41,6 @@ function App() {
     }, []);
 
     useEffect(() => {
-        const routesRef = firebase.database().ref("other routes");
-        routesRef.on("value", (snapshot) => {
-            let databaseRoutes = snapshot.val();
-            let newRoutes = [];
-            for (let dbRoute in databaseRoutes) {
-                newRoutes.push({
-                    id: dbRoute,
-                    name: databaseRoutes[dbRoute].name,
-                    path: databaseRoutes[dbRoute].path,
-                });
-            }
-            setOtherRoutes(newRoutes);
-        });
-    }, []);
-
-    useEffect(() => {
         const categoriesRef = firebase.database().ref("categories");
         categoriesRef.on("value", (snapshot) => {
             let databaseCategories = snapshot.val();
@@ -73,19 +54,20 @@ function App() {
             setCategories(newCategories);
         });
     }, []);
-    const addProduct = () => {
-        const productsRef = firebase.database().ref("products");
-        const product = {
-            img: image,
-            title: "Beliar Emperor Snowboard Set",
-            price: 229.99,
-            crossedPrice: 399.99,
-            category: "boots",
-            availability: 2,
-            mark: "beliar",
-        };
-        productsRef.push(product);
-    };
+
+    // const addProduct = () => {
+    //     const productsRef = firebase.database().ref("products");
+    //     const product = {
+    //         img: image,
+    //         title: "Beliar Emperor Snowboard Set",
+    //         price: 229.99,
+    //         crossedPrice: 399.99,
+    //         category: "boots",
+    //         availability: 2,
+    //         mark: "beliar",
+    //     };
+    //     productsRef.push(product);
+    // };
 
     // const addCategory = () => {
     //     const productsRef = firebase.database().ref("categories");
@@ -99,7 +81,7 @@ function App() {
     // };
 
     return (
-        <Router>
+        <Router forceRefresh={true}>
             <ProductsContext.Provider value={products}>
                 <Header />
                 {/* <button className="my-btn" onClick={() => addProduct()}>
@@ -126,22 +108,8 @@ function App() {
                                     />
                                 </Route>
                             ))}
-                            <Route path="/product">
-                                <ProductComponent />
-                            </Route>
-                            <Route path="/about">
-                                <About />
-                            </Route>
-                            <Route path="/contact">
-                                <Contact />
-                            </Route>
-                            {otherRoutes.map((link) => (
-                                <Route path={`/${link.path}`} key={link.id}>
-                                    <InformationComponent
-                                        headerName={link.name}
-                                    />
-                                </Route>
-                            ))}
+                            <Routes />
+
                             {/* Here all the products paths are rendered */}
                             {products.map((product) => (
                                 <Route
