@@ -4,13 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function MobileHeaderIcon({ icon, info, className, handleClickMobileSearch }) {
     return (
-        <div
-            className={className}
-            onClick={handleClickMobileSearch}
-            onClick={() => {
-                alert("lol");
-            }}
-        >
+        <div className={className} onClick={handleClickMobileSearch}>
             <FontAwesomeIcon icon={icon} />
             <p>{info}</p>
         </div>

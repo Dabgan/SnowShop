@@ -1,16 +1,16 @@
-import React from "react";
-import ProductTile from "../../../components/product tile/ProductTile";
+import React, { useContext } from "react";
+import BasketTile from "./basket tile/BasketTile";
+import { BasketProductsContext } from "../../../components/app/App";
 
 const BasketProducts = () => {
+    const basketContext = useContext(BasketProductsContext);
     return (
         <div className="col-md-6 border">
             <div className="row">
-                <ProductTile />
-                <ProductTile />
-                <ProductTile />
-                <ProductTile />
+                {basketContext.basketProducts.map((product) => (
+                    <BasketTile productInfo={product} />
+                ))}
             </div>
-            {/* <h2>This is products</h2> */}
         </div>
     );
 };

@@ -1,0 +1,31 @@
+@import "../../../../styles/global_variables.module.scss";
+
+.basket-product-container {
+    border: 2px solid #f11b1b;
+    width: 100%;
+    display: flex;
+    img {
+        width: 100%;
+    }
+}
+
+.basket-product-img {
+    border: 2px solid #2ce90a;
+    height: 80px;
+    width: 80px;
+}
+.basket-product-info {
+    flex: 1 0 auto;
+    border: 2px solid #069cc8;
+}
+.basket-product-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.basket-product-actions {
+    display: flex;
+}
+.basket-product-price {
+    font-size: 1.2rem;
+    font-weight: 600;
+}

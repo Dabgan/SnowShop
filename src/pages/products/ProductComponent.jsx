@@ -4,7 +4,6 @@ import DisplayProducts from "../../components/featured products/DisplayProducts"
 import ScrollToTopOnMount from "../../components/ScrollToTopOnMount";
 
 const ProductComponent = ({ productInfo }) => {
-    console.log(productInfo);
     return (
         <section className="product-wrapper">
             <ScrollToTopOnMount />

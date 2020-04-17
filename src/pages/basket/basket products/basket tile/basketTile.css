@@ -1,0 +1,41 @@
+.basket-product-container {
+  border: 2px solid #f11b1b;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.basket-product-container img {
+  width: 100%;
+}
+
+.basket-product-img {
+  border: 2px solid #2ce90a;
+  height: 80px;
+  width: 80px;
+}
+
+.basket-product-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  border: 2px solid #069cc8;
+}
+
+.basket-product-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.basket-product-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.basket-product-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+/*# sourceMappingURL=basketTile.css.map */

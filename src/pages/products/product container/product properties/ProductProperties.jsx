@@ -45,7 +45,7 @@ const ProductProperties = ({ productInfo }) => {
                 <FontAwesomeIcon icon="clock" />
                 At your place on {getDeliveryDate()}
             </p>
-            <ProductActions />
+            <ProductActions productInfo={productInfo} />
         </div>
     );
 };
