@@ -1,26 +1,39 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./basketSummary.css";
+import { BasketProductsContext } from "../../../components/app/App";
 
 const BasketSummary = () => {
+    const basketContext = useContext(BasketProductsContext);
+    const deliveryCost = 6.99;
+    const productsCost =
+        Math.floor(
+            basketContext.basketProducts.reduce((accumulator, product) => {
+                return accumulator + product.price * product.quantity;
+            }, 0) * 100
+        ) / 100;
+    const discount = (productsCost + deliveryCost) * 0.05;
+    const totalCost =
+        Math.floor((productsCost + deliveryCost - discount) * 100) / 100;
+
     return (
         <div className="basket-summary col-md-6">
             <h2 className="h3 mb-4">Summary:</h2>
             <div className="summary-info">
                 <div className="cost-products summary-row">
                     <p>Products:</p>
-                    <span>$69.69</span>
+                    <span>${productsCost}</span>
                 </div>
                 <div className="cost-delivery summary-row">
                     <p>Delivery:</p>
-                    <span>$4.99</span>
+                    <span>$6.99</span>
                 </div>
                 <div className="cost-discounts summary-row">
                     <p>Discounts:</p>
-                    <span>0</span>
+                    <span>5%</span>
                 </div>
                 <div className="cost-total summary-row">
                     <p>Sum:</p>
-                    <span>$74.68</span>
+                    <span>${totalCost}</span>
                 </div>
                 <button className="my-btn basket-summary-btn">
                     Go to payment

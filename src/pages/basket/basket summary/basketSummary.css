@@ -1,3 +1,7 @@
+.basket-container {
+  padding: 20px;
+}
+
 .summary-info {
   font-size: 1rem;
   display: -webkit-box;

@@ -4,9 +4,9 @@ import BasketSummary from "./basket summary/BasketSummary";
 
 const BasketComponent = () => {
     return (
-        <div className="wrapper">
+        <div className="basket-container">
             <div className="row">
-                {/* <h1 className="h3">Shopping cart contents:</h1> */}
+                <h1 className="h3">Shopping cart contents:</h1>
             </div>
             <div className="row">
                 <BasketProducts />
