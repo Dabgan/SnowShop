@@ -24,6 +24,14 @@
         text-decoration: none;
     }
 }
+.shopping-cart {
+    position: relative;
+}
+.shopping-cart-badge {
+    position: absolute;
+    right: 10px;
+    background: linear-gradient(to right, #30cfd0 0%, #330867 100%) !important;
+}
 
 .login {
     margin-left: 100px;

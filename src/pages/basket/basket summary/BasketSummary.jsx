@@ -25,7 +25,7 @@ const BasketSummary = () => {
                 </div>
                 <div className="cost-delivery summary-row">
                     <p>Delivery:</p>
-                    <span>$6.99</span>
+                    <span>${deliveryCost}</span>
                 </div>
                 <div className="cost-discounts summary-row">
                     <p>Discounts:</p>
