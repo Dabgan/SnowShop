@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./basketTile.css";
+import { BasketProductsContext } from "../../../../components/app/App";
 
 const BasketTile = ({ productInfo }) => {
+    const basketContext = useContext(BasketProductsContext);
     return (
         <div className="basket-product-container">
             <div className="basket-product-img">
@@ -15,8 +17,16 @@ const BasketTile = ({ productInfo }) => {
                 </div>
             </div>
             <div className="basket-product-actions">
-                <div className="basket-product-price">{productInfo.price}</div>
-                <FontAwesomeIcon icon="user" />
+                <div className="basket-product-price">${productInfo.price}</div>
+                <FontAwesomeIcon
+                    icon="trash-alt"
+                    onClick={() =>
+                        basketContext.manageBasket({
+                            operation: "delete",
+                            productId: productInfo.id,
+                        })
+                    }
+                />
             </div>
         </div>
     );

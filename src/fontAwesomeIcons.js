@@ -10,6 +10,7 @@ import {
     faArchive,
     faTruck,
     faClock,
+    faTrashAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import {
     faGithub,
@@ -30,5 +31,6 @@ library.add(
     faChevronCircleUp,
     faArchive,
     faTruck,
-    faClock
+    faClock,
+    faTrashAlt
 );

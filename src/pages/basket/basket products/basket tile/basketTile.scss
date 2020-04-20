@@ -1,7 +1,12 @@
 @import "../../../../styles/global_variables.module.scss";
 
 .basket-product-container {
-    border: 2px solid #f11b1b;
+    // border: 2px solid #f11b1b;
+    box-shadow: 2px 2px 3px 3px #cecece;
+    background-color: #ffffff;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
     width: 100%;
     display: flex;
     img {
@@ -10,13 +15,13 @@
 }
 
 .basket-product-img {
-    border: 2px solid #2ce90a;
+    // border: 2px solid #2ce90a;
     height: 80px;
     width: 80px;
 }
 .basket-product-info {
     flex: 1 0 auto;
-    border: 2px solid #069cc8;
+    // border: 2px solid #069cc8;
 }
 .basket-product-title {
     font-size: 1.2rem;
@@ -24,6 +29,17 @@
 }
 .basket-product-actions {
     display: flex;
+    align-items: center;
+    // border: 2px solid #069cc8;
+    svg {
+        margin-left: 10px;
+        font-size: 1.3rem;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+        &:hover {
+            color: #ff0404;
+        }
+    }
 }
 .basket-product-price {
     font-size: 1.2rem;

@@ -22,7 +22,6 @@ const reducer = (state, action) => {
     console.log(`this is reducer`, state, action);
     switch (action.operation) {
         case "add":
-            // state.push(action.product);
             console.log(`this is reducer`, state, action);
             const productsBasketRef = firebase.database().ref("basket");
 
@@ -40,6 +39,10 @@ const reducer = (state, action) => {
             productsBasketRef.push(basketProduct);
             return state;
         case "delete":
+            const productRef = firebase
+                .database()
+                .ref(`basket/${action.productId}`);
+            productRef.remove();
             return state;
         case "set":
             const newState = action.state;
@@ -47,7 +50,6 @@ const reducer = (state, action) => {
         default:
             return state;
     }
-    // console.log(`this is reducer`, state, action);
 };
 
 function App() {
@@ -58,8 +60,8 @@ function App() {
     // const addProductToBasket = () => {};
 
     useEffect(() => {
-        const productsRef = firebase.database().ref("basket");
-        productsRef.on("value", (snapshot) => {
+        const basketProductsRef = firebase.database().ref("basket");
+        basketProductsRef.on("value", (snapshot) => {
             let databaseProducts = snapshot.val();
             let newProducts = [];
             for (let dbProduct in databaseProducts) {
