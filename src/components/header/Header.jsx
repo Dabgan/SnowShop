@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./header.css";
 import logo from "./../../assets/images/logo.png";
 import SearchBar from "./search bar/SearchBar";
@@ -7,8 +7,10 @@ import MobileHeaderIcon from "./mobile icon/MobileHeaderIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CategoriesMenu from "./categories menu/CategoriesMenu";
 import { Link } from "react-router-dom";
+import { BasketProductsContext } from "../app/App";
 
 const Header = () => {
+    const basketContext = useContext(BasketProductsContext);
     const [searchWidget, setSearchWidget] = useState(false);
     const handleSearchWidget = () => {
         return setSearchWidget(!searchWidget);
@@ -56,8 +58,15 @@ const Header = () => {
                     <Link to="/basket" className="shopping-cart">
                         <FontAwesomeIcon icon="shopping-cart" />
                         <p>Basket</p>
-                        <span className="badge badge-info shopping-cart-badge">
-                            2
+                        <span
+                            style={{
+                                display: basketContext.basketProducts.length
+                                    ? "block"
+                                    : "none",
+                            }}
+                            className="badge badge-info shopping-cart-badge"
+                        >
+                            {basketContext.basketProducts.length}
                         </span>
                     </Link>
                 </div>

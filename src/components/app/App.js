@@ -37,7 +37,6 @@ const reducer = (state, action) => {
                 quantity: action.quantity,
             };
             productsBasketRef.push(basketProduct);
-            alert("dodano produkt!");
             return state;
         case "delete":
             const productRef = firebase
