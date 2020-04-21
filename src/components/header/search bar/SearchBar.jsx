@@ -1,13 +1,13 @@
 import React from "react";
 import "./searchBar.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Icons from "../../../icons";
 
 function SearchBar() {
     return (
         <form className="search-bar">
             <input type="text" placeholder="Search" />
             <button type="submit" className="search-icon">
-                <FontAwesomeIcon icon="search" />
+                <Icons.FaSearch />
             </button>
         </form>
     );

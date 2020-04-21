@@ -1,7 +1,7 @@
 import React from "react";
 import "./footer.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import Icons from "../../icons";
 
 function Footer() {
     const footerLinks = [
@@ -11,14 +11,14 @@ function Footer() {
         { name: "blog", path: "blog", id: 4 },
         { name: "payment methods", path: "payment", id: 5 },
         { name: "privacy & cookies", path: "privacy", id: 6 },
-        { name: "terms & conditions", path: "terms", id: 7 }
+        { name: "terms & conditions", path: "terms", id: 7 },
     ];
 
     return (
         <footer className="footer py-4 bg-dark text-white-50">
             <div className="footer-container">
                 <div className="footer-nav">
-                    {footerLinks.map(link => (
+                    {footerLinks.map((link) => (
                         <div className="footer-nav-item" key={link.id}>
                             <Link to={`/${link.path}`} className="footer-link">
                                 {link.name}
@@ -27,9 +27,9 @@ function Footer() {
                     ))}
                 </div>
                 <div className="footer-socials">
-                    <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
-                    <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" />
-                    <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" />
+                    <Icons.FaGithub size="1.5rem" />
+                    <Icons.FaFacebook size="1.5rem" />
+                    <Icons.FaLinkedin size="1.5rem" />
                 </div>
             </div>
             <div className="footer-copyright">
@@ -37,7 +37,7 @@ function Footer() {
             </div>
             <a href="/#">
                 <button className=" to-top-btn">
-                    <FontAwesomeIcon icon="chevron-circle-up" size="3x" />
+                    <Icons.FaChevronCircleUp size="3rem" />
                 </button>
             </a>
         </footer>

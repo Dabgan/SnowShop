@@ -2,7 +2,6 @@ import React, { useState, useEffect, useReducer } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import firebase from "../../firebase.js";
 import "./App.css";
-// import { library } from "../../fontAwesomeIcons";
 import Routes from "../Routes.jsx";
 
 import Header from "../header/Header";

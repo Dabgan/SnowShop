@@ -1,10 +1,9 @@
 import React from "react";
 import "./../informations.css";
 import "./contact.css";
-import ContactComponent from "../../../components/header/contact info/ContactComponent";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContactForm from "./contact form/ContactForm";
 import ScrollToTopOnMount from "../../../components/ScrollToTopOnMount";
+import Icons from "../../../icons";
 
 const Contact = () => {
     return (
@@ -15,11 +14,14 @@ const Contact = () => {
                     <h1 className="h2 mb-3">Contact Snowshop</h1>
 
                     <div className="contact-container">
-                        <ContactComponent icon="phone-alt" info="420 213 769" />
-                        <ContactComponent
-                            icon="envelope"
-                            info="shop@snowshop.pl"
-                        />
+                        <div>
+                            <Icons.FaPhoneAlt />
+                            <p>420 213 769</p>
+                        </div>
+                        <div>
+                            <Icons.FaEnvelope />
+                            <p>shop@snowshop.pl</p>
+                        </div>
                     </div>
                 </div>
 
@@ -31,9 +33,9 @@ const Contact = () => {
                     </p>
 
                     <div className="footer-socials">
-                        <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
-                        <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" />
-                        <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" />
+                        <Icons.FaGithub size="2rem" />
+                        <Icons.FaFacebook size="2rem" />
+                        <Icons.FaLinkedin size="2rem" />
                     </div>
                 </div>
 

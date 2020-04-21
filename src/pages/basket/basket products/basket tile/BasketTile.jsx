@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./basketTile.css";
 import { BasketProductsContext } from "../../../../components/app/App";
+import Icons from "../../../../icons";
 
 const BasketTile = ({ productInfo }) => {
     const basketContext = useContext(BasketProductsContext);
@@ -18,8 +18,7 @@ const BasketTile = ({ productInfo }) => {
             </div>
             <div className="basket-product-actions">
                 <div className="basket-product-price">${productInfo.price}</div>
-                <FontAwesomeIcon
-                    icon="trash-alt"
+                <Icons.FaTrashAlt
                     onClick={() =>
                         basketContext.manageBasket({
                             operation: "delete",

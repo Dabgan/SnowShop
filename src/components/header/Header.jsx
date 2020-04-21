@@ -2,12 +2,10 @@ import React, { useState, useContext } from "react";
 import "./header.css";
 import logo from "./../../assets/images/logo.png";
 import SearchBar from "./search bar/SearchBar";
-import ContactComponent from "./contact info/ContactComponent";
-import MobileHeaderIcon from "./mobile icon/MobileHeaderIcon";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CategoriesMenu from "./categories menu/CategoriesMenu";
 import { Link } from "react-router-dom";
 import { BasketProductsContext } from "../app/App";
+import Icons from "../../icons";
 
 const Header = () => {
     const basketContext = useContext(BasketProductsContext);
@@ -37,26 +35,29 @@ const Header = () => {
                 <div className="header-top-menu collapse navbar-collapse">
                     <SearchBar />
                     <div className="contact-container">
-                        <ContactComponent icon="phone-alt" info="420 213 769" />
-                        <ContactComponent
-                            icon="envelope"
-                            info="shop@snowshop.pl"
-                        />
+                        <div>
+                            <Icons.FaPhoneAlt />
+                            <p>420 213 769</p>
+                        </div>
+                        <div>
+                            <Icons.FaEnvelope size="20px" />
+                            <p>shop@snowshop.pl</p>
+                        </div>
+                    </div>
+                    <div
+                        className="search-mobile"
+                        onClick={() => handleSearchWidget()}
+                    >
+                        <Icons.FaSearch />
                     </div>
 
-                    <MobileHeaderIcon
-                        className="search-mobile"
-                        icon="search"
-                        handleClickMobileSearch={() => handleSearchWidget()}
-                    />
+                    <div className="login">
+                        <Icons.FaUser />
+                        <p>Login</p>
+                    </div>
 
-                    <MobileHeaderIcon
-                        className="login"
-                        icon="user"
-                        info="Login"
-                    />
                     <Link to="/basket" className="shopping-cart">
-                        <FontAwesomeIcon icon="shopping-cart" />
+                        <Icons.FaShoppingCart />
                         <p>Basket</p>
                         <span
                             style={{
@@ -81,7 +82,7 @@ const Header = () => {
                 <form className="">
                     <input type="text" placeholder="Search" />
                     <button type="submit" className="mobile-search-icon">
-                        <FontAwesomeIcon icon="search" />
+                        <Icons.FaSearch />
                     </button>
                 </form>
             </div>

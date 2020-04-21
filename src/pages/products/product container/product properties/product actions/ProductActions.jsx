@@ -1,9 +1,9 @@
 import React, { useState, useContext } from "react";
 import "./productActions.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { BasketProductsContext } from "../../../../../components/app/App";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Icons from "../../../../../icons";
 
 const ProductActions = ({ productInfo }) => {
     const basketContext = useContext(BasketProductsContext);
@@ -74,7 +74,7 @@ const ProductActions = ({ productInfo }) => {
                     }}
                 >
                     Add to cart
-                    <FontAwesomeIcon icon="shopping-cart" />
+                    <Icons.FaShoppingCart />
                 </button>
             </div>
         </div>

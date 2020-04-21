@@ -1,7 +1,7 @@
 import React from "react";
 import ProductActions from "./product actions/ProductActions";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./productProperties.css";
+import Icons from "../../../../icons";
 
 const ProductProperties = ({ productInfo }) => {
     const deliveryDate = new Date();
@@ -34,15 +34,15 @@ const ProductProperties = ({ productInfo }) => {
                 </span>
             </h2>
             <p className="product-properties product-availability">
-                <FontAwesomeIcon icon="archive" />
+                <Icons.FaArchive />
                 In Store
             </p>
             <p className="product-properties delivery-info-price">
-                <FontAwesomeIcon icon="truck" />
+                <Icons.FaTruck />
                 Free delivery
             </p>
             <p className="product-properties delivery-info-date">
-                <FontAwesomeIcon icon="clock" />
+                <Icons.FaClock />
                 At your place on {getDeliveryDate()}
             </p>
             <ProductActions productInfo={productInfo} />
