@@ -2,9 +2,16 @@
 
 .product-actions {
     display: flex;
-    align-items: center;
+    flex-flow: column;
+    align-items: flex-start;
     border-top: 1px solid $shadow-color;
     padding: 30px 10px 10px;
+    // border: 2px solid #f11b1b;
+}
+.product-actions-container {
+    // border: 2px solid #069cc8;
+    display: flex;
+    align-items: center;
 }
 .product-quantity {
     font-size: 1.5rem;
@@ -26,4 +33,9 @@
 .add-to-cart-btn {
     margin: 10px 50px;
     font-size: 1rem;
+}
+.basket-alert {
+    border: 2px solid #007e33;
+    padding: 20px !important;
+    border-radius: 10px !important;
 }

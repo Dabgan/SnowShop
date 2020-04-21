@@ -14,6 +14,8 @@ import Footer from "../footer/Footer";
 import CategoryComponent from "../../pages/categories/CategoryComponent";
 import ProductComponent from "../../pages/products/ProductComponent";
 // import image from "../../assets/images/products/snowboard_set.jpg";
+import { toast } from "react-toastify";
+toast.configure();
 
 export const BasketProductsContext = React.createContext();
 export const ProductsContext = React.createContext();
