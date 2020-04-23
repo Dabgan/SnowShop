@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useReducer } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import firebase from "../../firebase.js";
-import "./App.css";
 import Routes from "../Routes.jsx";
+import "./App.css";
 
 import Header from "../header/Header";
 import DisplayProducts from "../featured products/DisplayProducts";
@@ -20,24 +20,38 @@ export const BasketProductsContext = React.createContext();
 export const ProductsContext = React.createContext();
 
 const reducer = (state, action) => {
-    console.log(`this is reducer`, state, action);
+    const basketRef = firebase.database().ref("basket");
+    let productQuantity = 0;
+    let newItemReference = null;
     switch (action.operation) {
         case "add":
-            console.log(`this is reducer`, state, action);
-            const productsBasketRef = firebase.database().ref("basket");
-
-            const basketProduct = {
-                id: action.product.id,
-                img: action.product.img,
-                title: action.product.title,
-                price: action.product.price,
-                crossedPrice: action.product.crossedPrice,
-                category: action.product.category,
-                availability: action.product.availability,
-                mark: action.product.mark,
-                quantity: action.quantity,
-            };
-            productsBasketRef.push(basketProduct);
+            basketRef
+                .orderByChild("title")
+                .equalTo(action.product.title)
+                .on("child_added", (data) => {
+                    console.log(data.val());
+                    return (
+                        (productQuantity = data.val().quantity),
+                        (newItemReference = data.ref)
+                    );
+                });
+            if (newItemReference) {
+                newItemReference.update({
+                    quantity: action.quantity + productQuantity,
+                });
+            } else {
+                const basketProduct = {
+                    img: action.product.img,
+                    title: action.product.title,
+                    price: action.product.price,
+                    crossedPrice: action.product.crossedPrice,
+                    category: action.product.category,
+                    availability: action.product.availability,
+                    mark: action.product.mark,
+                    quantity: action.quantity,
+                };
+                basketRef.push(basketProduct);
+            }
             return state;
         case "delete":
             const productRef = firebase
@@ -57,8 +71,6 @@ function App() {
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);
     const [basketProducts, dispatch] = useReducer(reducer, []);
-
-    // const addProductToBasket = () => {};
 
     useEffect(() => {
         const basketProductsRef = firebase.database().ref("basket");
