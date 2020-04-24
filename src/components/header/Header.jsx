@@ -3,13 +3,18 @@ import "./header.css";
 import logo from "./../../assets/images/logo.png";
 import SearchBar from "./search bar/SearchBar";
 import CategoriesMenu from "./categories menu/CategoriesMenu";
-import { Link } from "react-router-dom";
-import { BasketProductsContext } from "../app/App";
+import { Link as div } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { BasketProductsContext, BasketModalContext } from "../app/App";
 import Icons from "../../icons";
+import BasketModal from "../../pages/basket/basket modal/BasketModal";
 
 const Header = () => {
     const basketContext = useContext(BasketProductsContext);
+    const basketModal = useContext(BasketModalContext);
     const [searchWidget, setSearchWidget] = useState(false);
+
     const handleSearchWidget = () => {
         return setSearchWidget(!searchWidget);
     };
@@ -56,7 +61,11 @@ const Header = () => {
                         <p>Login</p>
                     </div>
 
-                    <Link to="/basket" className="shopping-cart">
+                    <div
+                        to="/basket"
+                        className="shopping-cart"
+                        onClick={() => basketModal.setIsModalVisible()}
+                    >
                         <Icons.FaShoppingCart />
                         <p>Basket</p>
                         <span
@@ -69,7 +78,8 @@ const Header = () => {
                         >
                             {basketContext.basketProducts.length}
                         </span>
-                    </Link>
+                    </div>
+                    <BasketModal />
                 </div>
             </nav>
             <div

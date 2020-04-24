@@ -12,14 +12,19 @@ import Newsletter from "../newsletter/Newsletter";
 import Footer from "../footer/Footer";
 import CategoryComponent from "../../pages/categories/CategoryComponent";
 import ProductComponent from "../../pages/products/ProductComponent";
-// import image from "../../assets/images/products/snowboard_set.jpg";
 import { toast } from "react-toastify";
+import Products from "../Products.jsx";
 toast.configure();
 
 export const BasketProductsContext = React.createContext();
 export const ProductsContext = React.createContext();
+export const BasketModalContext = React.createContext();
 
-const reducer = (state, action) => {
+const modalReducer = (state, action) => {
+    return !state;
+};
+
+const basketReducer = (state, action) => {
     const basketRef = firebase.database().ref("basket");
     let productQuantity = 0;
     let newItemReference = null;
@@ -70,7 +75,8 @@ const reducer = (state, action) => {
 function App() {
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);
-    const [basketProducts, dispatch] = useReducer(reducer, []);
+    const [basketProducts, dispatch] = useReducer(basketReducer, []);
+    const [isModalVisible, setIsModalVisible] = useReducer(modalReducer, false);
 
     useEffect(() => {
         const basketProductsRef = firebase.database().ref("basket");
@@ -130,81 +136,60 @@ function App() {
         });
     }, []);
 
-    // const addProduct = () => {
-    // const productsRef = firebase.database().ref("products");
-    // const product = {
-    //     img: image,
-    //     title: "Beliar Emperor Snowboard Set",
-    //     price: 229.99,
-    //     crossedPrice: 399.99,
-    //     category: "boots",
-    //     availability: 2,
-    //     mark: "beliar",
-    // };
-    // productsRef.push(product);
-    // };
-
-    // const addCategory = () => {
-    //     const productsRef = firebase.database().ref("categories");
-    //     // const product = {
-    //     //     img: image4,
-    //     //     title: "Helmet Pulsar 2020",
-    //     //     price: 79.99,
-    //     //     crossedPrice: 129.99,
-    //     // };
-    //     productsRef.push(categories[6]);
-    // };
-
     return (
         <Router forceRefresh={true}>
             <ProductsContext.Provider value={products}>
                 <BasketProductsContext.Provider
-                    value={{ basketProducts, manageBasket: dispatch }}
+                    value={{
+                        basketProducts,
+                        manageBasket: dispatch,
+                    }}
                 >
-                    <Header />
-                    {/* <button className="my-btn" onClick={() => addProduct()}>
-                    Add Product to database
-                </button> */}
-                    <Switch>
-                        <>
-                            <div className="main-container">
-                                <Route path="/" exact>
-                                    <Banner />
-                                    <DisplayProducts
-                                        title={"Featured products"}
-                                    />
-                                    <DailyPromotion />
-                                    <Newsletter />
-                                </Route>
-                                {categories.map((category) => (
-                                    <Route
-                                        path={`/${category.name}`}
-                                        key={category.id}
-                                        exact
-                                    >
-                                        <CategoryComponent
-                                            categoryName={category.name}
+                    <BasketModalContext.Provider
+                        value={{ isModalVisible, setIsModalVisible }}
+                    >
+                        <Header />
+                        <Switch>
+                            <>
+                                <div className="main-container">
+                                    <Route path="/" exact>
+                                        <Banner />
+                                        <DisplayProducts
+                                            title={"Featured products"}
+                                        />
+                                        <DailyPromotion />
+                                        <Newsletter />
+                                    </Route>
+                                    {categories.map((category) => (
+                                        <Route
+                                            path={`/${category.name}`}
                                             key={category.id}
-                                        />
-                                    </Route>
-                                ))}
-                                <Routes />
+                                            exact
+                                        >
+                                            <CategoryComponent
+                                                categoryName={category.name}
+                                                key={category.id}
+                                            />
+                                        </Route>
+                                    ))}
+                                    <Routes />
 
-                                {/* Here all the products paths are rendered */}
-                                {products.map((product) => (
-                                    <Route
-                                        path={`/${product.category}/${product.id}`}
-                                        key={product.id}
-                                    >
-                                        <ProductComponent
-                                            productInfo={product}
-                                        />
-                                    </Route>
-                                ))}
-                            </div>
-                        </>
-                    </Switch>
-                    <Footer />
+                                    {/* Here all the products paths are rendered */}
+                                    {products.map((product) => (
+                                        <Route
+                                            path={`/${product.category}/${product.id}`}
+                                            key={product.id}
+                                        >
+                                            <ProductComponent
+                                                productInfo={product}
+                                            />
+                                        </Route>
+                                    ))}
+                                </div>
+                            </>
+                        </Switch>
+                        <Footer />
+                    </BasketModalContext.Provider>
                 </BasketProductsContext.Provider>
             </ProductsContext.Provider>
         </Router>

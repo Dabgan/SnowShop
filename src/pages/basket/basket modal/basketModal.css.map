@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,aAAa,CAAC;EACV,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK;EACZ,QAAQ,EAAE,IAAI;EACd,GAAG,EAAE,KAAK;EACV,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,CAAC;EACV,UAAU,ECDO,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,OAAO;EDExC,aAAa,EAAE,GAAG;EAClB,UAAU,ECVI,OAAO;CDWxB",
+    "sources": [
+        "basketModal.scss",
+        "../../../styles/global_variables.module.scss"
+    ],
+    "names": [],
+    "file": "basketModal.css"
+}

@@ -1,0 +1,17 @@
+@import "../../../styles/global_variables.module.scss";
+
+.basket-modal {
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    overflow: auto;
+    top: 100px;
+    padding: 50px;
+    right: 10px;
+    z-index: 1;
+    box-shadow: $product-box-shadow;
+    border-radius: 5px;
+    background: $secondary-color;
+}
+.basket-modal-products {
+}
