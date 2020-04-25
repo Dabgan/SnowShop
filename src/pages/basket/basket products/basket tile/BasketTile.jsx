@@ -2,14 +2,18 @@ import React, { useContext } from "react";
 import "./basketTile.css";
 import { BasketProductsContext } from "../../../../components/app/App";
 import Icons from "../../../../icons";
+import { Link } from "react-router-dom";
 
 const BasketTile = ({ productInfo }) => {
     const basketContext = useContext(BasketProductsContext);
     return (
         <div className="basket-product-container">
-            <div className="basket-product-img">
+            <Link
+                to={`/${productInfo.category}/${productInfo.oldId}`}
+                className="basket-product-img"
+            >
                 <img src={productInfo.img} alt="shoes" />
-            </div>
+            </Link>
             <div className="basket-product-info">
                 <div className="basket-product-title">{productInfo.title}</div>
                 <div className="basket-product-quantity">

@@ -54,6 +54,7 @@ const basketReducer = (state, action) => {
                     availability: action.product.availability,
                     mark: action.product.mark,
                     quantity: action.quantity,
+                    oldId: action.product.id,
                 };
                 basketRef.push(basketProduct);
             }
@@ -94,6 +95,7 @@ function App() {
                     availability: databaseProducts[dbProduct].availability,
                     mark: databaseProducts[dbProduct].mark,
                     quantity: databaseProducts[dbProduct].quantity,
+                    oldId: databaseProducts[dbProduct].oldId,
                 });
             }
             dispatch({ operation: "set", state: newProducts });
