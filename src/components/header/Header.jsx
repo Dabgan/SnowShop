@@ -62,7 +62,6 @@ const Header = () => {
                     </div>
 
                     <div
-                        to="/basket"
                         className="shopping-cart"
                         onClick={() => basketModal.setIsModalVisible()}
                     >

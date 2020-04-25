@@ -9,6 +9,10 @@ header {
   max-height: 70px;
 }
 
+.header-top-menu {
+  position: relative;
+}
+
 .logo {
   height: 60px;
   -webkit-user-select: none;

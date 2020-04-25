@@ -18,25 +18,30 @@
     // border: 2px solid #2ce90a;
     height: 80px;
     width: 80px;
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
 }
 .basket-product-info {
-    flex: 1 0 auto;
+    // flex: 1 0 auto;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    padding-left: 10px;
+    padding: 0 10px;
+    margin-right: auto;
     // border: 2px solid #069cc8;
 }
 .basket-product-title {
-    font-size: 1.2rem;
+    // border: 2px solid #069cc8;
+    // font-size: 1.2rem;
     font-weight: 600;
 }
 .basket-product-actions {
+    flex: 0 0 auto;
+
     display: flex;
     align-items: center;
-    // border: 2px solid #069cc8;
+    // border: 2px solid #2ce90a;
     svg {
         margin-left: 10px;
         font-size: 1.3rem;

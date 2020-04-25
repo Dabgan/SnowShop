@@ -1,15 +1,32 @@
 import React, { useContext } from "react";
-import { BasketModalContext } from "../../../components/app/App";
+import { Link } from "react-router-dom";
+import {
+    BasketModalContext,
+    BasketProductsContext,
+} from "../../../components/app/App";
 import BasketProducts from "../basket products/BasketProducts";
 import "./basketModal.css";
 
 const BasketModal = () => {
     const basketModal = useContext(BasketModalContext);
-    const isModalVisible = basketModal.isModalVisible ? "block" : "none";
+    const basketProducts = useContext(BasketProductsContext);
+    const isModalVisible = basketModal.isModalVisible ? "flex" : "none";
     return (
         <div className="basket-modal" style={{ display: isModalVisible }}>
-            <p>Those products are in basket:</p>
-            <BasketProducts additionalClass={"col-md-12"} />
+            {basketProducts.basketProducts.length ? (
+                <>
+                    <div className="basket-modal-products">
+                        <BasketProducts additionalClass={"col-md-12"} />
+                    </div>
+                    <Link to="/basket" className="my-btn basket-modal-btn">
+                        Go to order
+                    </Link>
+                </>
+            ) : (
+                <p className="basket-modal-empty-info">
+                    You don't have any products in your shopping cart!
+                </p>
+            )}
         </div>
     );
 };

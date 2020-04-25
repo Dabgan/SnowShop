@@ -18,6 +18,9 @@
 .basket-product-img {
   height: 80px;
   width: 80px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,9 +30,6 @@
 }
 
 .basket-product-info {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,15 +40,18 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-left: 10px;
+  padding: 0 10px;
+  margin-right: auto;
 }
 
 .basket-product-title {
-  font-size: 1.2rem;
   font-weight: 600;
 }
 
 .basket-product-actions {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
