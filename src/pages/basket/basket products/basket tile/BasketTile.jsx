@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const BasketTile = ({ productInfo }) => {
     const basketContext = useContext(BasketProductsContext);
+    const totalPrice = productInfo.quantity * productInfo.price;
     return (
         <div className="basket-product-container">
             <Link
@@ -21,7 +22,16 @@ const BasketTile = ({ productInfo }) => {
                 </div>
             </div>
             <div className="basket-product-actions">
-                <div className="basket-product-price">${productInfo.price}</div>
+                <div className="basket-product-prices">
+                    <div className="basket-product-total-price">
+                        ${totalPrice}
+                    </div>
+                    {productInfo.quantity > 1 && (
+                        <div className="basket-product-price">
+                            per item: ${productInfo.price}
+                        </div>
+                    )}
+                </div>
                 <Icons.FaTrashAlt
                     onClick={() =>
                         basketContext.manageBasket({
