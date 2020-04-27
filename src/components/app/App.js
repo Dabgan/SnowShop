@@ -13,7 +13,7 @@ import Footer from "../footer/Footer";
 import CategoryComponent from "../../pages/categories/CategoryComponent";
 import ProductComponent from "../../pages/products/ProductComponent";
 import { toast } from "react-toastify";
-import Products from "../Products.jsx";
+// import Products from "../Products.jsx";
 toast.configure();
 
 export const BasketProductsContext = React.createContext();
@@ -59,6 +59,28 @@ const basketReducer = (state, action) => {
                 basketRef.push(basketProduct);
             }
             return state;
+        case "update":
+            console.log(action.product);
+            basketRef
+                .orderByChild("title")
+                .equalTo(action.product.title)
+                .on("child_added", (data) => {
+                    console.log(data.val());
+                    return (
+                        (productQuantity = data.val().quantity),
+                        (newItemReference = data.ref)
+                    );
+                });
+            if (newItemReference) {
+                console.log(`to jest podane quanitt:`, action.quantity);
+                newItemReference.update({
+                    quantity:
+                        action.update === "increment"
+                            ? action.quantity + 1
+                            : action.quantity - 1,
+                });
+            }
+            return state;
         case "delete":
             const productRef = firebase
                 .database()
@@ -81,6 +103,7 @@ function App() {
 
     useEffect(() => {
         const basketProductsRef = firebase.database().ref("basket");
+        console.log(`database updated`);
         basketProductsRef.on("value", (snapshot) => {
             let databaseProducts = snapshot.val();
             let newProducts = [];

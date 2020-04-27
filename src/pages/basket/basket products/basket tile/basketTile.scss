@@ -27,6 +27,7 @@
     display: flex;
     flex-flow: column;
     justify-content: center;
+    align-items: flex-start;
     padding: 0 10px;
     margin-right: auto;
     // border: 2px solid #069cc8;
@@ -38,19 +39,25 @@
 }
 .basket-product-actions {
     flex: 0 0 auto;
-
     display: flex;
     align-items: center;
     // border: 2px solid #2ce90a;
     svg {
         margin-left: 10px;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         cursor: pointer;
         transition: color 0.3s ease-in-out;
         &:hover {
             color: #ff0404;
         }
     }
+}
+.basket-product-quantity {
+    // border: 2px solid #069cc8;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
 }
 .basket-product-prices {
     // border: 2px solid #2ce90a;

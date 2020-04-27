@@ -40,6 +40,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 0 10px;
   margin-right: auto;
 }
@@ -62,7 +65,7 @@
 
 .basket-product-actions svg {
   margin-left: 10px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   cursor: pointer;
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
@@ -70,6 +73,19 @@
 
 .basket-product-actions svg:hover {
   color: #ff0404;
+}
+
+.basket-product-quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
 .basket-product-prices {

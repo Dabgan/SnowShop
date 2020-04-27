@@ -1,0 +1,25 @@
+@import "../styles/global_variables.module.scss";
+
+.product-quantity {
+    // flex: 0 0 auto;
+    // font-size: 1.5rem;
+    border: 2px solid $shadow-color;
+    margin-left: 20px;
+    border-radius: 5px;
+    flex: 0 1 auto;
+    input {
+        width: 50px;
+        margin: 0;
+        font-size: 1.3rem;
+        border: none;
+        text-align: center;
+    }
+}
+.quantity-span {
+    margin: 0 5px;
+}
+.quantity-btn {
+    padding: 0 8px;
+    border: none;
+    font-weight: 600;
+}

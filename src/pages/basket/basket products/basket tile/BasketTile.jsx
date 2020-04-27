@@ -1,12 +1,15 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import "./basketTile.css";
 import { BasketProductsContext } from "../../../../components/app/App";
 import Icons from "../../../../icons";
 import { Link } from "react-router-dom";
+import QuantityCounter from "../../../../components/QuantityCounter";
 
-const BasketTile = ({ productInfo }) => {
+const BasketTile = ({ productInfo, quantityOptions }) => {
     const basketContext = useContext(BasketProductsContext);
-    const totalPrice = productInfo.quantity * productInfo.price;
+    const [quantity, setQuantity] = useState(productInfo.quantity);
+    const totalPrice = quantity * productInfo.price;
+    console.log(quantity);
     return (
         <div className="basket-product-container">
             <Link
@@ -17,14 +20,22 @@ const BasketTile = ({ productInfo }) => {
             </Link>
             <div className="basket-product-info">
                 <div className="basket-product-title">{productInfo.title}</div>
-                <div className="basket-product-quantity">
-                    Quantity: <span>{productInfo.quantity}</span>
-                </div>
+                {quantityOptions && (
+                    <div className="basket-product-quantity">
+                        Quantity:
+                        <QuantityCounter
+                            quantity={quantity}
+                            setQuantity={setQuantity}
+                            updateQuantity={true}
+                            productInfo={productInfo}
+                        />
+                    </div>
+                )}
             </div>
             <div className="basket-product-actions">
                 <div className="basket-product-prices">
                     <div className="basket-product-total-price">
-                        ${totalPrice}
+                        ${Math.floor(totalPrice * 100) / 100}
                     </div>
                     {productInfo.quantity > 1 && (
                         <div className="basket-product-price">
