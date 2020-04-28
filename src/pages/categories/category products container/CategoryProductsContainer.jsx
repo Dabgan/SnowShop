@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import "./categoryProductsContainer.css";
 import ProductTile from "../../../components/product tile/ProductTile";
 import { FilteredProductsContext } from "../CategoryComponent";
@@ -6,6 +6,12 @@ import { FilteredProductsContext } from "../CategoryComponent";
 function CategoryProductsContainer({ name }) {
     const filterContext = useContext(FilteredProductsContext);
     const productsOfThisCategory = filterContext.filteredProducts;
+
+    useEffect(() => {
+        filterContext.filterProducts({ filtr: "clear" });
+        console.log(`done`);
+        return filterContext.filterProducts({ filtr: "clear" });
+    }, []);
 
     return (
         <section className="products-container">

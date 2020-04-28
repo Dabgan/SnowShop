@@ -17,6 +17,7 @@
   padding: 40px;
   margin: auto;
   background: #f9f9f9;
+  min-height: calc(100vh - 319px);
 }
 
 .my-btn {

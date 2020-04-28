@@ -1,13 +1,11 @@
-import React, { useContext, useReducer } from "react";
+import React, { useReducer } from "react";
 import FiltersContainer from "./filters/FiltersContainer";
 import CategoryProductsContainer from "./category products container/CategoryProductsContainer";
 import "./filters/filtersContainer.css";
-import { ProductsContext } from "../../components/app/App";
 
 export const FilteredProductsContext = React.createContext();
 
-const CategoryComponent = ({ categoryName }) => {
-    const products = useContext(ProductsContext);
+const CategoryComponent = ({ categoryName, products }) => {
     const reducer = (state, action) => {
         switch (action.filtr) {
             case "mark":
@@ -27,10 +25,6 @@ const CategoryComponent = ({ categoryName }) => {
                 return state;
         }
     };
-
-    const productsOfThisCategory = products.filter((product) => {
-        return product.category === categoryName;
-    });
 
     const filtrProductsBy = (state, action, param) => {
         const newState = state.filter((product) => {
@@ -70,17 +64,27 @@ const CategoryComponent = ({ categoryName }) => {
         return sortedArray;
     };
 
+    const productsOfThisCategory = products.filter((product) => {
+        return product.category === categoryName;
+    });
+
     const [filteredProducts, dispatch] = useReducer(
         reducer,
         productsOfThisCategory
     );
 
+    console.log(`those I pass down: `, filteredProducts);
+    console.log(`they just got filtered:`, productsOfThisCategory);
+
     return (
         <FilteredProductsContext.Provider
-            value={{ filteredProducts, filterProducts: dispatch }}
+            value={{
+                filteredProducts,
+                filterProducts: dispatch,
+                XD: productsOfThisCategory,
+            }}
         >
             <div className="category-container">
-                {/* <ScrollToTopOnMount /> */}
                 <FiltersContainer name={categoryName} />
                 <CategoryProductsContainer name={categoryName} />
             </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import ProductContainer from "./product container/ProductContainer";
-import DisplayProducts from "../../components/featured products/DisplayProducts";
+import DisplayProducts from "../../components/display products/DisplayProducts";
 
 const ProductComponent = ({ productInfo }) => {
     return (

@@ -2,7 +2,7 @@
 
 .basket-container {
     // border: 2px solid #2ce90a;
-    padding: 20px;
+    // padding: 20px;
 }
 .basket-summary {
     // border: 2px solid #069cc8;
@@ -39,4 +39,22 @@
 .basket-summary-btn {
     // margin: 0;
     align-self: flex-end;
+}
+
+/* ---------------------------------------------------
+     MEDIA QUERIES
+----------------------------------------------------- */
+
+@media (min-width: 1181px) {
+}
+@media (min-width: 320px) and (max-width: 1181px) {
+    .basket-summary {
+        // border: 2px solid #f11b1b;
+        margin-top: 20px;
+        // padding: 30px;
+    }
+    .summary-info {
+        // border: 2px solid #069cc8;
+        padding: 20px;
+    }
 }

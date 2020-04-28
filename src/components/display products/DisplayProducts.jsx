@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import "./displayProducts.css";
 import ProductTile from "../product tile/ProductTile";
-import { ProductsContext } from "../../components/app/App";
+import { ProductsContext } from "../../routes/Routes";
 
-function FeaturedProducts({ title }) {
+function DisplayProducts({ title }) {
     const products = useContext(ProductsContext);
     return (
         <div className="featured-products">
@@ -25,4 +25,4 @@ function FeaturedProducts({ title }) {
     );
 }
 
-export default FeaturedProducts;
+export default DisplayProducts;

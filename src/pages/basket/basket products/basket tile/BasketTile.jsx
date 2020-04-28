@@ -11,7 +11,7 @@ const BasketTile = ({ productInfo, quantityOptions }) => {
     const totalPrice = quantity * productInfo.price;
     console.log(quantity);
     return (
-        <div className="basket-product-container">
+        <div className="basket-product">
             <Link
                 to={`/${productInfo.category}/${productInfo.oldId}`}
                 className="basket-product-img"

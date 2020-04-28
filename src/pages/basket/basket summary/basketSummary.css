@@ -1,7 +1,3 @@
-.basket-container {
-  padding: 20px;
-}
-
 .summary-info {
   font-size: 1rem;
   display: -webkit-box;
@@ -33,5 +29,17 @@
 .basket-summary-btn {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+/* ---------------------------------------------------
+     MEDIA QUERIES
+----------------------------------------------------- */
+@media (min-width: 320px) and (max-width: 1181px) {
+  .basket-summary {
+    margin-top: 20px;
+  }
+  .summary-info {
+    padding: 20px;
+  }
 }
 /*# sourceMappingURL=basketSummary.css.map */
