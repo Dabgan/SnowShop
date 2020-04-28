@@ -6,6 +6,7 @@ import "./App.css";
 
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
+import ProductComponent from "../../pages/products/ProductComponent";
 import { toast } from "react-toastify";
 toast.configure();
 
@@ -117,7 +118,7 @@ function App() {
     }, []);
 
     return (
-        <Router>
+        <Router forceRefresh={true}>
             <BasketProductsContext.Provider
                 value={{
                     basketProducts,

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import { Router, Switch, Route } from "react-router-dom";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import About from "../pages/informations/About/About";
 import Contact from "../pages/informations/Contact/Contact";
 import firebase from "../firebase";
@@ -12,10 +11,7 @@ import Newsletter from "../components/newsletter/Newsletter";
 import DisplayProducts from "../components/display products/DisplayProducts";
 import CategoryComponent from "../pages/categories/CategoryComponent";
 import ProductComponent from "../pages/products/ProductComponent";
-import PathNotFound from "./PathNotFound";
-// import CategoryComponent from "../pages/categories/CategoryComponent";
-// import { createBrowserHistory as history } from "history";
-// import history from "../history";
+import PathNotFound from "../pages/404 page/PathNotFound";
 
 export const ProductsContext = React.createContext();
 
@@ -123,8 +119,11 @@ const Routes = () => {
                             />
                         </Route>
                     ))}
-                    <Route exact path="*">
+                    <Route to="/404">
                         <PathNotFound />
+                    </Route>
+                    <Route path="*">
+                        <Redirect exact to="/404" />
                     </Route>
                 </Switch>
             </ProductsContext.Provider>
