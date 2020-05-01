@@ -2,7 +2,7 @@ import React from "react";
 import "./categoriesMenu.css";
 import CategoriesMenuItem from "./CategoriesMenuItem";
 
-function CategoriesMenu() {
+const CategoriesMenu = () => {
     return (
         <div className=" navbar navbar-expand-lg navbar-dark bg-dark header-categories">
             <div
@@ -19,6 +19,6 @@ function CategoriesMenu() {
             </div>
         </div>
     );
-}
+};
 
 export default CategoriesMenu;

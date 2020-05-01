@@ -1,7 +1,7 @@
 import React from "react";
 import "./newsletter.css";
 
-function Newsletter() {
+const Newsletter = () => {
     return (
         <div className="newsletter-container">
             <form className="newsletter-form">
@@ -24,6 +24,6 @@ function Newsletter() {
             </form>
         </div>
     );
-}
+};
 
 export default Newsletter;

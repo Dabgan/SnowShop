@@ -3,7 +3,7 @@ import "./footer.css";
 import { Link } from "react-router-dom";
 import Icons from "../../icons";
 
-function Footer() {
+const Footer = () => {
     const footerLinks = [
         { name: "about", path: "about", id: 0 },
         { name: "contact", path: "contact", id: 2 },
@@ -42,6 +42,6 @@ function Footer() {
             </a>
         </footer>
     );
-}
+};
 
 export default Footer;

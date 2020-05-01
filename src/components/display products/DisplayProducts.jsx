@@ -3,7 +3,7 @@ import "./displayProducts.css";
 import ProductTile from "../product tile/ProductTile";
 import { ProductsContext } from "../../routes/Routes";
 
-function DisplayProducts({ title }) {
+const DisplayProducts = ({ title }) => {
     const products = useContext(ProductsContext);
     return (
         <div className="featured-products">
@@ -23,6 +23,6 @@ function DisplayProducts({ title }) {
             </div>
         </div>
     );
-}
+};
 
 export default DisplayProducts;

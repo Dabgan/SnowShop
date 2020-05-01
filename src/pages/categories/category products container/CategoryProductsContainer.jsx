@@ -3,7 +3,7 @@ import "./categoryProductsContainer.css";
 import ProductTile from "../../../components/product tile/ProductTile";
 import { FilteredProductsContext } from "../CategoryComponent";
 
-function CategoryProductsContainer({ name }) {
+const CategoryProductsContainer = ({ name }) => {
     const filterContext = useContext(FilteredProductsContext);
     const productsOfThisCategory = filterContext.filteredProducts;
 
@@ -53,6 +53,6 @@ function CategoryProductsContainer({ name }) {
             </div>
         </section>
     );
-}
+};
 
 export default CategoryProductsContainer;

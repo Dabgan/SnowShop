@@ -2,7 +2,7 @@ import React from "react";
 import "./searchBar.css";
 import Icons from "../../../icons";
 
-function SearchBar() {
+const SearchBar = () => {
     return (
         <form className="search-bar">
             <input type="text" placeholder="Search" />
@@ -11,6 +11,6 @@ function SearchBar() {
             </button>
         </form>
     );
-}
+};
 
 export default SearchBar;

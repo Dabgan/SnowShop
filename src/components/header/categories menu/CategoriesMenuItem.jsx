@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function CategoriesMenuItem(props) {
+const CategoriesMenuItem = (props) => {
     const { name } = props;
     return (
         <li className="nav-item categories-item">
@@ -15,6 +15,6 @@ function CategoriesMenuItem(props) {
             </NavLink>
         </li>
     );
-}
+};
 
 export default CategoriesMenuItem;
