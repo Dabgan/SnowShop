@@ -73,9 +73,6 @@ const CategoryComponent = ({ categoryName, products }) => {
         productsOfThisCategory
     );
 
-    console.log(`those I pass down: `, filteredProducts);
-    console.log(`they just got filtered:`, productsOfThisCategory);
-
     return (
         <FilteredProductsContext.Provider
             value={{

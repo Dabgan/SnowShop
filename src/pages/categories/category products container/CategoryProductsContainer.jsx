@@ -9,7 +9,6 @@ function CategoryProductsContainer({ name }) {
 
     useEffect(() => {
         filterContext.filterProducts({ filtr: "clear" });
-        console.log(`done`);
         return filterContext.filterProducts({ filtr: "clear" });
     }, []);
 

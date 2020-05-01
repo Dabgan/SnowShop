@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useReducer } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import firebase from "../../firebase.js";
-import Routes from "../../routes/Routes.js";
+import Routes from "../../routes/Routes.jsx";
 import "./App.css";
 
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import ProductComponent from "../../pages/products/ProductComponent";
 import { toast } from "react-toastify";
+import ScrollToTopOnMount from "../ScrollToTopOnMount.jsx";
+import Icons from "../../icons.js";
 toast.configure();
 
 export const BasketProductsContext = React.createContext();
@@ -92,10 +93,10 @@ const basketReducer = (state, action) => {
 function App() {
     const [basketProducts, dispatch] = useReducer(basketReducer, []);
     const [isModalVisible, setIsModalVisible] = useReducer(modalReducer, false);
+    const [loader, setLoader] = useState(true);
 
     useEffect(() => {
         const basketProductsRef = firebase.database().ref("basket");
-        console.log(`database updated`);
         basketProductsRef.on("value", (snapshot) => {
             let databaseProducts = snapshot.val();
             let newProducts = [];
@@ -114,11 +115,13 @@ function App() {
                 });
             }
             dispatch({ operation: "set", state: newProducts });
+            setLoader(false);
         });
     }, []);
 
     return (
-        <Router forceRefresh={true}>
+        <Router>
+            <ScrollToTopOnMount />
             <BasketProductsContext.Provider
                 value={{
                     basketProducts,
@@ -130,8 +133,18 @@ function App() {
                 >
                     <Header />
                     <>
-                        <div className="main-container">
-                            <Routes />
+                        <div className="main-wrapper">
+                            <Icons.FaRegSnowflake
+                                size="10rem"
+                                className="icon-spin"
+                                style={{ display: loader ? "block" : "none" }}
+                            ></Icons.FaRegSnowflake>
+                            <div
+                                className="main-container"
+                                style={{ display: loader ? "none" : "block" }}
+                            >
+                                <Routes />
+                            </div>
                         </div>
                     </>
                     <Footer />

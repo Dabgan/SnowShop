@@ -12,11 +12,16 @@
 }
 
 .main-container {
-    max-width: 1220px;
+    width: 1220px;
     padding: 40px;
-    margin: auto;
     background: $primary-color;
     min-height: calc(100vh - 319px);
+}
+.main-wrapper {
+    min-height: calc(100vh - 319px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .my-btn {

@@ -15,6 +15,7 @@ import {
     FaClock,
     FaSnowplow,
     FaSnowman,
+    FaRegSnowflake,
 } from "react-icons/fa";
 const Icons = {
     FaUser,
@@ -33,6 +34,7 @@ const Icons = {
     FaClock,
     FaSnowplow,
     FaSnowman,
+    FaRegSnowflake,
 };
 
 export default Icons;

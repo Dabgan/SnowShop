@@ -9,7 +9,6 @@ const BasketTile = ({ productInfo, quantityOptions }) => {
     const basketContext = useContext(BasketProductsContext);
     const [quantity, setQuantity] = useState(productInfo.quantity);
     const totalPrice = quantity * productInfo.price;
-    console.log(quantity);
     return (
         <div className="basket-product">
             <Link

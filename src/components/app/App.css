@@ -1,3 +1,30 @@
+.icon-spin {
+  -webkit-animation: icon-spin 0.3s infinite linear;
+          animation: icon-spin 0.3s infinite linear;
+}
+
+@-webkit-keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -13,11 +40,23 @@
 }
 
 .main-container {
-  max-width: 1220px;
+  width: 1220px;
   padding: 40px;
-  margin: auto;
   background: #f9f9f9;
   min-height: calc(100vh - 319px);
+}
+
+.main-wrapper {
+  min-height: calc(100vh - 319px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .my-btn {

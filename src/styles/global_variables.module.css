@@ -1,1 +1,27 @@
-/* No CSS *//*# sourceMappingURL=global_variables.module.css.map */
+.icon-spin {
+  -webkit-animation: icon-spin 0.3s infinite linear;
+          animation: icon-spin 0.3s infinite linear;
+}
+
+@-webkit-keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+/*# sourceMappingURL=global_variables.module.css.map */

@@ -3,7 +3,6 @@ import Icons from "../../icons";
 import { Link } from "react-router-dom";
 import "./pathNotFound.css";
 const PathNotFound = () => {
-    console.log(Icons);
     return (
         <div className="container-404">
             <div className="snowman-404">
@@ -14,7 +13,7 @@ const PathNotFound = () => {
                 <h1>Oh no! What have you done?</h1>
                 <p>
                     Just kidding. Seems like page you are looking for is
-                    missing.
+                    missing. Dont panic.
                 </p>
                 <Link to="/" className="my-btn">
                     Go back to homepage

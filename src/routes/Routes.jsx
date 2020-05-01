@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import About from "../pages/informations/About/About";
 import Contact from "../pages/informations/Contact/Contact";
 import firebase from "../firebase";
@@ -19,6 +19,7 @@ const Routes = () => {
     const [otherRoutes, setOtherRoutes] = useState([]);
     const [categories, setCategories] = useState([]);
     const [products, setProducts] = useState([]);
+    const [errorPage, setErrorPage] = useState(false);
 
     useEffect(() => {
         const routesRef = firebase.database().ref("other routes");
@@ -68,7 +69,9 @@ const Routes = () => {
                     mark: databaseProducts[dbProduct].mark,
                 });
             }
+
             setProducts(newProducts);
+            setErrorPage(!errorPage);
         });
     }, []);
 
@@ -108,9 +111,9 @@ const Routes = () => {
                     ))}
                     {categories.map((category) => (
                         <Route
+                            exact
                             path={`/${category.name}`}
                             key={category.id}
-                            exact
                         >
                             <CategoryComponent
                                 categoryName={category.name}
@@ -119,12 +122,11 @@ const Routes = () => {
                             />
                         </Route>
                     ))}
-                    <Route to="/404">
-                        <PathNotFound />
-                    </Route>
-                    <Route path="*">
-                        <Redirect exact to="/404" />
-                    </Route>
+                    {errorPage && (
+                        <Route to="*">
+                            <PathNotFound />
+                        </Route>
+                    )}
                 </Switch>
             </ProductsContext.Provider>
         </>
