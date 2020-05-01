@@ -1,3 +1,30 @@
+.icon-spin {
+  -webkit-animation: icon-spin 0.3s infinite linear;
+          animation: icon-spin 0.3s infinite linear;
+}
+
+@-webkit-keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
 .header-categories {
   padding: 0 !important;
 }
@@ -65,6 +92,13 @@
 .categories-link:hover:after {
   width: 100%;
   left: 0;
+}
+
+.categories-selected {
+  background: -webkit-gradient(linear, left top, right top, from(#30cfd0), to(#b3d5f0));
+  background: linear-gradient(to right, #30cfd0 0%, #b3d5f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* ---------------------------------------------------

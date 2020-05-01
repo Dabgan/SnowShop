@@ -1,3 +1,5 @@
+@import "../../../styles/global_variables.module.scss";
+
 .header-categories {
     padding: 0 !important;
 }
@@ -55,8 +57,9 @@
     }
 }
 .categories-selected {
-    // border: 2px solid #2ce90a !important;
-    // font-size: 55px !important;
+    background: linear-gradient(to right, #30cfd0 0%, #b3d5f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* ---------------------------------------------------
