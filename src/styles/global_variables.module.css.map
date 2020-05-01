@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAYA,AAAA,UAAU,CAAC;EACP,SAAS,EAAE,8BAA8B;CAC5C;;AAED,UAAU,CAAV,SAAU;EACN,EAAE;IACE,SAAS,EAAE,YAAY;;EAE3B,IAAI;IACA,SAAS,EAAE,cAAc",
+    "mappings": "",
     "sources": [
         "global_variables.module.scss"
     ],

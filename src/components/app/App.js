@@ -8,7 +8,9 @@ import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import { toast } from "react-toastify";
 import ScrollToTopOnMount from "../ScrollToTopOnMount.jsx";
+
 import Icons from "../../icons.js";
+import ToTopButton from "../ToTopButton.jsx";
 toast.configure();
 
 export const BasketProductsContext = React.createContext();
@@ -122,6 +124,7 @@ function App() {
     return (
         <Router>
             <ScrollToTopOnMount />
+            <ToTopButton />
             <BasketProductsContext.Provider
                 value={{
                     basketProducts,
@@ -136,7 +139,7 @@ function App() {
                         <div className="main-wrapper">
                             <Icons.FaRegSnowflake
                                 size="10rem"
-                                className="icon-spin"
+                                className="icon-spinning"
                                 style={{ display: loader ? "block" : "none" }}
                             ></Icons.FaRegSnowflake>
                             <div

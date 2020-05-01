@@ -9,16 +9,3 @@ $shadow-color: #cecece; // color for shadows/hovers
 $footer-text-color: #868686;
 
 $product-box-shadow: 2px 2px 3px 3px #cecece;
-
-.icon-spin {
-    animation: icon-spin 0.3s infinite linear;
-}
-
-@keyframes icon-spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(359deg);
-    }
-}

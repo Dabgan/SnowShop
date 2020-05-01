@@ -35,11 +35,6 @@ const Footer = () => {
             <div className="footer-copyright">
                 <small>Copyright &copy; Gabriel Daniluk</small>
             </div>
-            <a href="/#">
-                <button className=" to-top-btn">
-                    <Icons.FaChevronCircleUp size="3rem" />
-                </button>
-            </a>
         </footer>
     );
 };

@@ -10,6 +10,9 @@
 *::after {
     box-sizing: inherit;
 }
+html {
+    scroll-behavior: auto !important;
+}
 
 .main-container {
     width: 1220px;
@@ -49,6 +52,19 @@
     background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@keyframes icon-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+.icon-spinning {
+    animation: icon-spin 2s infinite linear;
 }
 
 /* ---------------------------------------------------

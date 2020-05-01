@@ -56,20 +56,6 @@ html {
     border-top: 1px solid $footer-text-color;
     text-align: right;
 }
-.to-top-btn {
-    position: absolute;
-    top: 30%;
-    right: 100px;
-
-    border: none;
-    background: inherit;
-    color: $footer-text-color;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    &:hover {
-        color: #ffffff;
-        transform: scale(1.1);
-    }
-}
 /* ---------------------------------------------------
     MEDIA QUERIES
 ----------------------------------------------------- */
