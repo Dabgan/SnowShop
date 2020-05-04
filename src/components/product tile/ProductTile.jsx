@@ -2,20 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./productTile.css";
 
-const ProductTile = ({
-    productImg,
-    productTitle,
-    price,
-    crossedPrice,
-    productPath,
-    newClass = "",
-}) => {
+const ProductTile = ({ productInfo, newClass = "" }) => {
+    const { img, title, price, crossedPrice } = productInfo;
+    const productPath = `/${productInfo.category}/${productInfo.id}`;
+
     return (
         <Link to={productPath} className={`product-tile ${newClass}`}>
             <div className="product-img-container">
-                <img src={productImg} alt="item number X" />
+                <img src={img} alt="item number X" />
             </div>
-            <div className="product-info">{productTitle}</div>
+            <div className="product-info">{title}</div>
             <div className="product-price product-price-crossed">
                 ${crossedPrice}
             </div>

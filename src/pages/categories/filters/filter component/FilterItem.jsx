@@ -10,7 +10,6 @@ function FilterItem({ name, filterName, range }) {
                 type="radio"
                 name={filterName}
                 onChange={(e) => {
-                    console.log(e.target.value);
                     filterContext.filterProducts({
                         name,
                         filtr: filterName,

@@ -11,14 +11,7 @@ const DisplayProducts = ({ title }) => {
 
             <div className="featured-products-tiles">
                 {products.slice(0, 4).map((product) => (
-                    <ProductTile
-                        productImg={product.img}
-                        productTitle={product.title}
-                        price={product.price}
-                        crossedPrice={product.crossedPrice}
-                        key={product.id}
-                        productPath={`/${product.category}/${product.id}`}
-                    />
+                    <ProductTile productInfo={product} />
                 ))}
             </div>
         </div>

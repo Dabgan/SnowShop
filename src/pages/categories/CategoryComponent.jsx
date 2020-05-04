@@ -78,7 +78,6 @@ const CategoryComponent = ({ categoryName, products }) => {
             value={{
                 filteredProducts,
                 filterProducts: dispatch,
-                XD: productsOfThisCategory,
             }}
         >
             <div className="category-container">

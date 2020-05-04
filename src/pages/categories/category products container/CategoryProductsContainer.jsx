@@ -41,13 +41,8 @@ const CategoryProductsContainer = ({ name }) => {
             <div className="category-products">
                 {productsOfThisCategory.map((product) => (
                     <ProductTile
-                        productImg={product.img}
-                        productTitle={product.title}
-                        price={product.price}
-                        crossedPrice={product.crossedPrice}
-                        key={product.id}
+                        productInfo={product}
                         newClass="category-tile"
-                        productPath={`/${product.category}/${product.id}`}
                     />
                 ))}
             </div>
