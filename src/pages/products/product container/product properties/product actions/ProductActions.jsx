@@ -34,6 +34,7 @@ const ProductActions = ({ productInfo }) => {
                     className="my-btn add-to-cart-btn"
                     onClick={() => {
                         notify();
+                        document.title = `SnowShop (${basketContext.basketProducts.length})`;
                         basketContext.manageBasket({
                             operation: "add",
                             product: productInfo,

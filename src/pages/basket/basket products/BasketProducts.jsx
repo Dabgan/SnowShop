@@ -4,6 +4,7 @@ import { BasketProductsContext } from "../../../components/app/App";
 
 const BasketProducts = () => {
     const basketContext = useContext(BasketProductsContext);
+
     return (
         <div className={"col-md-6"}>
             <div className="row basket-products-container">

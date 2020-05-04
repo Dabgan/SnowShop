@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
     BasketModalContext,
     BasketProductsContext,
 } from "../../../components/app/App";
-import BasketProducts from "../basket products/BasketProducts";
 import "./basketModal.css";
 import BasketTile from "../basket products/basket tile/BasketTile";
 
@@ -12,6 +11,18 @@ const BasketModal = () => {
     const basketModal = useContext(BasketModalContext);
     const basketProducts = useContext(BasketProductsContext);
     const isModalVisible = basketModal.isModalVisible ? "flex" : "none";
+    const basketLength = basketProducts.basketProducts.length;
+    const [docTitle, setDocTitle] = useState(document.title);
+
+    useEffect(() => {
+        document.title = docTitle;
+    }, [docTitle]);
+
+    useEffect(() => {
+        let newTitle = basketLength ? `SnowShop (${basketLength})` : `SnowShop`;
+        setDocTitle(newTitle);
+    }, [basketLength]);
+
     return (
         <div className="basket-modal" style={{ display: isModalVisible }}>
             {basketProducts.basketProducts.length ? (

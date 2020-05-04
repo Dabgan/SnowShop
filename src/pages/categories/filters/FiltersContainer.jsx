@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import FilterComponent from "./filter component/FilterComponent";
 import { ProductsContext } from "../../../routes/Routes";
 import { FilteredProductsContext } from "../CategoryComponent";
