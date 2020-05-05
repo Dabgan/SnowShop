@@ -11,6 +11,7 @@ import ScrollToTopOnMount from "../ScrollToTopOnMount.jsx";
 
 import Icons from "../../icons.js";
 import ToTopButton from "../ToTopButton.jsx";
+import Products from "../Products.jsx";
 toast.configure();
 
 export const BasketProductsContext = React.createContext();
@@ -134,6 +135,7 @@ function App() {
                 <BasketModalContext.Provider
                     value={{ isModalVisible, setIsModalVisible }}
                 >
+                    {/* <Products /> */}
                     <Header />
                     <>
                         <div className="main-wrapper">

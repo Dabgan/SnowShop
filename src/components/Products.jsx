@@ -11,7 +11,7 @@ import snowboard_set from "./../assets/images/products/snowboard_set.jpg";
 import ProductTile from "./product tile/ProductTile";
 
 const Products = () => {
-    const [products, setProducts] = useState();
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
         const productsRef = firebase.database().ref("productsTest");
@@ -35,20 +35,20 @@ const Products = () => {
     }, []);
 
     const addProduct = () => {
-        const productsRef = firebase.database().ref("productsTest");
+        const productsRef = firebase.database().ref("products");
 
-        testProducts.map((product) => productsRef.push(product));
+        // testProducts.map((product) => productsRef.push(product));
 
-        // const product = {
-        //     img: image,
-        //     title: "Beliar Emperor Snowboard Set",
-        //     price: 229.99,
-        //     crossedPrice: 399.99,
-        //     category: "boots",
-        //     availability: 2,
-        //     mark: "beliar",
-        // };
-        // productsRef.push(product);
+        const product = {
+            img: snowboard_set,
+            title: "Eagle Slash Snowboard Set",
+            price: 399.99,
+            crossedPrice: 699.99,
+            category: "boots",
+            availability: 1,
+            mark: "eagle slash",
+        };
+        productsRef.push(product);
     };
 
     // const addCategory = () => {
@@ -144,16 +144,9 @@ const Products = () => {
             <button className="my-btn" onClick={() => addProduct()}>
                 Add Product to database
             </button>
-            {/* {testProducts.map((product) => (
-                <ProductTile
-                    productImg={product.img}
-                    productTitle={product.title}
-                    price={product.price}
-                    crossedPrice={product.crossedPrice}
-                    key={product.id}
-                    productPath={`/${product.category}/${product.id}`}
-                />
-            ))} */}
+            {products.map((product) => (
+                <ProductTile productInfo={product} key={product.id} />
+            ))}
         </div>
     );
 };

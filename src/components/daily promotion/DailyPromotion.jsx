@@ -3,6 +3,7 @@ import "./dailyPromotion.css";
 import dailyItem from "./../../assets/images/products/snowboard_set.jpg";
 import Countdown from "./countdown/Countdown";
 import Icons from "../../icons";
+import { Link } from "react-router-dom";
 
 const DailyPromotion = () => {
     return (
@@ -28,9 +29,12 @@ const DailyPromotion = () => {
                     <span className="price-crossed">$699,99</span>
                 </span>
 
-                <button className="my-btn daily-btn">
+                <Link
+                    to="/boots/-M6_tqK4sIFon-LaavvI"
+                    className="my-btn daily-btn"
+                >
                     Check promotion <Icons.FaLongArrowAltRight />
-                </button>
+                </Link>
             </div>
         </div>
     );
