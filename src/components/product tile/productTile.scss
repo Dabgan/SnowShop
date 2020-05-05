@@ -1,11 +1,12 @@
-@import "../../../styles/global_variables.module.scss";
+@import "../../styles/global_variables.module.scss";
 
 .product-tile {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
     text-align: center;
-    margin: 0 15px;
+    max-width: 260px;
+    margin: 0 auto;
     padding: 15px;
     background-color: $secondary-color;
     border-radius: 5px;
@@ -25,11 +26,12 @@
     }
 }
 .product-img-container {
-    min-height: 220px;
+    min-height: 100px;
+    flex-grow: 1;
     display: flex;
 }
 .product-info {
-    margin: 20px 0;
+    margin: 10px 0;
 }
 .product-price {
     font-weight: 600;
@@ -50,7 +52,7 @@
 @media (min-width: 320px) and (max-width: 580px) {
     .product-tile {
         margin: 15px auto;
-        width: 180px;
+        width: 200px;
         padding: 15px;
     }
 }
