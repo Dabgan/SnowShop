@@ -9,7 +9,7 @@ function FilterItem({ name, filterName, range }) {
             <input
                 type="radio"
                 name={filterName}
-                onChange={(e) => {
+                onClick={() => {
                     filterContext.filterProducts({
                         name,
                         filtr: filterName,

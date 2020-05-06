@@ -19,7 +19,7 @@ export const BasketProductsContext = React.createContext();
 export const BasketModalContext = React.createContext();
 
 const modalReducer = (state, action) => {
-    return !state;
+    return action ? false : !state;
 };
 
 const basketReducer = (state, action) => {

@@ -31,7 +31,9 @@ const ContactForm = () => {
                         name="name"
                         id="contact-name"
                         className="form-control"
-                        onKeyUp={e => testValue(e.target, /^[\p{L} -]{2,}$/gu)}
+                        onKeyUp={(e) =>
+                            testValue(e.target, /^[\p{L} -]{2,}$/gu)
+                        }
                         required
                         minLength="2"
                     />
@@ -49,7 +51,7 @@ const ContactForm = () => {
                         name="email"
                         id="contact-email"
                         className="form-control"
-                        onKeyUp={e =>
+                        onKeyUp={(e) =>
                             testValue(
                                 e.target,
                                 /^([\w.-])+@([a-zA-Z0-9-]+)\.([a-z.]+)$/g

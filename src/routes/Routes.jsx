@@ -12,6 +12,7 @@ import DisplayProducts from "../components/display products/DisplayProducts";
 import CategoryComponent from "../pages/categories/CategoryComponent";
 import ProductComponent from "../pages/products/ProductComponent";
 import PathNotFound from "../pages/404 page/PathNotFound";
+import CloseBasketModal from "../components/CloseBasketModal";
 
 export const ProductsContext = React.createContext();
 
@@ -89,14 +90,17 @@ const Routes = () => {
                         <BasketComponent />
                     </Route>
                     <Route exact path="/about">
+                        <CloseBasketModal />
                         <About />
                     </Route>
                     <Route exact path="/contact">
+                        <CloseBasketModal />
                         <Contact />
                     </Route>
 
                     {otherRoutes.map((link) => (
                         <Route exact path={`/${link.path}`} key={link.id}>
+                            <CloseBasketModal />
                             <InformationComponent headerName={link.name} />
                         </Route>
                     ))}
@@ -106,6 +110,7 @@ const Routes = () => {
                             path={`/${product.category}/${product.id}`}
                             key={product.id}
                         >
+                            <CloseBasketModal />
                             <ProductComponent productInfo={product} />
                         </Route>
                     ))}
@@ -115,6 +120,7 @@ const Routes = () => {
                             path={`/${category.name}`}
                             key={category.id}
                         >
+                            <CloseBasketModal />
                             <CategoryComponent
                                 categoryName={category.name}
                                 key={category.id}

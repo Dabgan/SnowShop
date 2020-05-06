@@ -54,8 +54,8 @@ const Header = () => {
                     </div>
 
                     <div className="login">
-                        <Icons.FaUser />
-                        <p>Login</p>
+                        {/* <Icons.FaUser /> */}
+                        {/* <p>Login</p> */}
                     </div>
 
                     <div

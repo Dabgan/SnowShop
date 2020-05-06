@@ -43,6 +43,7 @@ const CategoryProductsContainer = ({ name }) => {
                     <ProductTile
                         productInfo={product}
                         newClass="category-tile"
+                        key={product.id}
                     />
                 ))}
             </div>

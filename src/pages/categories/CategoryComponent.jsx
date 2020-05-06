@@ -2,6 +2,7 @@ import React, { useReducer } from "react";
 import FiltersContainer from "./filters/FiltersContainer";
 import CategoryProductsContainer from "./category products container/CategoryProductsContainer";
 import "./filters/filtersContainer.css";
+import CloseBasketModal from "../../components/CloseBasketModal";
 
 export const FilteredProductsContext = React.createContext();
 

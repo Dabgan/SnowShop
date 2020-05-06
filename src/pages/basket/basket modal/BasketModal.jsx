@@ -24,7 +24,11 @@ const BasketModal = () => {
     }, [basketLength]);
 
     return (
-        <div className="basket-modal" style={{ display: isModalVisible }}>
+        <div
+            className="basket-modal"
+            style={{ display: isModalVisible }}
+            onFocus={() => console.log(`GOT FOCUS MODAL`)}
+        >
             {basketProducts.basketProducts.length ? (
                 <>
                     <div className="row">
@@ -37,7 +41,11 @@ const BasketModal = () => {
                         ))}
                     </div>
 
-                    <Link to="/basket" className="my-btn basket-modal-btn">
+                    <Link
+                        to="/basket"
+                        className="my-btn basket-modal-btn"
+                        onClick={() => basketModal.setIsModalVisible()}
+                    >
                         Go to order
                     </Link>
                 </>

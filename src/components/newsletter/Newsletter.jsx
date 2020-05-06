@@ -16,7 +16,12 @@ const Newsletter = () => {
                     </p>
                 </div>
                 <div className="newsletter-input-container">
-                    <input type="text" placeholder="Type your email" />
+                    <input
+                        required
+                        type="email"
+                        name="email"
+                        placeholder="Type your email"
+                    />
                 </div>
                 <button type="submit" className="my-btn newsletter-btn">
                     Sign me!

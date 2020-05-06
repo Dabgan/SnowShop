@@ -57,7 +57,7 @@ export class Countdown extends Component {
         setInterval(this.setCountdownTimer, 1000);
     }
     componentWillUnmount() {
-        setInterval(this.setCountdownTimer, 1000);
+        return setInterval(this.setCountdownTimer, 1000);
     }
     render() {
         const { addLeadingZeros } = this;

@@ -6,7 +6,7 @@ const ProductDescription = () => {
         { name: "Mark", value: "GHyper X 3", id: 1 },
         { name: "Lens Style", value: "Spherical", id: 2 },
         { name: "Lens Color", value: "Mirror Coated/Clear", id: 3 },
-        { name: "Fit", value: "Youth/Adult", id: 4 }
+        { name: "Fit", value: "Youth/Adult", id: 4 },
     ];
 
     return (
@@ -97,7 +97,7 @@ const ProductDescription = () => {
                     role="tabpanel"
                     aria-labelledby="product-details-tab"
                 >
-                    {productDetails.map(details => (
+                    {productDetails.map((details) => (
                         <div className="row details-row" key={details.id}>
                             <div className="col-md-3 details-column">
                                 {details.name}:

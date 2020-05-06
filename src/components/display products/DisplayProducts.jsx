@@ -11,7 +11,7 @@ const DisplayProducts = ({ title }) => {
 
             <div className="featured-products-tiles">
                 {products.slice(0, 4).map((product) => (
-                    <ProductTile productInfo={product} />
+                    <ProductTile productInfo={product} key={product.id} />
                 ))}
             </div>
         </div>

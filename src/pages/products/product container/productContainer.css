@@ -15,4 +15,13 @@
 .modal-body img {
   width: 100%;
 }
+
+/* ---------------------------------------------------
+     MEDIA QUERIES
+----------------------------------------------------- */
+@media (min-width: 320px) and (max-width: 1181px) {
+  .product-container {
+    margin: 0 0 !important;
+  }
+}
 /*# sourceMappingURL=productContainer.css.map */
