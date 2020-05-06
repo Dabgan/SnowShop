@@ -124,6 +124,7 @@ function App() {
 
     return (
         <Router>
+            {/* <Products /> */}
             <ScrollToTopOnMount />
             <ToTopButton />
             <BasketProductsContext.Provider

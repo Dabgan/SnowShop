@@ -29,28 +29,20 @@
 
 .category-products {
     display: flex;
+    padding: 20px;
     flex-flow: row wrap;
-    padding: 20px 0;
-}
-.category-tile {
-    margin: 10px auto;
-
-    min-height: 350px;
+    justify-content: flex-start;
 }
 
 /* ---------------------------------------------------
      MEDIA QUERIES
 ----------------------------------------------------- */
-
-@media (min-width: 1181px) {
-}
 @media (min-width: 320px) and (max-width: 1181px) {
     .products-container {
         padding: 15px;
     }
     .category-tile {
         margin: 10px auto;
-        max-width: 290px;
-        min-height: 350px;
+        max-width: 180px;
     }
 }
