@@ -1,19 +1,16 @@
-.featured-products {
+.display-products {
     padding: 10px;
     display: flex;
     flex-flow: column;
-    margin: 40px 0;
-    // background-color: #ffffff;
     p {
         margin-top: 10px;
         align-self: flex-start;
     }
     a {
         font-size: 0.9rem;
-        // margin: 0 50px 10px 0;
     }
 }
-.featured-products-tiles {
+.display-products-tiles {
     display: flex;
     margin: 20px 0;
 }
@@ -28,7 +25,7 @@
 ----------------------------------------------------- */
 
 @media (min-width: 320px) and (max-width: 580px) {
-    .featured-products-tiles {
+    .display-products-tiles {
         flex-flow: row wrap;
         margin: 10px;
     }

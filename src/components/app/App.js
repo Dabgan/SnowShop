@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import firebase from "../../firebase.js";
 import Routes from "../../routes/Routes.jsx";
@@ -9,10 +9,8 @@ import Footer from "../footer/Footer";
 import { toast } from "react-toastify";
 import ScrollToTopOnMount from "../ScrollToTopOnMount.jsx";
 
-import Icons from "../../icons.js";
 import ToTopButton from "../ToTopButton.jsx";
 import Products from "../Products.jsx";
-import HeroImage from "../hero image/HeroImage.jsx";
 toast.configure();
 
 export const BasketProductsContext = React.createContext();

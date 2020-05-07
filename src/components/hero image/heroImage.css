@@ -10,7 +10,7 @@
           align-items: center;
   width: 100%;
   padding: 40px 0;
-  background-image: url("../../assets/images/banner7.jpg");
+  background-image: url("../../assets/images/banner5.jpg");
   height: 600px;
   background-position: center;
   background-repeat: no-repeat;
@@ -20,7 +20,7 @@
 
 .hero-text {
   text-align: center;
-  color: white;
+  text-shadow: 1px 1px 2px #868686;
 }
 
 /* ---------------------------------------------------

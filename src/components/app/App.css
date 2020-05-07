@@ -16,40 +16,40 @@ html {
   scroll-behavior: auto !important;
 }
 
-.main-container {
+.main-wrapper {
+  min-height: calc(100vh - 319px);
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-wrapper {
+  min-height: calc(100vh - 319px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-container {
   width: 1220px;
   padding: 40px;
   background: #f9f9f9;
   min-height: calc(100vh - 319px);
-}
-
-.main-wrapper {
-  min-height: calc(100vh - 319px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.super-main-wrapper {
-  min-height: calc(100vh - 319px);
-}
-
-.super-main-wrapper2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .my-btn {
@@ -90,42 +90,16 @@ html {
 .text-gradient {
   background: -webkit-gradient(linear, left top, right top, from(#30cfd0), to(#330867));
   background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-@-webkit-keyframes icon-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
-
-@keyframes icon-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
-
-.icon-spinning {
-  -webkit-animation: icon-spin 2s infinite linear;
-          animation: icon-spin 2s infinite linear;
 }
 
 /* ---------------------------------------------------
     MEDIA QUERIES
 ----------------------------------------------------- */
 @media (min-width: 320px) and (max-width: 1181px) {
-  .main-container {
+  .content-container {
     padding: 0px;
   }
 }

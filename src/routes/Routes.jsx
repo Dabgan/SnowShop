@@ -13,7 +13,7 @@ import ProductComponent from "../pages/products/ProductComponent";
 import PathNotFound from "../pages/404 page/PathNotFound";
 import CloseBasketModal from "../components/CloseBasketModal";
 import HeroImage from "../components/hero image/HeroImage";
-import Icons from "../icons";
+import Loader from "../components/loader/Loader";
 
 export const ProductsContext = React.createContext();
 
@@ -22,7 +22,7 @@ const Routes = () => {
     const [categories, setCategories] = useState([]);
     const [products, setProducts] = useState([]);
     const [errorPage, setErrorPage] = useState(false);
-    const [loader, setLoader] = useState(true);
+    const [isPageLoaded, setIsPageLoaded] = useState(true);
 
     useEffect(() => {
         const routesRef = firebase.database().ref("other routes");
@@ -75,7 +75,7 @@ const Routes = () => {
 
             setProducts(newProducts);
             setErrorPage(!errorPage);
-            setLoader(false);
+            setIsPageLoaded(false);
         });
     }, []);
 
@@ -83,54 +83,35 @@ const Routes = () => {
         <>
             <ProductsContext.Provider value={products}>
                 <div
-                    className={`super-main-wrapper ${
-                        loader ? "super-main-wrapper2" : ""
-                    }`}
+                    className={`main-wrapper ${isPageLoaded && "flex-center"}`}
                 >
-                    <Icons.FaRegSnowflake
-                        size="10rem"
-                        className="icon-spinning"
-                        style={{ display: loader ? "block" : "none" }}
-                    ></Icons.FaRegSnowflake>
-                    <div
-                        className="main-containerr"
-                        style={{ display: loader ? "none" : "block" }}
-                    >
+                    <Loader isPageLoaded={isPageLoaded} />
+                    <div style={{ display: isPageLoaded ? "none" : "block" }}>
                         <Switch>
                             <Route path="/" exact>
                                 <HeroImage />
-                                <div className="main-wrapper">
-                                    <div className="main-container">
-                                        <DisplayProducts
-                                            title={"Featured products"}
-                                        />
-                                        <DailyPromotion />
-                                        <Newsletter />
-                                    </div>
-                                </div>
+                                <CloseBasketModal>
+                                    <DisplayProducts
+                                        title={"Featured products"}
+                                    />
+                                    <DailyPromotion />
+                                    <Newsletter />
+                                </CloseBasketModal>
                             </Route>
                             <Route exact path="/basket">
-                                <div className="main-wrapper">
-                                    <div className="main-container">
-                                        <BasketComponent />
-                                    </div>
-                                </div>
+                                <CloseBasketModal>
+                                    <BasketComponent />
+                                </CloseBasketModal>
                             </Route>
                             <Route exact path="/about">
-                                <div className="main-wrapper">
-                                    <div className="main-container">
-                                        <CloseBasketModal />
-                                        <About />
-                                    </div>
-                                </div>
+                                <CloseBasketModal>
+                                    <About />
+                                </CloseBasketModal>
                             </Route>
                             <Route exact path="/contact">
-                                <div className="main-wrapper">
-                                    <div className="main-container">
-                                        <CloseBasketModal />
-                                        <Contact />
-                                    </div>
-                                </div>
+                                <CloseBasketModal>
+                                    <Contact />
+                                </CloseBasketModal>
                             </Route>
 
                             {otherRoutes.map((link) => (
@@ -139,14 +120,11 @@ const Routes = () => {
                                     path={`/${link.path}`}
                                     key={link.id}
                                 >
-                                    <div className="main-wrapper">
-                                        <div className="main-container">
-                                            <CloseBasketModal />
-                                            <InformationComponent
-                                                headerName={link.name}
-                                            />
-                                        </div>
-                                    </div>
+                                    <CloseBasketModal>
+                                        <InformationComponent
+                                            headerName={link.name}
+                                        />
+                                    </CloseBasketModal>
                                 </Route>
                             ))}
                             {products.map((product) => (
@@ -155,14 +133,11 @@ const Routes = () => {
                                     path={`/${product.category}/${product.id}`}
                                     key={product.id}
                                 >
-                                    <div className="main-wrapper">
-                                        <div className="main-container">
-                                            <CloseBasketModal />
-                                            <ProductComponent
-                                                productInfo={product}
-                                            />
-                                        </div>
-                                    </div>
+                                    <CloseBasketModal>
+                                        <ProductComponent
+                                            productInfo={product}
+                                        />
+                                    </CloseBasketModal>
                                 </Route>
                             ))}
                             {categories.map((category) => (
@@ -171,16 +146,13 @@ const Routes = () => {
                                     path={`/${category.name}`}
                                     key={category.id}
                                 >
-                                    <div className="main-wrapper">
-                                        <div className="main-container">
-                                            <CloseBasketModal />
-                                            <CategoryComponent
-                                                categoryName={category.name}
-                                                key={category.id}
-                                                products={products}
-                                            />
-                                        </div>
-                                    </div>
+                                    <CloseBasketModal>
+                                        <CategoryComponent
+                                            categoryName={category.name}
+                                            key={category.id}
+                                            products={products}
+                                        />
+                                    </CloseBasketModal>
                                 </Route>
                             ))}
                             {errorPage && (

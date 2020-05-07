@@ -1,4 +1,4 @@
-.featured-products {
+.display-products {
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7,20 +7,19 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  margin: 40px 0;
 }
 
-.featured-products p {
+.display-products p {
   margin-top: 10px;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 
-.featured-products a {
+.display-products a {
   font-size: 0.9rem;
 }
 
-.featured-products-tiles {
+.display-products-tiles {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,7 +35,7 @@
     MEDIA QUERIES
 ----------------------------------------------------- */
 @media (min-width: 320px) and (max-width: 580px) {
-  .featured-products-tiles {
+  .display-products-tiles {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;

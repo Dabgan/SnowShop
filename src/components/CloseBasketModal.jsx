@@ -1,7 +1,7 @@
-import { useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { BasketModalContext } from "../components/app/App";
 
-const CloseBasketModal = () => {
+const CloseBasketModal = ({ children }) => {
     const basketModal = useContext(BasketModalContext);
 
     useEffect(() => {
@@ -9,7 +9,11 @@ const CloseBasketModal = () => {
         return basketModal.setIsModalVisible("turn off");
     }, []);
 
-    return null;
+    return (
+        <div className="content-wrapper">
+            <div className="content-container">{children}</div>
+        </div>
+    );
 };
 
 export default CloseBasketModal;
