@@ -5,7 +5,6 @@ import Contact from "../pages/informations/Contact/Contact";
 import firebase from "../firebase";
 import InformationComponent from "../pages/informations/others/InformationComponent";
 import BasketComponent from "../pages/basket/BasketComponent";
-import Banner from "../components/banner/Banner";
 import DailyPromotion from "../components/daily promotion/DailyPromotion";
 import Newsletter from "../components/newsletter/Newsletter";
 import DisplayProducts from "../components/display products/DisplayProducts";
@@ -13,6 +12,8 @@ import CategoryComponent from "../pages/categories/CategoryComponent";
 import ProductComponent from "../pages/products/ProductComponent";
 import PathNotFound from "../pages/404 page/PathNotFound";
 import CloseBasketModal from "../components/CloseBasketModal";
+import HeroImage from "../components/hero image/HeroImage";
+import Icons from "../icons";
 
 export const ProductsContext = React.createContext();
 
@@ -21,6 +22,7 @@ const Routes = () => {
     const [categories, setCategories] = useState([]);
     const [products, setProducts] = useState([]);
     const [errorPage, setErrorPage] = useState(false);
+    const [loader, setLoader] = useState(true);
 
     useEffect(() => {
         const routesRef = firebase.database().ref("other routes");
@@ -73,67 +75,122 @@ const Routes = () => {
 
             setProducts(newProducts);
             setErrorPage(!errorPage);
+            setLoader(false);
         });
     }, []);
 
     return (
         <>
             <ProductsContext.Provider value={products}>
-                <Switch>
-                    <Route path="/" exact>
-                        <Banner />
-                        <DisplayProducts title={"Featured products"} />
-                        <DailyPromotion />
-                        <Newsletter />
-                    </Route>
-                    <Route exact path="/basket">
-                        <BasketComponent />
-                    </Route>
-                    <Route exact path="/about">
-                        <CloseBasketModal />
-                        <About />
-                    </Route>
-                    <Route exact path="/contact">
-                        <CloseBasketModal />
-                        <Contact />
-                    </Route>
+                <div
+                    className={`super-main-wrapper ${
+                        loader ? "super-main-wrapper2" : ""
+                    }`}
+                >
+                    <Icons.FaRegSnowflake
+                        size="10rem"
+                        className="icon-spinning"
+                        style={{ display: loader ? "block" : "none" }}
+                    ></Icons.FaRegSnowflake>
+                    <div
+                        className="main-containerr"
+                        style={{ display: loader ? "none" : "block" }}
+                    >
+                        <Switch>
+                            <Route path="/" exact>
+                                <HeroImage />
+                                <div className="main-wrapper">
+                                    <div className="main-container">
+                                        <DisplayProducts
+                                            title={"Featured products"}
+                                        />
+                                        <DailyPromotion />
+                                        <Newsletter />
+                                    </div>
+                                </div>
+                            </Route>
+                            <Route exact path="/basket">
+                                <div className="main-wrapper">
+                                    <div className="main-container">
+                                        <BasketComponent />
+                                    </div>
+                                </div>
+                            </Route>
+                            <Route exact path="/about">
+                                <div className="main-wrapper">
+                                    <div className="main-container">
+                                        <CloseBasketModal />
+                                        <About />
+                                    </div>
+                                </div>
+                            </Route>
+                            <Route exact path="/contact">
+                                <div className="main-wrapper">
+                                    <div className="main-container">
+                                        <CloseBasketModal />
+                                        <Contact />
+                                    </div>
+                                </div>
+                            </Route>
 
-                    {otherRoutes.map((link) => (
-                        <Route exact path={`/${link.path}`} key={link.id}>
-                            <CloseBasketModal />
-                            <InformationComponent headerName={link.name} />
-                        </Route>
-                    ))}
-                    {products.map((product) => (
-                        <Route
-                            exact
-                            path={`/${product.category}/${product.id}`}
-                            key={product.id}
-                        >
-                            <CloseBasketModal />
-                            <ProductComponent productInfo={product} />
-                        </Route>
-                    ))}
-                    {categories.map((category) => (
-                        <Route
-                            exact
-                            path={`/${category.name}`}
-                            key={category.id}
-                        >
-                            <CloseBasketModal />
-                            <CategoryComponent
-                                categoryName={category.name}
-                                key={category.id}
-                                products={products}
-                            />
-                        </Route>
-                    ))}
-                    {errorPage && (
-                        <Route to="*">
-                            <PathNotFound />
-                        </Route>
-                    )}
-                </Switch>
+                            {otherRoutes.map((link) => (
+                                <Route
+                                    exact
+                                    path={`/${link.path}`}
+                                    key={link.id}
+                                >
+                                    <div className="main-wrapper">
+                                        <div className="main-container">
+                                            <CloseBasketModal />
+                                            <InformationComponent
+                                                headerName={link.name}
+                                            />
+                                        </div>
+                                    </div>
+                                </Route>
+                            ))}
+                            {products.map((product) => (
+                                <Route
+                                    exact
+                                    path={`/${product.category}/${product.id}`}
+                                    key={product.id}
+                                >
+                                    <div className="main-wrapper">
+                                        <div className="main-container">
+                                            <CloseBasketModal />
+                                            <ProductComponent
+                                                productInfo={product}
+                                            />
+                                        </div>
+                                    </div>
+                                </Route>
+                            ))}
+                            {categories.map((category) => (
+                                <Route
+                                    exact
+                                    path={`/${category.name}`}
+                                    key={category.id}
+                                >
+                                    <div className="main-wrapper">
+                                        <div className="main-container">
+                                            <CloseBasketModal />
+                                            <CategoryComponent
+                                                categoryName={category.name}
+                                                key={category.id}
+                                                products={products}
+                                            />
+                                        </div>
+                                    </div>
+                                </Route>
+                            ))}
+                            {errorPage && (
+                                <Route to="*">
+                                    <PathNotFound />
+                                </Route>
+                            )}
+                        </Switch>
+                    </div>
+                </div>
             </ProductsContext.Provider>
         </>
     );

@@ -12,6 +12,7 @@ import ScrollToTopOnMount from "../ScrollToTopOnMount.jsx";
 import Icons from "../../icons.js";
 import ToTopButton from "../ToTopButton.jsx";
 import Products from "../Products.jsx";
+import HeroImage from "../hero image/HeroImage.jsx";
 toast.configure();
 
 export const BasketProductsContext = React.createContext();
@@ -96,7 +97,6 @@ const basketReducer = (state, action) => {
 function App() {
     const [basketProducts, dispatch] = useReducer(basketReducer, []);
     const [isModalVisible, setIsModalVisible] = useReducer(modalReducer, false);
-    const [loader, setLoader] = useState(true);
 
     useEffect(() => {
         const basketProductsRef = firebase.database().ref("basket");
@@ -118,13 +118,11 @@ function App() {
                 });
             }
             dispatch({ operation: "set", state: newProducts });
-            setLoader(false);
         });
     }, []);
 
     return (
         <Router>
-            {/* <Products /> */}
             <ScrollToTopOnMount />
             <ToTopButton />
             <BasketProductsContext.Provider
@@ -138,21 +136,7 @@ function App() {
                 >
                     {/* <Products /> */}
                     <Header />
-                    <>
-                        <div className="main-wrapper">
-                            <Icons.FaRegSnowflake
-                                size="10rem"
-                                className="icon-spinning"
-                                style={{ display: loader ? "block" : "none" }}
-                            ></Icons.FaRegSnowflake>
-                            <div
-                                className="main-container"
-                                style={{ display: loader ? "none" : "block" }}
-                            >
-                                <Routes />
-                            </div>
-                        </div>
-                    </>
+                    <Routes />
                     <Footer />
                 </BasketModalContext.Provider>
             </BasketProductsContext.Provider>

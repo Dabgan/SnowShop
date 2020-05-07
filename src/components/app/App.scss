@@ -26,6 +26,14 @@ html {
     justify-content: center;
     align-items: center;
 }
+.super-main-wrapper {
+    min-height: calc(100vh - 319px);
+}
+.super-main-wrapper2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .my-btn {
     display: flex;

@@ -5,8 +5,8 @@ const CloseBasketModal = () => {
     const basketModal = useContext(BasketModalContext);
 
     useEffect(() => {
-        basketModal.setIsModalVisible(true);
-        return basketModal.setIsModalVisible(true);
+        basketModal.setIsModalVisible("turn off");
+        return basketModal.setIsModalVisible("turn off");
     }, []);
 
     return null;
