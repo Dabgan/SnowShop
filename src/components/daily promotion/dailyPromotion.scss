@@ -1,3 +1,5 @@
+@import "../../styles/global_variables.module.scss";
+
 .daily-promotion {
     display: flex;
     width: 100%;
@@ -21,6 +23,8 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    font-family: $headers-font;
+    // color: red;
     width: 250px;
     margin: 0 auto;
     font-size: 1.8rem;

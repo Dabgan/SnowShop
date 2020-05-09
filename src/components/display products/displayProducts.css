@@ -10,9 +10,9 @@
 }
 
 .display-products p {
-  margin-top: 10px;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  font-weight: 600;
 }
 
 .display-products a {
@@ -23,18 +23,19 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 20px 0;
-}
-
-.bold-text {
-  font-size: 1.3rem;
-  font-weight: 700;
+  margin: 10px 0;
 }
 
 /* ---------------------------------------------------
     MEDIA QUERIES
 ----------------------------------------------------- */
 @media (min-width: 320px) and (max-width: 580px) {
+  .display-products {
+    margin-top: 10px;
+  }
+  .display-products p {
+    margin: 0 10px;
+  }
   .display-products-tiles {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

@@ -2,28 +2,54 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
-  padding: 40px 0;
   background-image: url("../../assets/images/banner5.jpg");
   height: 600px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .hero-text {
-  text-align: center;
-  text-shadow: 1px 1px 2px #868686;
+  width: 35rem;
+  margin-left: 22%;
+  margin-top: 12%;
+  opacity: 0.9;
+  color: #f9f9f9;
+  text-shadow: 3px 3px 4px #343a40;
+}
+
+.hero-header {
+  font-size: 3.5rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.hero-paragraph {
+  font-size: 1.2rem;
+  margin-top: 20px;
 }
 
 /* ---------------------------------------------------
     MEDIA QUERIES
 ----------------------------------------------------- */
+@media (min-width: 320px) and (max-width: 1181px) {
+  .hero-img {
+    height: 40vh;
+  }
+  .hero-text {
+    max-width: 70%;
+    margin: 5% auto;
+    padding: 25px;
+  }
+  .hero-header {
+    font-size: 2rem;
+    font-family: "Ubuntu", sans-serif;
+  }
+  .hero-paragraph {
+    font-size: 1.1rem;
+  }
+}
 /*# sourceMappingURL=heroImage.css.map */
