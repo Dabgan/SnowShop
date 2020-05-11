@@ -14,6 +14,7 @@ import PathNotFound from "../pages/404 page/PathNotFound";
 import CloseBasketModal from "../components/CloseBasketModal";
 import HeroImage from "../components/hero image/HeroImage";
 import Loader from "../components/loader/Loader";
+import DisplayCategory from "../components/display category/DisplayCategory";
 
 export const ProductsContext = React.createContext();
 
@@ -95,6 +96,7 @@ const Routes = () => {
                                         title={"Featured products"}
                                     />
                                     <DailyPromotion />
+                                    <DisplayCategory />
                                     <Newsletter />
                                 </CloseBasketModal>
                             </Route>
