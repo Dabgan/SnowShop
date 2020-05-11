@@ -3,7 +3,7 @@ import "./basketTile.css";
 import { BasketProductsContext } from "../../../../components/app/App";
 import Icons from "../../../../icons";
 import { Link } from "react-router-dom";
-import QuantityCounter from "../../../../components/QuantityCounter";
+import QuantityCounter from "../../../../components/quantity counter/QuantityCounter";
 
 const BasketTile = ({ productInfo, quantityOptions }) => {
     const basketContext = useContext(BasketProductsContext);

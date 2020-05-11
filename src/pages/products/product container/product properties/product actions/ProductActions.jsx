@@ -4,7 +4,7 @@ import { BasketProductsContext } from "../../../../../components/app/App";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Icons from "../../../../../icons";
-import QuantityCounter from "../../../../../components/QuantityCounter";
+import QuantityCounter from "../../../../../components/quantity counter/QuantityCounter";
 
 const ProductActions = ({ productInfo }) => {
     const basketContext = useContext(BasketProductsContext);

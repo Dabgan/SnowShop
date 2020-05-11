@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { BasketProductsContext } from "../components/app/App";
+import { BasketProductsContext } from "../app/App";
 import "./quantityCounter.css";
 
 const QuantityCounter = ({
