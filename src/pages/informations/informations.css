@@ -8,4 +8,10 @@
 .information-page-container h1 {
   text-transform: capitalize;
 }
+
+.info-component-header {
+  font-family: "Ubuntu", sans-serif;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
 /*# sourceMappingURL=informations.css.map */

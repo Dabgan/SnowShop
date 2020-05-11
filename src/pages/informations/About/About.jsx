@@ -8,14 +8,14 @@ const About = () => {
         <>
             <ScrollToTopOnMount />
             <div className="information-page-container">
-                <h1 className="h3 mb-4">About us</h1>
+                <h1 className="info-component-header">About us</h1>
                 <p>
                     The main idea of creating this webshop site was to practice
                     the basics of React and learn React Hooks. In order to do
                     that I wanted to create a place where I would like to buy
                     myself. Where shopping is easy and enjoyable.
                 </p>
-                <h2 className="h3 my-4">Some more</h2>
+                <h2 className="info-component-header">Some more</h2>
                 <p>
                     I've learned a lot by creating this site. First of all,
                     perseverance in creating the project and how much time the
@@ -23,7 +23,7 @@ const About = () => {
                     use them. I also learned how to use Firebase and how to use
                     the database more smoothly.
                 </p>
-                <h2 className="h3 my-4">And more</h2>
+                <h2 className="info-component-header">And more</h2>
                 <p>
                     Propably not worth reading, I will put here some lorem ipsum
                     to lengthen this paragraph. Snowboarding is a recreational

@@ -11,7 +11,7 @@ const Contact = () => {
             <ScrollToTopOnMount />
             <div className="">
                 <div className="contact-snow-shop information-page-container">
-                    <h1 className="h2 mb-3">Contact Snowshop</h1>
+                    <h1 className="info-component-header">Contact Snowshop</h1>
 
                     <div className="contact-container">
                         <div>
@@ -26,7 +26,7 @@ const Contact = () => {
                 </div>
 
                 <div className="contact-real information-page-container">
-                    <h2 className="h2 mb-3">Real contact</h2>
+                    <h2 className="info-component-header">Real contact</h2>
                     <p>
                         Okey, those informations above are fake. You can find
                         and contact me here:
@@ -40,7 +40,9 @@ const Contact = () => {
                 </div>
 
                 <div className="contact-form information-page-container">
-                    <h2 className="h2">Or send me an email:</h2>
+                    <h2 className="info-component-header">
+                        Or send me an email:
+                    </h2>
                     <ContactForm />
                 </div>
             </div>

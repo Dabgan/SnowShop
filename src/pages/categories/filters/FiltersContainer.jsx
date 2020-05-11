@@ -26,6 +26,7 @@ function FiltersContainer({ name }) {
         { name: "$0-99", id: 0, range: { min: 0, max: 99 } },
         { name: "$99-199", id: 1, range: { min: 99, max: 199 } },
         { name: "$199-299", id: 2, range: { min: 199, max: 299 } },
+        { name: "$299+", id: 2, range: { min: 299, max: 999 } },
     ];
 
     return (
@@ -35,7 +36,7 @@ function FiltersContainer({ name }) {
                 Filtr by:
                 {uniqueMarks.length ? (
                     <FilterComponent
-                        filterName="mark"
+                        filterName="brand"
                         filterLabels={uniqueMarks}
                     />
                 ) : null}

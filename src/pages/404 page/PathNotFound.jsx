@@ -13,7 +13,7 @@ const PathNotFound = () => {
                 <h1>Oh no! What have you done?</h1>
                 <p>
                     Just kidding. Seems like page you are looking for is
-                    missing. Dont panic.
+                    missing. Don't panic.
                 </p>
                 <Link to="/" className="my-btn">
                     Go back to homepage
