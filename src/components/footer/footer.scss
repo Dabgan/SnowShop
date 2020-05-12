@@ -5,8 +5,10 @@ html {
 }
 .footer {
     position: relative;
+    // border: 2px solid #069cc8;
 }
 .footer-container {
+    // border: 2px solid #2ce90a;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -14,17 +16,20 @@ html {
     margin: 0 auto;
 }
 .footer-nav {
+    // border: 2px solid #f11b1b;
     display: flex;
     flex-flow: row wrap;
     flex: 1 0 300px;
 }
 .footer-nav-item {
+    // border: 2px solid #069cc8;
     min-width: 200px;
     margin: 10px;
     text-align: center;
     text-transform: capitalize;
 }
 .footer-link {
+    // border: 2px solid #2ce90a;
     color: inherit;
     transition: color 0.2s ease-in-out;
     cursor: pointer;
@@ -34,6 +39,7 @@ html {
     }
 }
 .footer-socials {
+    // border: 2px solid #f11b1b;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -59,10 +65,10 @@ html {
 /* ---------------------------------------------------
     MEDIA QUERIES
 ----------------------------------------------------- */
-@media (min-width: 1181px) and (max-width: 1500px) {
-    .to-top-btn {
-        top: 10px;
-        right: 30px;
+
+@media (min-width: 320px) and (max-width: 800px) {
+    .footer-container {
+        flex-flow: column nowrap;
     }
 }
 
