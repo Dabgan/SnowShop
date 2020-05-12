@@ -50,10 +50,6 @@
   background-image: url("../../assets/images/category2.jpg");
 }
 
-.display-category3 {
-  background-image: url("../../assets/images/category3.jpg");
-}
-
 .display-category-title {
   position: absolute;
   top: 50%;
@@ -89,5 +85,17 @@
 
 .display-category-arrow-hovered {
   right: 5%;
+}
+
+/* ---------------------------------------------------
+     MEDIA QUERIES
+----------------------------------------------------- */
+@media (min-width: 320px) and (max-width: 800px) {
+  .display-category {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
 }
 /*# sourceMappingURL=displayCategory.css.map */

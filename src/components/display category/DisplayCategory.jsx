@@ -11,14 +11,9 @@ const DisplayCategory = () => {
                 category="snowboards"
             />
             <DisplayCategoryTile
-                title={"Boots"}
-                imgNum={"3"}
-                category="boots"
-            />
-            <DisplayCategoryTile
-                title={"UV protection goggles"}
+                title={"Waterproof gloves"}
                 imgNum={"2"}
-                category="goggles"
+                category="gloves"
             />
         </div>
     );

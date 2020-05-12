@@ -32,9 +32,7 @@
 .display-category2 {
     background-image: url("../../assets/images/category2.jpg");
 }
-.display-category3 {
-    background-image: url("../../assets/images/category3.jpg");
-}
+
 .display-category-title {
     position: absolute;
     top: 50%;
@@ -61,8 +59,19 @@
     right: 10%;
     pointer-events: none;
     transition: right 0.3s ease-in-out;
+    // border: 2px solid red;
 }
 
 .display-category-arrow-hovered {
     right: 5%;
+}
+
+/* ---------------------------------------------------
+     MEDIA QUERIES
+----------------------------------------------------- */
+
+@media (min-width: 320px) and (max-width: 800px) {
+    .display-category {
+        flex-flow: column;
+    }
 }
