@@ -21,6 +21,7 @@
 }
 
 .icon-spinning {
+  color: #000000;
   -webkit-animation: icon-spin 2s infinite linear;
           animation: icon-spin 2s infinite linear;
 }

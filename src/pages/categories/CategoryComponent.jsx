@@ -8,7 +8,7 @@ export const FilteredProductsContext = React.createContext();
 const CategoryComponent = ({ categoryName, products }) => {
     const reducer = (state, action) => {
         switch (action.filtr) {
-            case "mark":
+            case "brand":
                 return filtrProductsBy(productsOfThisCategory, action, {
                     type: "name",
                 });

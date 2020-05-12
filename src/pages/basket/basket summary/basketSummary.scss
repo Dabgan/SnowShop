@@ -1,17 +1,9 @@
 @import "../../../styles/global_variables.module.scss";
 
 .basket-container {
-    // border: 2px solid #2ce90a;
-    // padding: 20px;
-}
-.basket-summary {
-    // border: 2px solid #069cc8;
-    // display: flex;
-    // flex-flow: column;
-    // align-items: center;
+    color: #000000;
 }
 .summary-info {
-    // border: 2px solid #f11b1b;
     font-size: 1rem;
     display: flex;
     flex-flow: column;
@@ -19,15 +11,6 @@
 .summary-row {
     display: flex;
     justify-content: space-between;
-}
-.cost-products {
-    // border: 2px solid #069cc8;
-}
-.cost-delivery {
-    // border: 2px solid #2ce90a;
-}
-.cost-discounts {
-    // border: 2px solid #f11b1b;
 }
 .cost-total {
     margin-top: 20px;
@@ -37,7 +20,6 @@
     border-top: 2px solid #000000;
 }
 .basket-summary-btn {
-    // margin: 0;
     align-self: flex-end;
 }
 
@@ -49,12 +31,9 @@
 }
 @media (min-width: 320px) and (max-width: 1181px) {
     .basket-summary {
-        // border: 2px solid #f11b1b;
         margin-top: 20px;
-        // padding: 30px;
     }
     .summary-info {
-        // border: 2px solid #069cc8;
         padding: 20px;
     }
 }

@@ -13,6 +13,7 @@
   -ms-flex-item-align: start;
       align-self: flex-start;
   font-weight: 600;
+  color: #000000;
 }
 
 .display-products a {

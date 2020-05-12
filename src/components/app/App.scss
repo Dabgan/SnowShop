@@ -15,8 +15,11 @@
 html {
     scroll-behavior: auto !important;
 }
+body {
+}
 .main-wrapper {
     min-height: calc(100vh - 319px);
+    color: $main-font-color;
 }
 .flex-center {
     display: flex;
