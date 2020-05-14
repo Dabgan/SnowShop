@@ -23,16 +23,11 @@ const basketReducer = (state, action) => {
                 });
             } else {
                 const basketProduct = {
-                    img: action.product.img,
-                    title: action.product.title,
-                    price: action.product.price,
-                    crossedPrice: action.product.crossedPrice,
-                    category: action.product.category,
-                    availability: action.product.availability,
-                    mark: action.product.mark,
-                    quantity: action.quantity,
+                    ...action.product,
                     oldId: action.product.id,
+                    quantity: action.quantity,
                 };
+                console.log(basketProduct);
                 basketRef.push(basketProduct);
             }
             return state;
@@ -71,22 +66,8 @@ const basketReducer = (state, action) => {
             return state;
     }
 };
-const basketReducerLocalStorage = (state, action) => {
-    switch (action.operation) {
-        case "add":
-            return state;
-        case "update":
-            return state;
-        case "delete":
-            return state;
-        case "set":
-            return state;
-        default:
-            return state;
-    }
-};
 
-const useBasketManagment = () => {
+const useBasketFirebase = () => {
     useEffect(() => {
         const basketProductsRef = firebase.database().ref("basket");
         basketProductsRef.on("value", (snapshot) => {
@@ -94,16 +75,8 @@ const useBasketManagment = () => {
             let newProducts = [];
             for (let dbProduct in databaseProducts) {
                 newProducts.push({
+                    ...databaseProducts[dbProduct],
                     id: dbProduct,
-                    img: databaseProducts[dbProduct].img,
-                    title: databaseProducts[dbProduct].title,
-                    price: databaseProducts[dbProduct].price,
-                    crossedPrice: databaseProducts[dbProduct].crossedPrice,
-                    category: databaseProducts[dbProduct].category,
-                    availability: databaseProducts[dbProduct].availability,
-                    mark: databaseProducts[dbProduct].mark,
-                    quantity: databaseProducts[dbProduct].quantity,
-                    oldId: databaseProducts[dbProduct].oldId,
                 });
             }
             dispatch({ operation: "set", state: newProducts });
@@ -114,4 +87,4 @@ const useBasketManagment = () => {
     return [basketProducts, dispatch];
 };
 
-export default useBasketManagment;
+export default useBasketFirebase;

@@ -7,18 +7,18 @@ import ScrollToTopOnMount from "../ScrollToTopOnMount.jsx";
 import ToTopButton from "../ToTopButton.jsx";
 import "./App.css";
 
-import useBasketManagment from "../../hooks/useBasketManagment/useBasketManagment.jsx";
 import useSetModalVisibility from "../../hooks/useSetModalVisibility/useSetModalVisibility.jsx";
 
 // import Products from "../Products.jsx";
 import { toast } from "react-toastify";
+import useBasketLocal from "../../hooks/useBasket/useBasketLocal.jsx";
 toast.configure();
 
 export const BasketProductsContext = React.createContext();
 export const BasketModalContext = React.createContext();
 
 function App() {
-    const [basketProducts, dispatch] = useBasketManagment();
+    const [basketProducts, dispatch] = useBasketLocal();
     const [isModalVisible, setIsModalVisible] = useSetModalVisibility();
 
     return (

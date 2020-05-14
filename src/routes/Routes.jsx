@@ -32,9 +32,8 @@ const Routes = () => {
             let newRoutes = [];
             for (let dbRoute in databaseRoutes) {
                 newRoutes.push({
+                    ...databaseRoutes[dbRoute],
                     id: dbRoute,
-                    name: databaseRoutes[dbRoute].name,
-                    path: databaseRoutes[dbRoute].path,
                 });
             }
             setOtherRoutes(newRoutes);
@@ -48,8 +47,8 @@ const Routes = () => {
             let newCategories = [];
             for (let dbCategory in databaseCategories) {
                 newCategories.push({
+                    ...databaseCategories[dbCategory],
                     id: dbCategory,
-                    name: databaseCategories[dbCategory].name,
                 });
             }
             setCategories(newCategories);
@@ -63,14 +62,8 @@ const Routes = () => {
             let newProducts = [];
             for (let dbProduct in databaseProducts) {
                 newProducts.push({
+                    ...databaseProducts[dbProduct],
                     id: dbProduct,
-                    img: databaseProducts[dbProduct].img,
-                    title: databaseProducts[dbProduct].title,
-                    price: databaseProducts[dbProduct].price,
-                    crossedPrice: databaseProducts[dbProduct].crossedPrice,
-                    category: databaseProducts[dbProduct].category,
-                    availability: databaseProducts[dbProduct].availability,
-                    mark: databaseProducts[dbProduct].mark,
                 });
             }
 

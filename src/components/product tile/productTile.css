@@ -10,7 +10,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: center;
-  max-width: 240px;
+  width: 240px;
   margin: 20px;
   padding: 15px;
   background-color: #ffffff;

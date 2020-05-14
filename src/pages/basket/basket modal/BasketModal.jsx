@@ -24,11 +24,7 @@ const BasketModal = () => {
     }, [basketLength]);
 
     return (
-        <div
-            className="basket-modal"
-            style={{ display: isModalVisible }}
-            onFocus={() => console.log(`GOT FOCUS MODAL`)}
-        >
+        <div className="basket-modal" style={{ display: isModalVisible }}>
             {basketProducts.basketProducts.length ? (
                 <>
                     <div className="row">
