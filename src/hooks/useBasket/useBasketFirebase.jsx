@@ -60,8 +60,7 @@ const basketReducer = (state, action) => {
             productRef.remove();
             return state;
         case "set":
-            const newState = action.state;
-            return newState;
+            return action.state;
         default:
             return state;
     }

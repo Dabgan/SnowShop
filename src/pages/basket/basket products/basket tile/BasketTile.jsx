@@ -47,6 +47,7 @@ const BasketTile = ({ productInfo, quantityOptions }) => {
                         basketContext.manageBasket({
                             operation: "delete",
                             productId: productInfo.id,
+                            title: productInfo.title,
                         })
                     }
                 />

@@ -1,96 +1,111 @@
-import { useReducer, useEffect, useState } from "react";
+import { useReducer, useEffect } from "react";
+
+let localBasketProducts = [];
+const basketReducerLocalStorage = (state, action) => {
+    const KEY = "basket_products";
+
+    // update localStorage
+    const sync = () => {
+        let basket = JSON.stringify(localBasketProducts);
+        localStorage.setItem(KEY, basket);
+    };
+
+    // find an item in the cart by its id
+    const find = () => {
+        const match = localBasketProducts.filter((item) => {
+            if (item.id === action.product.id) return true;
+        });
+        if (match && match[0]) return match[0];
+    };
+
+    // add an item to cart. If it is in the cart already increase it quantity
+    const add = () => {
+        if (find()) {
+            increase(action.quantity);
+        } else {
+            const newBasketProduct = {
+                ...action.product,
+                oldId: action.product.id,
+                quantity: action.quantity,
+            };
+            localBasketProducts.push(newBasketProduct);
+        }
+        sync();
+    };
+
+    // remove item from cart
+    const remove = (id) => {
+        localBasketProducts = localBasketProducts.filter((item) => {
+            if (item.id !== id) {
+                return true;
+            } else return false;
+        });
+        sync();
+    };
+
+    // increase quantity
+    const increase = (quantity = 1) => {
+        localBasketProducts = localBasketProducts.map((item) => {
+            if (item.id === find().id) {
+                item.quantity = item.quantity + quantity;
+            }
+            return item;
+        });
+    };
+
+    // decrease quantity
+    const decrease = () => {
+        localBasketProducts = localBasketProducts.map((item) => {
+            if (item.id === find().id) {
+                item.quantity = item.quantity - 1;
+            }
+            return item;
+        });
+        localBasketProducts.find((item) => {
+            if (item.id === find().id && item.quantity === 0) {
+                remove(find().id);
+                return true;
+            }
+        });
+        sync();
+    };
+
+    switch (action.operation) {
+        case "init":
+            const basketProducts = localStorage.getItem("basket_products");
+            localBasketProducts = JSON.parse(basketProducts) || [];
+            sync();
+            return localBasketProducts;
+        case "add":
+            add();
+            return localBasketProducts;
+        case "delete":
+            remove(action.productId);
+            return localBasketProducts;
+        case "update":
+            if (action.update === "increment") {
+                increase();
+            } else if (action.update === "decrement") {
+                decrease();
+            }
+            sync();
+            return localBasketProducts;
+        default:
+            sync();
+            return localBasketProducts;
+    }
+};
 
 const useBasketLocal = () => {
     useEffect(() => {
-        const basketProducts =
-            JSON.parse(localStorage.getItem("basketProducts2")) || [];
-        console.log(basketProducts);
-        dispatch({ operation: "set", state: basketProducts });
+        dispatch({ operation: "init" });
     }, []);
-
-    const [localBasketProducts, setLocalBasketProducts] = useState([]);
-
-    let testItems = [
-        {
-            availability: 5,
-            category: "goggles",
-            crossedPrice: 19.99,
-            img: "googles1",
-            mark: "feomathar",
-            price: 13.99,
-            title: "Feomathar OTG Ski Goggles",
-            quantity: 1,
-        },
-        {
-            availability: 3,
-            category: "snowboards",
-            crossedPrice: 399.99,
-            img: "snowboard",
-            mark: "xardas",
-            price: 299.99,
-            title: "Xardas Necro Snowboard",
-            quantity: 1,
-        },
-    ];
-
-    const basketReducerLocalStorage = (state, action) => {
-        switch (action.operation) {
-            case "add":
-                const localBasket = JSON.parse(
-                    localStorage.getItem("basketProducts2")
-                );
-                const actualBasket = localBasket ? localBasket : [];
-
-                // const id = action.product.id;
-
-                const newBasketProduct = {
-                    ...action.product,
-                    oldId: action.product.id,
-                    quantity: action.quantity,
-                };
-
-                console.log(`local basket`, localBasket);
-                console.log("actual basket", actualBasket);
-                actualBasket.push(newBasketProduct);
-                console.log(`newBasketProduct`, newBasketProduct);
-                console.log("actual basket", actualBasket);
-                // const newLocalBasket = [...actualBasket, newBasketProduct];
-                // console.log(`newLocalBasket`, newLocalBasket);
-
-                localStorage.setItem(
-                    "basketProducts2",
-                    JSON.stringify(actualBasket)
-                );
-                // setLocalBasketProducts(newLocalBasket);
-                return state;
-            case "update":
-                return state;
-            case "delete":
-                console.log(action);
-                localStorage.removeItem({ category: "boots" });
-                return state;
-            case "set":
-                const newState = action.state;
-                return newState;
-            default:
-                return state;
-        }
-    };
-
-    // useEffect(() => {
-    //     localStorage.setItem("basketProducts", localBasketProducts);
-    //     console.log(localBasketProducts);
-    // }, [localBasketProducts]);
-
-    // useEffect(() => {
-    //     console.log(`dispatched`);
-    //     dispatch({ operation: "set", state: localBasketProducts });
-    // }, [localBasketProducts]);
 
     const [basketProducts, dispatch] = useReducer(
         basketReducerLocalStorage,
         []
     );
+
     return [basketProducts, dispatch];
 };
 
