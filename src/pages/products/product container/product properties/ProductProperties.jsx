@@ -7,7 +7,7 @@ const ProductProperties = ({ productInfo }) => {
     const deliveryDate = new Date();
 
     const setDeliveryDate = () => {
-        return deliveryDate.setDate(deliveryDate.getDate() + 2);
+        return deliveryDate.setDate(deliveryDate.getDate() + 1);
     };
 
     const addLeadingZeros = (date) => {
@@ -35,7 +35,7 @@ const ProductProperties = ({ productInfo }) => {
             </h2>
             <p className="product-properties product-availability">
                 <Icons.FaArchive />
-                In Store
+                In Store: {productInfo.availability}
             </p>
             <p className="product-properties delivery-info-price">
                 <Icons.FaTruck />

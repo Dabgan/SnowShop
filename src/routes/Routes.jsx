@@ -15,6 +15,7 @@ import CloseBasketModal from "../components/CloseBasketModal";
 import HeroImage from "../components/hero image/HeroImage";
 import Loader from "../components/loader/Loader";
 import DisplayCategory from "../components/display category/DisplayCategory";
+import Products from "../components/Products";
 
 export const ProductsContext = React.createContext();
 
@@ -106,6 +107,11 @@ const Routes = () => {
                             <Route exact path="/contact">
                                 <CloseBasketModal>
                                     <Contact />
+                                </CloseBasketModal>
+                            </Route>
+                            <Route exact path="/admin">
+                                <CloseBasketModal>
+                                    <Products />
                                 </CloseBasketModal>
                             </Route>
 

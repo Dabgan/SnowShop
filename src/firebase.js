@@ -1,4 +1,5 @@
 import firebase from "firebase";
+import "firebase/storage";
 
 const config = {
     apiKey: "AIzaSyCsF7BJPsaDHQRxrF48yLHO0f561OtDU-Q",
@@ -9,5 +10,7 @@ const config = {
     messagingSenderId: "799256025104",
     appId: "1:799256025104:web:8c2b8216fd740ef51d5295",
 };
+
 firebase.initializeApp(config);
+export const storage = firebase.storage();
 export default firebase;

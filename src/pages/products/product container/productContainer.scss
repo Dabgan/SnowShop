@@ -10,8 +10,10 @@
 }
 .product-photo-container {
     cursor: pointer;
+    display: flex;
+    justify-content: center;
     img {
-        width: 100%;
+        max-height: 500px;
     }
 }
 .modal-body {
