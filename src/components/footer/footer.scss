@@ -43,6 +43,12 @@ html {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    a {
+        color: inherit;
+        &:hover {
+            color: inherit;
+        }
+    }
     svg {
         // border-radius: 50%;
         margin: 10px;

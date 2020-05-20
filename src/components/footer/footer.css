@@ -65,6 +65,14 @@ html {
           align-items: flex-end;
 }
 
+.footer-socials a {
+  color: inherit;
+}
+
+.footer-socials a:hover {
+  color: inherit;
+}
+
 .footer-socials svg {
   margin: 10px;
   cursor: pointer;

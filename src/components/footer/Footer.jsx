@@ -27,8 +27,20 @@ const Footer = () => {
                     ))}
                 </div>
                 <div className="footer-socials">
-                    <Icons.FaGithub size="1.5rem" />
-                    <Icons.FaFacebook size="1.5rem" />
+                    <a
+                        href="https://github.com/Dabgan"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Icons.FaGithub size="1.5rem"></Icons.FaGithub>
+                    </a>
+                    <a
+                        href="https://www.facebook.com/gabriel.daniluk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Icons.FaFacebook size="1.5rem" />
+                    </a>
                     <Icons.FaLinkedin size="1.5rem" />
                 </div>
             </div>

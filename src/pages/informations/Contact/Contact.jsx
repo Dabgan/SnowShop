@@ -33,8 +33,20 @@ const Contact = () => {
                     </p>
 
                     <div className="footer-socials">
-                        <Icons.FaGithub size="2rem" />
-                        <Icons.FaFacebook size="2rem" />
+                        <a
+                            href="https://github.com/Dabgan"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Icons.FaGithub size="2rem"></Icons.FaGithub>
+                        </a>
+                        <a
+                            href="https://www.facebook.com/gabriel.daniluk"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Icons.FaFacebook size="2rem" />
+                        </a>
                         <Icons.FaLinkedin size="2rem" />
                     </div>
                 </div>
