@@ -6,7 +6,7 @@ const ProductComponent = ({ productInfo }) => {
     return (
         <section className="product-wrapper">
             <ProductContainer productInfo={productInfo} />
-            <DisplayProducts title="Check also" />
+            <DisplayProducts title="Check also" randomProducts={true} />
         </section>
     );
 };

@@ -88,6 +88,7 @@ const Routes = () => {
                                 <CloseBasketModal>
                                     <DisplayProducts
                                         title={"Featured products"}
+                                        random={false}
                                     />
                                     <DailyPromotion />
                                     <DisplayCategory />
