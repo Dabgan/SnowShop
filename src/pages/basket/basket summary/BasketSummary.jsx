@@ -16,7 +16,7 @@ const BasketSummary = () => {
         Math.floor((productsCost + deliveryCost - discount) * 100) / 100;
 
     return (
-        <div className="basket-summary col-md-6">
+        <div className="basket-summary col-lg-6">
             <h2 className="h3 mb-4">Summary:</h2>
             <div className="summary-info">
                 <div className="cost-products summary-row">

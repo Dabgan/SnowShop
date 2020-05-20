@@ -30,7 +30,7 @@ const DailyPromotion = () => {
                 </span>
 
                 <Link
-                    to="/boots/-M6_tqK4sIFon-LaavvI"
+                    to="/boots/-M7iN00LVf6_KG2GXnwe"
                     className="my-btn daily-btn"
                 >
                     Check promotion <Icons.FaLongArrowAltRight />

@@ -70,6 +70,7 @@ header {
 
 .shopping-cart {
   position: relative;
+  margin-left: 100px;
 }
 
 .shopping-cart-badge {
@@ -77,10 +78,6 @@ header {
   right: 10px;
   background: -webkit-gradient(linear, left top, right top, from(#30cfd0), to(#330867)) !important;
   background: linear-gradient(to right, #30cfd0 0%, #330867 100%) !important;
-}
-
-.login {
-  margin-left: 100px;
 }
 
 .contact-container {

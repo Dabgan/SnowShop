@@ -53,10 +53,10 @@ const Header = () => {
                         <Icons.FaSearch />
                     </div>
 
-                    <div className="login">
-                        {/* <Icons.FaUser /> */}
-                        {/* <p>Login</p> */}
-                    </div>
+                    {/* <div className="login"> */}
+                    {/* <Icons.FaUser /> */}
+                    {/* <p>Login</p> */}
+                    {/* </div> */}
 
                     <div
                         className="shopping-cart"

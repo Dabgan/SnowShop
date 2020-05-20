@@ -10,7 +10,7 @@
           box-shadow: 2px 2px 3px 3px #cecece;
   background-color: #ffffff;
   margin: 10px;
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 5px;
   width: 100%;
   height: 90px;
@@ -35,6 +35,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.basket-product-img img {
+  height: 100%;
 }
 
 .basket-product-info {
@@ -124,7 +128,11 @@
 ----------------------------------------------------- */
 @media (min-width: 320px) and (max-width: 1181px) {
   .basket-container {
+    font-size: 0.9rem;
     margin: 20px;
+  }
+  .basket-product img {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=basketTile.css.map */

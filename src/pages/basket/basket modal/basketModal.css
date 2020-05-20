@@ -19,6 +19,11 @@
   border-radius: 5px;
 }
 
+.basket-modal-overflow-container {
+  max-height: 330px;
+  overflow: auto;
+}
+
 .basket-modal-products {
   overflow: auto;
   max-height: 240px;

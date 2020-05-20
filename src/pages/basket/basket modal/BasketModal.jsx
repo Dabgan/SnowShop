@@ -27,7 +27,7 @@ const BasketModal = () => {
         <div className="basket-modal" style={{ display: isModalVisible }}>
             {basketProducts.basketProducts.length ? (
                 <>
-                    <div className="row">
+                    <div className="row basket-modal-overflow-container">
                         {basketProducts.basketProducts.map((product) => (
                             <BasketTile
                                 productInfo={product}

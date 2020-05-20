@@ -6,7 +6,7 @@ const BasketProducts = () => {
     const basketContext = useContext(BasketProductsContext);
 
     return (
-        <div className={"col-md-6"}>
+        <div className={"col-lg-6"}>
             <div className="row basket-products-container">
                 {basketContext.basketProducts.map((product) => (
                     <BasketTile

@@ -44,6 +44,7 @@ header {
 }
 .shopping-cart {
     position: relative;
+    margin-left: 100px;
 }
 .shopping-cart-badge {
     position: absolute;
@@ -51,9 +52,9 @@ header {
     background: linear-gradient(to right, #30cfd0 0%, #330867 100%) !important;
 }
 
-.login {
-    margin-left: 100px;
-}
+// .login {
+//     margin-left: 100px;
+// }
 
 .contact-container {
     margin: 0;
