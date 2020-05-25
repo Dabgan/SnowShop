@@ -2,12 +2,14 @@
     "name": "project07",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://dabgan.github.io/Project07-React_SnowShop/",
     "dependencies": {
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.4.1",
         "@testing-library/user-event": "^7.2.1",
         "bootstrap": "^4.4.1",
         "firebase": "^7.13.2",
+        "gh-pages": "^2.2.0",
         "jquery": "^3.4.1",
         "popper.js": "^1.16.1",
         "react": "^16.13.0",
@@ -22,7 +24,9 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -b master -d build"
     },
     "eslintConfig": {
         "extends": "react-app"
