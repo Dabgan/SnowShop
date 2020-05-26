@@ -1,16 +1,16 @@
 @import "../../../styles/global_variables.module.scss";
 
 .product-container {
-    // border: 2px solid #f11b1b;
     padding: 20px;
     background-color: $page-background-color;
     border-radius: 10px;
-    // width: 100%;
-    // margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 .product-photo-container {
     cursor: pointer;
     display: flex;
+    flex: 1 0 50%;
     justify-content: center;
     img {
         max-height: 500px;

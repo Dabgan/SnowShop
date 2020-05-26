@@ -25,7 +25,7 @@ const ProductProperties = ({ productInfo }) => {
     };
 
     return (
-        <div className="product-info-container col-md-6">
+        <div className="product-info-container">
             <h1 className="product-name">{productInfo.title}</h1>
             <h2 className="product-info-price">
                 ${productInfo.price}{" "}

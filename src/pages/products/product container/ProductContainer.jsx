@@ -7,7 +7,7 @@ const ProductContainer = ({ productInfo }) => {
     return (
         <div className="product-container row">
             <div
-                className="product-photo-container col-md-6"
+                className="product-photo-container"
                 type="button"
                 data-toggle="modal"
                 data-target="#exampleModal"

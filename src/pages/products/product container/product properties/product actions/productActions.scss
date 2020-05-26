@@ -6,16 +6,14 @@
     align-items: flex-start;
     border-top: 1px solid $shadow-color;
     padding: 30px 10px 10px;
-    // border: 2px solid #f11b1b;
 }
 .product-actions-container {
-    // border: 2px solid #069cc8;
     display: flex;
     align-items: center;
 }
 
 .add-to-cart-btn {
-    margin: 10px 50px;
+    margin: 0px 50px;
     font-size: 1rem;
 }
 .basket-alert {

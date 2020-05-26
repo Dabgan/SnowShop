@@ -10,7 +10,7 @@ const ProductDescription = () => {
     ];
 
     return (
-        <div className="product-description col-md-12">
+        <div className="product-description">
             <ul className="nav nav-tabs" id="myTab" role="tablist">
                 <li className=" nav-item">
                     <a
