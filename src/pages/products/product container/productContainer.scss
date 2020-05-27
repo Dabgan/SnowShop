@@ -1,7 +1,8 @@
 @import "../../../styles/global_variables.module.scss";
 
 .product-container {
-    padding: 20px;
+    padding: 1.4rem;
+    margin-bottom: 1.4rem;
     background-color: $page-background-color;
     border-radius: 10px;
     display: flex;

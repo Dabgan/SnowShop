@@ -29,11 +29,12 @@
 }
 
 .category-products {
-    display: flex;
     padding: 20px;
+    display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
 }
+// .category-tile {
+// }
 
 /* ---------------------------------------------------
      MEDIA QUERIES

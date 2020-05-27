@@ -4,18 +4,19 @@
     flex-flow: column;
     justify-content: space-between;
     position: absolute;
-    min-height: 180px;
+    min-height: 12rem;
     padding: 1.4rem;
     width: 26rem;
     top: 4.2rem;
     right: 0px;
     z-index: 1;
+    font-size: 0.95rem;
     background: $secondary-color;
     box-shadow: $product-box-shadow;
     border-radius: 5px;
 }
 .basket-modal-overflow-container {
-    max-height: 330px;
+    max-height: 21rem;
     overflow: auto;
 }
 .basket-modal-products {

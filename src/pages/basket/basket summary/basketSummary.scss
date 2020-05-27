@@ -1,5 +1,11 @@
 @import "../../../styles/global_variables.module.scss";
 
+.basket-summary {
+    flex: 1 0 50%;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
 .basket-container {
     color: #000000;
 }

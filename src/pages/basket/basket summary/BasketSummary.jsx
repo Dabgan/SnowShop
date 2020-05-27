@@ -13,7 +13,9 @@ const BasketSummary = () => {
         ) / 100;
     const discount = (productsCost + deliveryCost) * 0.05;
     const totalCost =
-        Math.floor((productsCost + deliveryCost - discount) * 100) / 100;
+        productsCost === 0
+            ? 0
+            : Math.floor((productsCost + deliveryCost - discount) * 100) / 100;
 
     return (
         <div className="basket-summary col-lg-6">
