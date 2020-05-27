@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
 import FiltersContainer from "./filters/FiltersContainer";
 import CategoryProductsContainer from "./category products container/CategoryProductsContainer";
 import "./filters/filtersContainer.css";
@@ -6,6 +6,11 @@ import "./filters/filtersContainer.css";
 export const FilteredProductsContext = React.createContext();
 
 const CategoryComponent = ({ categoryName, products }) => {
+    useEffect(() => {
+        dispatch({ filtr: "clear" });
+        return dispatch({ filtr: "clear" });
+    }, []);
+
     const reducer = (state, action) => {
         switch (action.filtr) {
             case "brand":
@@ -56,9 +61,7 @@ const CategoryComponent = ({ categoryName, products }) => {
             let comparison = 0;
             varA > varB ? (comparison = 1) : (comparison = -1);
             // sort items alphabetically, else invert value (by multiplying by -1)
-            return val === "desc" || val === "az"
-                ? comparison
-                : comparison * -1;
+            return val === "asc" || val === "az" ? comparison : comparison * -1;
         };
         const sortedArray = [...state].sort(compare);
         return sortedArray;
