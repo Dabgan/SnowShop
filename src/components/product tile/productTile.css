@@ -28,6 +28,7 @@
 
 .product-tile img {
   max-width: 100%;
+  max-height: 100%;
 }
 
 .product-tile:hover {
@@ -82,9 +83,6 @@
   .product-tile img {
     width: 80%;
     height: 80%;
-  }
-  .product-img-container {
-    height: auto;
   }
 }
 /*# sourceMappingURL=productTile.css.map */

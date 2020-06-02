@@ -1,15 +1,13 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import "./header.css";
 import logo from "./../../assets/images/logo.png";
 import SearchBar from "./search bar/SearchBar";
 import CategoriesMenu from "./categories menu/CategoriesMenu";
-import { BasketProductsContext, BasketModalContext } from "../app/App";
 import Icons from "../../icons";
 import BasketModal from "../../pages/basket/basket modal/BasketModal";
+import ShoppingCart from "./shopping cart/ShoppingCart";
 
 const Header = () => {
-    const basketContext = useContext(BasketProductsContext);
-    const basketModal = useContext(BasketModalContext);
     const [searchWidget, setSearchWidget] = useState(false);
 
     const handleSearchWidget = () => {
@@ -47,23 +45,7 @@ const Header = () => {
                     {/* <p>Login</p> */}
                     {/* </div> */}
 
-                    <div
-                        className="shopping-cart"
-                        onClick={() => basketModal.setIsModalVisible()}
-                    >
-                        <Icons.FaShoppingCart />
-                        <p>Basket</p>
-                        <span
-                            style={{
-                                display: basketContext.basketProducts.length
-                                    ? "block"
-                                    : "none",
-                            }}
-                            className="badge badge-info shopping-cart-badge"
-                        >
-                            {basketContext.basketProducts.length}
-                        </span>
-                    </div>
+                    <ShoppingCart />
                     <BasketModal />
                 </div>
                 <button

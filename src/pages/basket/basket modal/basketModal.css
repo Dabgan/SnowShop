@@ -52,4 +52,35 @@
   font-size: 1.3rem;
   text-align: center;
 }
+
+/* ---------------------------------------------------
+     MEDIA QUERIES
+----------------------------------------------------- */
+@media (min-width: 320px) and (max-width: 1181px) {
+  .basket-modal {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: absolute;
+    min-height: 12rem;
+    padding: 1.4rem;
+    width: 18rem;
+    top: 5rem;
+    right: -6rem;
+    z-index: 1;
+    font-size: 0.95rem;
+    background: #ffffff;
+    -webkit-box-shadow: 2px 2px 3px 3px #cecece;
+            box-shadow: 2px 2px 3px 3px #cecece;
+    border-radius: 5px;
+    border: 2px solid #069cc8;
+  }
+  .basket-modal-overflow-container {
+    max-height: 14rem;
+  }
+}
 /*# sourceMappingURL=basketModal.css.map */

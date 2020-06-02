@@ -82,16 +82,17 @@
      MEDIA QUERIES
 ----------------------------------------------------- */
 
-@media (min-width: 1181px) {
-}
 @media (min-width: 320px) and (max-width: 1181px) {
     .basket-container {
         font-size: 0.9rem;
         margin: 20px;
     }
     .basket-product {
+        padding: 0 10px;
         img {
             width: 100%;
+            max-height: 100%;
+            // border: 2px solid #2ce90a;
         }
     }
 }
