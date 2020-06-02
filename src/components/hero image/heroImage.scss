@@ -32,12 +32,14 @@
 ----------------------------------------------------- */
 @media (min-width: 320px) and (max-width: 1181px) {
     .hero-img {
-        height: 40vh;
+        align-items: center;
+        justify-content: center;
+        height: 85vh;
+        overflow: hidden;
     }
     .hero-text {
-        // border: 2px solid #069cc8;
-        max-width: 70%;
-        margin: 5% auto;
+        // width: auto;
+        margin: 8% 25% 0 0;
         padding: 25px;
     }
     .hero-header {

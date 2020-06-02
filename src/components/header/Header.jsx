@@ -19,17 +19,6 @@ const Header = () => {
     return (
         <header>
             <nav className="header-top navbar navbar-expand-lg navbar-light bg-light">
-                <button
-                    className="navbar-toggler bg-secondary"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
                 <a className="navbar-brand mx-3" href="/">
                     <img src={logo} alt="logo" className="logo" />
                 </a>
@@ -77,6 +66,17 @@ const Header = () => {
                     </div>
                     <BasketModal />
                 </div>
+                <button
+                    className="xds navbar-toggler bg-secondary"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span className="navbar-toggler-icon"></span>
+                </button>
             </nav>
             <div
                 id="mobileSearchWidget"

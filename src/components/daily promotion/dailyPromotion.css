@@ -104,6 +104,22 @@
     width: auto;
     padding: 20px;
     margin: 20px;
+    margin: 0 3rem;
+  }
+  .daily-promotion-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+  }
+  .daily-promotion-item img {
+    width: 80%;
   }
 }
 /*# sourceMappingURL=dailyPromotion.css.map */

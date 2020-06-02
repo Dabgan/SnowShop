@@ -40,18 +40,21 @@
 }
 
 .product-img-container {
-  height: 190px;
+  height: 12rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.product-name {
-  font-weight: 600;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .product-info {
   margin: 10px 0;
+  font-weight: 600;
 }
 
 .product-price {
@@ -72,9 +75,16 @@
 ----------------------------------------------------- */
 @media (min-width: 320px) and (max-width: 580px) {
   .product-tile {
-    margin: 15px auto;
-    width: 200px;
-    padding: 15px;
+    margin: 10px auto;
+    width: 12rem;
+    padding: 5px 10px;
+  }
+  .product-tile img {
+    width: 80%;
+    height: 80%;
+  }
+  .product-img-container {
+    height: auto;
   }
 }
 /*# sourceMappingURL=productTile.css.map */

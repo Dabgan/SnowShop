@@ -1,5 +1,5 @@
 @import "../../styles/global_variables.module.scss";
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Ubuntu:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Ubuntu:wght@400;500&display=swap");
 
 * {
     box-sizing: border-box;
@@ -15,8 +15,8 @@
 html {
     scroll-behavior: auto !important;
 }
-body {
-}
+// body {
+// }
 .main-wrapper {
     min-height: calc(100vh - 319px);
     color: $main-font-color;
@@ -72,6 +72,9 @@ body {
     MEDIA QUERIES
 ----------------------------------------------------- */
 @media (min-width: 320px) and (max-width: 1181px) {
+    html {
+        font-size: 14px;
+    }
     .content-container {
         padding: 0px;
     }

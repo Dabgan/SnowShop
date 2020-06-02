@@ -146,12 +146,13 @@ header {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
+  .xds {
+    border: 2px solid #2ce90a;
+    margin: 0 10px;
+  }
   .contact-container {
     display: none;
   }
-}
-
-@media (min-width: 320px) and (max-width: 1181px) {
   .login p,
   .shopping-cart p {
     display: none;
@@ -159,9 +160,6 @@ header {
   .login {
     margin-left: 0px;
   }
-}
-
-@media (min-width: 320px) and (max-width: 1181px) {
   .contact-container {
     display: none;
   }

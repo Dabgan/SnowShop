@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "../../routes/Routes.jsx";
 import Header from "../header/Header";
@@ -18,8 +18,6 @@ export const BasketProductsContext = React.createContext();
 export const BasketModalContext = React.createContext();
 
 function App() {
-    // useEffect(() => {}, []);
-
     const [basketProducts, dispatch] = useBasketLocal();
     const [isModalVisible, setIsModalVisible] = useSetModalVisibility();
 
