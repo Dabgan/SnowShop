@@ -5,7 +5,6 @@ header {
 }
 .header-top {
     max-height: 70px;
-    padding: 0 !important;
 }
 .header-top-menu {
     position: relative;
@@ -17,13 +16,13 @@ header {
 }
 .login,
 .shopping-cart {
-    color: inherit;
-    padding: 10px;
-    height: 70px;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    color: inherit;
+    padding: 10px;
     font-size: 1rem;
     font-weight: 600;
     user-select: none;
@@ -98,12 +97,13 @@ header {
         flex: 0 !important;
         justify-content: flex-end;
     }
-    .xds {
-        border: 2px solid #2ce90a;
-        // margin-right: 200px;
-        // width: 100%;
-        // height: 100px;
-        margin: 0 10px;
+    .header-top-menu-container {
+        display: flex;
+        height: 70px;
+    }
+    .navbar-toggler {
+        margin: 0 5px;
+        align-self: center;
     }
     .contact-container {
         display: none;
@@ -114,9 +114,10 @@ header {
             display: none;
         }
     }
-    .login {
+    .shopping-cart {
         margin-left: 0px;
     }
+
     .contact-container {
         display: none;
     }

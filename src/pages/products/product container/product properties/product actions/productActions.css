@@ -20,6 +20,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .add-to-cart-btn {
@@ -38,8 +39,7 @@
 ----------------------------------------------------- */
 @media (min-width: 320px) and (max-width: 1181px) {
   .add-to-cart-btn {
-    margin: 10px 30px;
-    font-size: 1rem;
+    margin: 0px auto !important;
   }
 }
 /*# sourceMappingURL=productActions.css.map */

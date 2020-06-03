@@ -1,14 +1,14 @@
 @import "../../../styles/global_variables.module.scss";
 
-.basket-summary {
-    flex: 1 0 50%;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
 .basket-container {
     color: #000000;
 }
+.basket-summary {
+    flex: 1 0 50%;
+    padding: 10px !important;
+    margin: 0 !important;
+}
+
 .summary-info {
     font-size: 1rem;
     display: flex;
@@ -36,6 +36,10 @@
 @media (min-width: 1181px) {
 }
 @media (min-width: 320px) and (max-width: 1181px) {
+    .basket-container {
+        padding: 1rem;
+        margin: 1rem;
+    }
     .basket-summary {
         margin-top: 20px;
     }

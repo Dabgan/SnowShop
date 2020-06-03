@@ -28,8 +28,6 @@
 }
 
 .search-mobile {
-  padding: 10px;
-  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,6 +41,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100%;
+  padding: 10px;
   font-size: 1rem;
   font-weight: 600;
   -webkit-user-select: none;

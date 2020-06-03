@@ -20,8 +20,17 @@
 }
 
 .quantity-btn {
-  padding: 0 8px;
+  padding: 0 5px;
   border: none;
   font-weight: 600;
+}
+
+/* ---------------------------------------------------
+     MEDIA QUERIES
+----------------------------------------------------- */
+@media (min-width: 320px) and (max-width: 1181px) {
+  .quantity-btn {
+    padding: 0 2px;
+  }
 }
 /*# sourceMappingURL=quantityCounter.css.map */

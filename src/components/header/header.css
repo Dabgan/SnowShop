@@ -7,7 +7,6 @@ header {
 
 .header-top {
   max-height: 70px;
-  padding: 0 !important;
 }
 
 .header-top-menu {
@@ -25,9 +24,6 @@ header {
 
 .login,
 .shopping-cart {
-  color: inherit;
-  padding: 10px;
-  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,6 +37,9 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100%;
+  color: inherit;
+  padding: 10px;
   font-size: 1rem;
   font-weight: 600;
   -webkit-user-select: none;
@@ -146,9 +145,17 @@ header {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .xds {
-    border: 2px solid #2ce90a;
-    margin: 0 10px;
+  .header-top-menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 70px;
+  }
+  .navbar-toggler {
+    margin: 0 5px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .contact-container {
     display: none;
@@ -157,7 +164,7 @@ header {
   .shopping-cart p {
     display: none;
   }
-  .login {
+  .shopping-cart {
     margin-left: 0px;
   }
   .contact-container {

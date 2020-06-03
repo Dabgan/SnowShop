@@ -20,45 +20,46 @@ const Header = () => {
                 <a className="navbar-brand mx-3" href="/">
                     <img src={logo} alt="logo" className="logo" />
                 </a>
+                <div className="header-top-menu-container">
+                    <div className="header-top-menu collapse navbar-collapse">
+                        <SearchBar />
+                        <div className="contact-container">
+                            <div>
+                                <Icons.FaPhoneAlt />
+                                <p>420 213 769</p>
+                            </div>
+                            <div>
+                                <Icons.FaEnvelope size="20px" />
+                                <p>shop@snowshop.pl</p>
+                            </div>
+                        </div>
+                        <div
+                            className="search-mobile"
+                            onClick={() => handleSearchWidget()}
+                        >
+                            <Icons.FaSearch />
+                        </div>
 
-                <div className="header-top-menu collapse navbar-collapse">
-                    <SearchBar />
-                    <div className="contact-container">
-                        <div>
-                            <Icons.FaPhoneAlt />
-                            <p>420 213 769</p>
-                        </div>
-                        <div>
-                            <Icons.FaEnvelope size="20px" />
-                            <p>shop@snowshop.pl</p>
-                        </div>
+                        {/* <div className="login"> */}
+                        {/* <Icons.FaUser /> */}
+                        {/* <p>Login</p> */}
+                        {/* </div> */}
+
+                        <ShoppingCart />
+                        <BasketModal />
                     </div>
-                    <div
-                        className="search-mobile"
-                        onClick={() => handleSearchWidget()}
+                    <button
+                        className="navbar-toggler bg-secondary"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
                     >
-                        <Icons.FaSearch />
-                    </div>
-
-                    {/* <div className="login"> */}
-                    {/* <Icons.FaUser /> */}
-                    {/* <p>Login</p> */}
-                    {/* </div> */}
-
-                    <ShoppingCart />
-                    <BasketModal />
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
                 </div>
-                <button
-                    className="xds navbar-toggler bg-secondary"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
             </nav>
             <div
                 id="mobileSearchWidget"
