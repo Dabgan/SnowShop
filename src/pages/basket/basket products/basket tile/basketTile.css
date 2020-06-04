@@ -1,5 +1,5 @@
 .basket-products-wrapper {
-  padding: 10px !important;
+  padding: 0 !important;
 }
 
 .basket-products-container {
@@ -13,13 +13,13 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  max-width: 100%;
 }
 
 .basket-product {
   -webkit-box-shadow: 2px 2px 3px 3px #cecece;
           box-shadow: 2px 2px 3px 3px #cecece;
   background-color: #ffffff;
-  border: 2px solid #f11b1b;
   margin: 0.6rem;
   padding: 5px 10px;
   border-radius: 5px;
@@ -37,7 +37,6 @@
 }
 
 .basket-product-img {
-  border: 2px solid #069cc8;
   width: 80px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
@@ -70,8 +69,6 @@
           align-items: flex-start;
   padding: 0 10px;
   margin-right: auto;
-  border: 2px solid #2ce90a;
-  width: 150px;
 }
 
 .basket-product-title {
@@ -80,7 +77,6 @@
 }
 
 .basket-product-actions {
-  border: 2px solid #f11b1b;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
@@ -156,7 +152,6 @@
     max-height: 100%;
   }
   .basket-product-img {
-    border: 2px solid #069cc8;
     height: auto;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;

@@ -13,6 +13,10 @@ header {
   position: relative;
 }
 
+.navbar {
+  padding: 0 !important;
+}
+
 .logo {
   height: 60px;
   -webkit-user-select: none;

@@ -15,6 +15,8 @@ import CloseBasketModal from "../components/CloseBasketModal";
 import HeroImage from "../components/hero image/HeroImage";
 import Loader from "../components/loader/Loader";
 import DisplayCategory from "../components/display category/DisplayCategory";
+import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
 import Products from "../components/Products";
 
 export const ProductsContext = React.createContext();
@@ -82,6 +84,7 @@ const Routes = () => {
                 >
                     <Loader isPageLoaded={isPageLoaded} />
                     <div style={{ display: isPageLoaded ? "none" : "block" }}>
+                        <Header />
                         <Switch>
                             <Route path="/" exact>
                                 <HeroImage />
@@ -110,12 +113,11 @@ const Routes = () => {
                                     <Contact />
                                 </CloseBasketModal>
                             </Route>
-                            <Route exact path="/admin">
+                            {/* <Route exact path="/admin">
                                 <CloseBasketModal>
                                     <Products />
                                 </CloseBasketModal>
-                            </Route>
-
+                            </Route> */}
                             {otherRoutes.map((link) => (
                                 <Route
                                     exact
@@ -163,6 +165,7 @@ const Routes = () => {
                                 </Route>
                             )}
                         </Switch>
+                        <Footer />
                     </div>
                 </div>
             </ProductsContext.Provider>

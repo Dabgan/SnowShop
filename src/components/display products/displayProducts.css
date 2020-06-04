@@ -1,5 +1,6 @@
 .display-products {
   padding: 10px;
+  margin: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,12 +26,14 @@
   display: -ms-flexbox;
   display: flex;
   margin: 10px 0;
+  padding: 0px;
+  margin: 0;
 }
 
 /* ---------------------------------------------------
     MEDIA QUERIES
 ----------------------------------------------------- */
-@media (min-width: 320px) and (max-width: 580px) {
+@media (min-width: 320px) and (max-width: 1181px) {
   .display-products {
     margin-top: 10px;
   }
@@ -42,7 +45,6 @@
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
-    margin: 10px;
   }
 }
 /*# sourceMappingURL=displayProducts.css.map */

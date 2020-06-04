@@ -74,15 +74,14 @@
 /* ---------------------------------------------------
     MEDIA QUERIES
 ----------------------------------------------------- */
-@media (min-width: 320px) and (max-width: 580px) {
+@media (min-width: 320px) and (max-width: 900px) {
   .product-tile {
     margin: 10px auto;
-    width: 12rem;
+    width: 11rem;
     padding: 5px 10px;
   }
-  .product-tile img {
-    width: 80%;
-    height: 80%;
+  .product-img-container {
+    height: 8rem;
   }
 }
 /*# sourceMappingURL=productTile.css.map */

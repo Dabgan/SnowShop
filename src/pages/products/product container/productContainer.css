@@ -39,5 +39,8 @@
   .product-container {
     margin: 0 0 !important;
   }
+  .product-container img {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=productContainer.css.map */

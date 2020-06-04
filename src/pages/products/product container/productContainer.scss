@@ -30,5 +30,8 @@
 @media (min-width: 320px) and (max-width: 1181px) {
     .product-container {
         margin: 0 0 !important;
+        img {
+            width: 100%;
+        }
     }
 }

@@ -18,8 +18,8 @@ html {
 // body {
 // }
 .main-wrapper {
-    min-height: calc(100vh - 319px);
     color: $main-font-color;
+    height: 100vh;
 }
 .flex-center {
     display: flex;

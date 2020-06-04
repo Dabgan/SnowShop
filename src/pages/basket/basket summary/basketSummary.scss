@@ -2,11 +2,11 @@
 
 .basket-container {
     color: #000000;
+    padding: 1rem;
 }
 .basket-summary {
     flex: 1 0 50%;
-    padding: 10px !important;
-    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .summary-info {
@@ -32,9 +32,6 @@
 /* ---------------------------------------------------
      MEDIA QUERIES
 ----------------------------------------------------- */
-
-@media (min-width: 1181px) {
-}
 @media (min-width: 320px) and (max-width: 1181px) {
     .basket-container {
         padding: 1rem;

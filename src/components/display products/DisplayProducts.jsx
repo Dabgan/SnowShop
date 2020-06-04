@@ -6,7 +6,7 @@ import { ProductsContext } from "../../routes/Routes";
 const DisplayProducts = ({ title, randomProducts }) => {
     const products = useContext(ProductsContext);
 
-    // Shuffle array
+    // Shuffle array of products
     if (randomProducts) {
         console.log(randomProducts);
         products.sort(() => 0.5 - Math.random());

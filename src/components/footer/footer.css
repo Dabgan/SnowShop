@@ -1,5 +1,6 @@
 .footer {
   position: relative;
+  overflow: hidden;
 }
 
 .footer-container {
@@ -107,7 +108,7 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 1181px) {
+@media (min-width: 320px) and (max-width: 900px) {
   .footer-nav {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 auto;
