@@ -22,7 +22,7 @@
     margin: 0 auto 0 10px;
 }
 .sortbar {
-    width: 250px;
+    width: 16rem;
     padding: 8px;
     border-radius: 5px;
     margin-left: 20px;
@@ -33,15 +33,22 @@
     display: flex;
     flex-flow: row wrap;
 }
-// .category-tile {
-// }
 
 /* ---------------------------------------------------
      MEDIA QUERIES
 ----------------------------------------------------- */
 @media (min-width: 320px) and (max-width: 1181px) {
     .products-container {
-        padding: 15px;
+        padding: 0px;
+    }
+    .sorting-container {
+        padding: 1rem;
+    }
+    .sortbar {
+        width: auto;
+    }
+    .category-products-counter {
+        margin: 0;
     }
     .category-tile {
         margin: 10px auto;

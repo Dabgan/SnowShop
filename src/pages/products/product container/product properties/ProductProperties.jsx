@@ -35,7 +35,7 @@ const ProductProperties = ({ productInfo }) => {
             </h2>
             <p className="product-properties product-availability">
                 <Icons.FaArchive />
-                In Store: {productInfo.availability}
+                In Store: {productInfo.availability ? "available" : "sold out"}
             </p>
             <p className="product-properties delivery-info-price">
                 <Icons.FaTruck />
