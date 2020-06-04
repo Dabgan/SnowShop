@@ -37,9 +37,14 @@ const BasketTile = ({ productInfo, quantityOptions }) => {
                         ${Math.floor(totalPrice * 100) / 100}
                     </div>
                     {productInfo.quantity > 1 && (
-                        <div className="basket-product-price">
-                            per item: ${productInfo.price}
-                        </div>
+                        <>
+                            <div className="basket-product-price">
+                                per item:
+                            </div>
+                            <div className="basket-product-price">
+                                ${productInfo.price}
+                            </div>
+                        </>
                     )}
                 </div>
                 <Icons.FaTrashAlt

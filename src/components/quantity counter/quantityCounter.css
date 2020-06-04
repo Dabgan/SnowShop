@@ -29,8 +29,11 @@
      MEDIA QUERIES
 ----------------------------------------------------- */
 @media (min-width: 320px) and (max-width: 1181px) {
+  .product-quantity {
+    margin-left: 10px;
+  }
   .quantity-btn {
-    padding: 0 2px;
+    padding: 0 4px;
   }
 }
 /*# sourceMappingURL=quantityCounter.css.map */
