@@ -17,7 +17,7 @@ header {
     user-select: none;
     margin: 0 auto !important;
 }
-.login,
+// .login,
 .shopping-cart {
     display: flex;
     flex-flow: column;
@@ -25,7 +25,7 @@ header {
     justify-content: center;
     height: 100%;
     color: inherit;
-    padding: 10px;
+    padding: 3px 6px;
     font-size: 1rem;
     font-weight: 600;
     user-select: none;
@@ -52,11 +52,9 @@ header {
     right: 10px;
     background: linear-gradient(to right, #30cfd0 0%, #330867 100%) !important;
 }
-
 // .login {
 //     margin-left: 100px;
 // }
-
 .contact-container {
     margin: 0;
     display: flex;
@@ -103,6 +101,8 @@ header {
     .header-top-menu-container {
         display: flex;
         height: 70px;
+        // border: 2px solid #069cc8;
+        margin-right: 4rem;
     }
     .navbar-toggler {
         margin: 0 5px;
@@ -123,5 +123,8 @@ header {
 
     .contact-container {
         display: none;
+    }
+    .logo {
+        margin-left: 1rem !important;
     }
 }

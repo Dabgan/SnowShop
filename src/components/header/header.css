@@ -26,7 +26,6 @@ header {
   margin: 0 auto !important;
 }
 
-.login,
 .shopping-cart {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -43,7 +42,7 @@ header {
           justify-content: center;
   height: 100%;
   color: inherit;
-  padding: 10px;
+  padding: 3px 6px;
   font-size: 1rem;
   font-weight: 600;
   -webkit-user-select: none;
@@ -55,17 +54,14 @@ header {
   transition: background-color 0.3s ease-in-out;
 }
 
-.login p,
 .shopping-cart p {
   margin: 0;
 }
 
-.login svg,
 .shopping-cart svg {
   font-size: 2rem;
 }
 
-.login:hover,
 .shopping-cart:hover {
   background: #bbbbbb;
   color: inherit;
@@ -154,6 +150,7 @@ header {
     display: -ms-flexbox;
     display: flex;
     height: 70px;
+    margin-right: 4rem;
   }
   .navbar-toggler {
     margin: 0 5px;
@@ -173,6 +170,9 @@ header {
   }
   .contact-container {
     display: none;
+  }
+  .logo {
+    margin-left: 1rem !important;
   }
 }
 /*# sourceMappingURL=header.css.map */

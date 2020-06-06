@@ -8,7 +8,6 @@ const DisplayProducts = ({ title, randomProducts }) => {
 
     // Shuffle array of products
     if (randomProducts) {
-        console.log(randomProducts);
         products.sort(() => 0.5 - Math.random());
     }
 

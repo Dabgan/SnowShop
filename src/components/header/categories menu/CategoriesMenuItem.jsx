@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./categoriesMenuItem.css";
 
 const CategoriesMenuItem = (props) => {
     const { name } = props;
