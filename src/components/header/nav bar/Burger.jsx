@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useRef, useContext } from "react";
+import useOnClickOutside from "../../../hooks/useOnClickOutside/useOnClickOutside";
+import { BurgerMenuContext } from "../../app/App";
 import styled from "styled-components";
 import RightNav from "./RightNav";
 
+const BurgerContainer = styled.div`
+    width: 100%;
+`;
+
 const StyledBurger = styled.div`
-    width: 2rem;
     height: 2rem;
     position: fixed;
     top: 21px;
@@ -37,17 +42,21 @@ const StyledBurger = styled.div`
 `;
 
 const Burger = () => {
-    const [open, setOpen] = useState(false);
+    const burgerMenuContext = useContext(BurgerMenuContext);
+    const open = burgerMenuContext.openBurger;
+    const setOpen = burgerMenuContext.setOpenBurger;
+    const node = useRef();
+    useOnClickOutside(node, () => setOpen(false));
 
     return (
-        <>
+        <BurgerContainer ref={node}>
             <StyledBurger open={open} onClick={() => setOpen(!open)}>
                 <div />
                 <div />
                 <div />
             </StyledBurger>
             <RightNav open={open} />
-        </>
+        </BurgerContainer>
     );
 };
 export default Burger;

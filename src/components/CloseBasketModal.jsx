@@ -1,13 +1,17 @@
 import React, { useEffect, useContext } from "react";
 import { BasketModalContext } from "../components/app/App";
+import useCloseBurger from "../hooks/useCloseBurger/useCloseBurger";
 
 const CloseBasketModal = ({ children }) => {
     const basketModal = useContext(BasketModalContext);
+    const setModal = basketModal.setIsModalVisible;
 
     useEffect(() => {
-        basketModal.setIsModalVisible("turn off");
-        return basketModal.setIsModalVisible("turn off");
-    }, []);
+        setModal("turn off");
+        return setModal("turn off");
+    }, [setModal]);
+
+    useCloseBurger();
 
     return (
         <div className="content-wrapper">

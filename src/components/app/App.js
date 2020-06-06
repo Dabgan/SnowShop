@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "../../routes/Routes.jsx";
 import ScrollToTopOnMount from "../ScrollToTopOnMount.jsx";
@@ -13,10 +13,12 @@ toast.configure();
 
 export const BasketProductsContext = React.createContext();
 export const BasketModalContext = React.createContext();
+export const BurgerMenuContext = React.createContext();
 
 function App() {
     const [basketProducts, dispatch] = useBasketLocal();
     const [isModalVisible, setIsModalVisible] = useSetModalVisibility();
+    const [openBurger, setOpenBurger] = useState(false);
 
     return (
         <Router>
@@ -31,7 +33,11 @@ function App() {
                 <BasketModalContext.Provider
                     value={{ isModalVisible, setIsModalVisible }}
                 >
-                    <Routes />
+                    <BurgerMenuContext.Provider
+                        value={{ openBurger, setOpenBurger }}
+                    >
+                        <Routes />
+                    </BurgerMenuContext.Provider>
                 </BasketModalContext.Provider>
             </BasketProductsContext.Provider>
         </Router>

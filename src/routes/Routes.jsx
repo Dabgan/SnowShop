@@ -17,7 +17,7 @@ import Loader from "../components/loader/Loader";
 import DisplayCategory from "../components/display category/DisplayCategory";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
-import Products from "../components/Products";
+// import Products from "../components/Products";
 
 export const ProductsContext = React.createContext();
 
