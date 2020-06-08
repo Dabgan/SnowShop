@@ -27,7 +27,6 @@ html {
     align-items: center;
 }
 .content-wrapper {
-    min-height: calc(100vh - 319px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +35,7 @@ html {
     width: 1220px;
     padding: 40px;
     background: $primary-color;
-    min-height: calc(100vh - 319px);
+    min-height: calc(100vh - 308px);
 }
 .my-btn {
     display: flex;

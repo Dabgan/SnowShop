@@ -9,7 +9,7 @@ const ProductTile = ({ productInfo, newClass = "" }) => {
     return (
         <Link to={productPath} className={`product-tile ${newClass}`}>
             <div className="product-img-container">
-                <img src={img} alt="item number X" />
+                <img src={img} alt={productInfo.title} />
             </div>
             <div className="product-info">{title}</div>
             <div className="product-price product-price-crossed">

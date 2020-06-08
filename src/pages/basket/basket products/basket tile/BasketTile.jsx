@@ -15,7 +15,7 @@ const BasketTile = ({ productInfo, quantityOptions }) => {
                 to={`/${productInfo.category}/${productInfo.oldId}`}
                 className="basket-product-img"
             >
-                <img src={productInfo.img} alt="shoes" />
+                <img src={productInfo.img} alt={productInfo.category} />
             </Link>
             <div className="basket-product-info">
                 <div className="basket-product-title">{productInfo.title}</div>

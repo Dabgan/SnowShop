@@ -17,6 +17,7 @@ import Loader from "../components/loader/Loader";
 import DisplayCategory from "../components/display category/DisplayCategory";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
+import OrderStepOne from "../pages/order/step one/OrderStepOne";
 // import Products from "../components/Products";
 
 export const ProductsContext = React.createContext();
@@ -113,6 +114,12 @@ const Routes = () => {
                                     <Contact />
                                 </CloseBasketModal>
                             </Route>
+                            <Route exact path="/order/step1">
+                                <CloseBasketModal>
+                                    {/* <Order /> */}
+                                    <OrderStepOne />
+                                </CloseBasketModal>
+                            </Route>
                             {/* <Route exact path="/admin">
                                 <CloseBasketModal>
                                     <Products />
@@ -161,7 +168,9 @@ const Routes = () => {
                             ))}
                             {errorPage && (
                                 <Route to="*">
-                                    <PathNotFound />
+                                    <CloseBasketModal>
+                                        <PathNotFound />
+                                    </CloseBasketModal>
                                 </Route>
                             )}
                         </Switch>

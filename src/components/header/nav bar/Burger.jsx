@@ -13,14 +13,19 @@ const StyledBurger = styled.div`
     position: fixed;
     top: 21px;
     right: 20px;
-    z-index: 20;
+    z-index: 2;
+    cursor: pointer;
     display: none;
+    &:focus {
+        outline: none;
+    }
+
     @media (max-width: 768px) {
         display: flex;
         justify-content: space-around;
         flex-flow: column nowrap;
     }
-    div {
+    span {
         width: 2rem;
         height: 0.33rem;
         background-color: ${({ open }) => (open ? "#ccc" : "#4b4b4b")};
@@ -51,9 +56,9 @@ const Burger = () => {
     return (
         <BurgerContainer ref={node}>
             <StyledBurger open={open} onClick={() => setOpen(!open)}>
-                <div />
-                <div />
-                <div />
+                <span />
+                <span />
+                <span />
             </StyledBurger>
             <RightNav open={open} />
         </BurgerContainer>

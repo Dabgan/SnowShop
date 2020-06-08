@@ -36,7 +36,6 @@ html {
 }
 
 .content-wrapper {
-  min-height: calc(100vh - 319px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,7 +51,7 @@ html {
   width: 1220px;
   padding: 40px;
   background: #f9f9f9;
-  min-height: calc(100vh - 319px);
+  min-height: calc(100vh - 308px);
 }
 
 .my-btn {

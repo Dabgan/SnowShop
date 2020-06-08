@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import "./basketSummary.css";
 import { BasketProductsContext } from "../../../components/app/App";
+import { Link } from "react-router-dom";
 
 const BasketSummary = () => {
     const basketContext = useContext(BasketProductsContext);
@@ -37,9 +38,9 @@ const BasketSummary = () => {
                     <p>Sum:</p>
                     <span>${totalCost}</span>
                 </div>
-                <button className="my-btn basket-summary-btn">
+                <Link to="/order/step1" className="my-btn basket-summary-btn">
                     Go to payment
-                </button>
+                </Link>
             </div>
         </div>
     );
