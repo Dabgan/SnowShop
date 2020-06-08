@@ -1,5 +1,5 @@
 import React from "react";
-import OrderSteps from "../OrderSteps";
+import ShoppingPath from "../ShoppingPath";
 import {
     OrderOptionsContainer,
     OrderOption,
@@ -13,15 +13,17 @@ import {
 const OrderStepOne = () => {
     return (
         <div>
-            <OrderSteps />
+            <ShoppingPath />
             <OrderOptionsContainer>
                 <OrderOption>
                     <OrderTitle>Order as a Guest</OrderTitle>
                     <p>
-                        You don't have to have an account in our shop. Click
+                        You don't have to create an account in our shop. Click
                         here to order!
                     </p>
-                    <OrderBtn className="my-btn">Order</OrderBtn>
+                    <OrderBtn href="/order/step2" className="my-btn">
+                        Order
+                    </OrderBtn>
                 </OrderOption>
                 <OrderOption disabled>
                     <OrderTitle>Login</OrderTitle>

@@ -1,8 +1,15 @@
 import styled from "styled-components";
 
 const OrderOptionsContainer = styled.div`
+    // border: 2px solid red;
     display: flex;
     margin-top: 2.5rem;
+    @media (min-width: 320px) and (max-width: 1181px) {
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 2.5rem;
+    }
 `;
 const OrderOption = styled.div`
     display: flex;
@@ -30,6 +37,13 @@ const OrderOption = styled.div`
     input {
         border-radius: 5px;
         margin-bottom: 0.5rem;
+    }
+    @media (min-width: 320px) and (max-width: 1181px) {
+        margin: 1rem 1rem;
+        flex: auto;
+        width: 80%;
+        height: 17rem;
+        overflow: hidden;
     }
 `;
 const OrderDisabled = styled.div`
@@ -63,7 +77,7 @@ const OrderTitle = styled.h2`
     text-align: center;
     margin-bottom: 0.8rem;
 `;
-const OrderBtn = styled.button`
+const OrderBtn = styled.a`
     margin: 0 1rem;
     justify-content: center;
 `;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const OrderStepContainer = styled.div`
+const ShoppingPathContainer = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -18,11 +18,19 @@ const OrderStepNum = styled.div`
     width: 3rem;
     // border: 2px solid black;
     border-radius: 50%;
-    background-color: #343a40;
+    background: ${(props) =>
+        props.active
+            ? "linear-gradient(to right, #30cfd0 0%, #330867 100%)"
+            : "#343a40"};
     color: #fff;
     font-size: 1.5rem;
     font-weight: 600;
     user-select: none;
+    @media (min-width: 320px) and (max-width: 1181px) {
+        height: 2rem;
+        width: 2rem;
+        font-size: 1.2rem;
+    }
 `;
 
 const OrderStep = styled.div`
@@ -36,15 +44,11 @@ const OrderStep = styled.div`
     }
 `;
 
-const OrderStepActive = styled(OrderStep)`
-    background-color: #36d67a;
-`;
-
 const OrderSteps = () => {
     return (
-        <OrderStepContainer>
+        <ShoppingPathContainer>
             <OrderStep>
-                <OrderStepNum>1</OrderStepNum>
+                <OrderStepNum active>1</OrderStepNum>
                 <p>Login/Register</p>
             </OrderStep>
             <OrderStep>
@@ -59,7 +63,7 @@ const OrderSteps = () => {
                 <OrderStepNum>4</OrderStepNum>
                 <p>Confirmation</p>
             </OrderStep>
-        </OrderStepContainer>
+        </ShoppingPathContainer>
     );
 };
 
