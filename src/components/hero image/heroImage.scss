@@ -5,7 +5,7 @@
     align-items: flex-start;
     width: 100%;
     background-image: url("../../assets/images/banner5.jpg");
-    height: 600px;
+    height: 700px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,19 +34,18 @@
     .hero-img {
         align-items: center;
         justify-content: center;
-        height: 85vh;
+        height: 92vh;
         overflow: hidden;
     }
     .hero-text {
-        // width: auto;
-        margin: 8% 25% 0 0;
+        margin: 8% 21% 0 0;
         padding: 25px;
     }
     .hero-header {
-        font-size: 2rem;
+        font-size: 2.8rem;
         font-family: $headers-font;
     }
     .hero-paragraph {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 }

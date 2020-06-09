@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 const OrderOptionsContainer = styled.div`
-    // border: 2px solid red;
     display: flex;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     @media (min-width: 320px) and (max-width: 1181px) {
         flex-flow: column;
         align-items: center;
@@ -15,7 +14,7 @@ const OrderOption = styled.div`
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    flex: 0 0 30%;
+    flex: 0 0 26%;
     padding: 1.5rem;
     margin: 1rem auto;
     background-color: #ffffff;

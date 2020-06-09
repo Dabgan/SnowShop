@@ -19,7 +19,7 @@ const OrderStepOne = () => {
                     <OrderTitle>Order as a Guest</OrderTitle>
                     <p>
                         You don't have to create an account in our shop. Click
-                        here to order!
+                        here to order:
                     </p>
                     <OrderBtn href="/order/step2" className="my-btn">
                         Order
