@@ -4,6 +4,7 @@ import {
     FormError,
     FormLabel,
     FormControl,
+    StyledTextArea,
 } from "./stepTwoStyles";
 
 const OrderInput = ({ name, formik, type = "text", title = name }) => {
@@ -18,7 +19,7 @@ const OrderInput = ({ name, formik, type = "text", title = name }) => {
                 onChange={formik.handleChange}
                 value={formik.values[name]}
                 onBlur={formik.handleBlur}
-                as={name === "comments" ? "textarea" : "input"}
+                as={name === "comments" ? StyledTextArea : "input"}
             />
             <FormError
                 error={formik.errors[name]}

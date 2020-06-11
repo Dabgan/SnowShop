@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const OrderOptionsContainer = styled.div`
     display: flex;
-    margin-top: 2rem;
     @media (min-width: 320px) and (max-width: 1181px) {
         flex-flow: column;
         align-items: center;

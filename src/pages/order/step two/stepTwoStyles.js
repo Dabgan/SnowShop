@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const StyledForm = styled.form`
-    // border: 2px solid green;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
@@ -24,19 +23,24 @@ const FormControl = styled.div`
     display: flex;
     flex-flow: column;
     justify-content: flex-end;
+    align-items: center;
     margin-bottom: 0.5rem;
     height: 100%;
+    width: 80%;
+    @media (min-width: 320px) and (max-width: 1181px) {
+        align-items: stretch;
+        width: 100%;
+    }
 `;
 const FormData = styled.div`
-    // border: 2px solid red;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    flex: 1 0 33%;
+    align-items: center;
+    flex: 1 0 40%;
     padding: 1.5rem;
     margin: 1rem auto;
     background-color: #ffffff;
-    border-radius: 5px;
     text-align: center;
     position: relative;
     pointer-events: ${(props) => (props.disabled ? "none" : "visible")};
@@ -50,25 +54,42 @@ const FormData = styled.div`
         width: 80%;
     }
 `;
+const FormLabel = styled.label`
+    text-transform: capitalize;
+    margin-bottom: 0;
+`;
 const StyledInput = styled.input`
     border-radius: 5px;
     border: 2px solid black;
     margin-bottom: 0.5rem;
     padding: 0.3rem 0.3rem 0.3rem 1rem;
-
-    /* textarea additional styles */
-    height: ${(props) => (props.name === "comments" ? "100%" : "auto")};
-    padding-top: ${(props) => (props.name === "comments" ? "0.5rem" : ".3rem")};
+    width: 100%;
+`;
+const StyledTextArea = styled.textarea`
+    height: 200px;
+    width: 35rem;
+    padding-top: 0.5rem;
+    align-self: center;
     resize: none;
+    @media (min-width: 320px) and (max-width: 1181px) {
+        height: 10rem;
+        width: auto;
+        align-self: stretch;
+    }
 `;
 const FormError = styled.div`
     display: ${(props) => (props.error && props.touched ? "block" : "none")};
     font-size: 0.8rem;
     color: red;
 `;
-const FormLabel = styled.label`
-    text-transform: capitalize;
-    margin-bottom: 0;
+const BtnContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 100%;
+    button {
+        margin-top: 0;
+    }
 `;
 
 export {
@@ -79,4 +100,6 @@ export {
     FormError,
     FormLabel,
     FormControl,
+    BtnContainer,
+    StyledTextArea,
 };

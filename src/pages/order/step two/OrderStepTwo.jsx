@@ -1,7 +1,7 @@
 import React from "react";
 import { useFormik } from "formik";
 import ShoppingPath from "../ShoppingPath";
-import { StyledForm, FormData, FormTitle } from "./stepTwoStyles";
+import { StyledForm, FormData, FormTitle, BtnContainer } from "./stepTwoStyles";
 import OrderInput from "./OrderInput";
 
 const initialValues = {
@@ -67,8 +67,6 @@ const OrderStepTwo = () => {
         validate,
     });
 
-    console.log(`visited filds`, formik.touched);
-
     return (
         <>
             <ShoppingPath active={2} />
@@ -109,9 +107,11 @@ const OrderStepTwo = () => {
                     <FormTitle>Additional info</FormTitle>
                     <OrderInput name="comments" formik={formik} />
                 </FormData>
-                <button type="submit" className="my-btn">
-                    Submit
-                </button>
+                <BtnContainer>
+                    <button type="submit" className="my-btn">
+                        Submit
+                    </button>
+                </BtnContainer>
             </StyledForm>
         </>
     );
