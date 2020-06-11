@@ -1,23 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./basketSummary.css";
-import { BasketProductsContext } from "../../../components/app/App";
+import useBasketCost from "../../../hooks/useBasket/useBasketCost.jsx";
 import { Link } from "react-router-dom";
 
 const BasketSummary = () => {
-    const basketContext = useContext(BasketProductsContext);
-    const deliveryCost = 6.99;
-    const productsCost =
-        Math.floor(
-            basketContext.basketProducts.reduce((accumulator, product) => {
-                return accumulator + product.price * product.quantity;
-            }, 0) * 100
-        ) / 100;
-    const discount = (productsCost + deliveryCost) * 0.05;
-    const totalCost =
-        productsCost === 0
-            ? 0
-            : Math.floor((productsCost + deliveryCost - discount) * 100) / 100;
-
+    const [productsCost, deliveryCost, totalCost] = useBasketCost();
     return (
         <div className="basket-summary col-lg-6">
             <h2 className="h3 mb-4">Summary:</h2>

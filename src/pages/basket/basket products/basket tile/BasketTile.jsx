@@ -5,8 +5,8 @@ import Icons from "../../../../icons";
 import { Link } from "react-router-dom";
 import QuantityCounter from "../../../../components/quantity counter/QuantityCounter";
 
-const BasketTile = ({ productInfo, quantityOptions }) => {
-    const basketContext = useContext(BasketProductsContext);
+const BasketTile = ({ productInfo, quantityOptions, orderTile }) => {
+    const basketProducts = useContext(BasketProductsContext);
     const [quantity, setQuantity] = useState(productInfo.quantity);
     const totalPrice = quantity * productInfo.price;
     return (
@@ -47,15 +47,17 @@ const BasketTile = ({ productInfo, quantityOptions }) => {
                         </>
                     )}
                 </div>
-                <Icons.FaTrashAlt
-                    onClick={() =>
-                        basketContext.manageBasket({
-                            operation: "delete",
-                            productId: productInfo.id,
-                            title: productInfo.title,
-                        })
-                    }
-                />
+                {!orderTile && (
+                    <Icons.FaTrashAlt
+                        onClick={() =>
+                            basketProducts.manageBasket({
+                                operation: "delete",
+                                productId: productInfo.id,
+                                title: productInfo.title,
+                            })
+                        }
+                    />
+                )}
             </div>
         </div>
     );

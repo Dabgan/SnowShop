@@ -74,11 +74,15 @@ const ShoppingPath = ({ active }) => {
                 <StepLabel>Your Data</StepLabel>
             </OrderStep>
             <OrderStep activeNum={active}>
-                <OrderStepNum>3</OrderStepNum>
+                <OrderStepNum as={Link} to={"/order/step3"}>
+                    3
+                </OrderStepNum>
                 <StepLabel>Summary</StepLabel>
             </OrderStep>
             <OrderStep activeNum={active}>
-                <OrderStepNum>4</OrderStepNum>
+                <OrderStepNum as={Link} to={"/order/step4"}>
+                    4
+                </OrderStepNum>
                 <StepLabel>Confirmation</StepLabel>
             </OrderStep>
         </ShoppingPathContainer>

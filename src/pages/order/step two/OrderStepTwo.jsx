@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import ShoppingPath from "../ShoppingPath";
 import { StyledForm, FormData, FormTitle, BtnContainer } from "./stepTwoStyles";
 import OrderInput from "./OrderInput";
+import { withRouter, useHistory } from "react-router-dom";
 
 const initialValues = {
     name: "Gabriel",
@@ -15,10 +16,6 @@ const initialValues = {
     city: "wadowice",
     state: "busy",
     comments: "lol no comment, so bad",
-};
-
-const onSubmit = (values) => {
-    console.log(`Form submited hrray!`, values);
 };
 
 const validate = (values) => {
@@ -51,7 +48,7 @@ const validate = (values) => {
                 break;
         }
     };
-    // every input excluding 'comments' is required
+    // set every input excluding 'comments' to required
     for (const name in values) {
         if (name !== "comments") {
             validateRequired(name);
@@ -61,6 +58,13 @@ const validate = (values) => {
 };
 
 const OrderStepTwo = () => {
+    let history = useHistory();
+
+    // onsubmit go to step3 page and pass all the inputs values
+    const onSubmit = (values) => {
+        history.push("/order/step3", { ...values });
+    };
+
     const formik = useFormik({
         initialValues: initialValues,
         onSubmit,
@@ -117,4 +121,4 @@ const OrderStepTwo = () => {
     );
 };
 
-export default OrderStepTwo;
+export default withRouter(OrderStepTwo);
