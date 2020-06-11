@@ -19,10 +19,7 @@ const OrderStepNum = styled.div`
     height: 1.6rem;
     width: 1.6rem;
     border-radius: 50%;
-    background: ${(props) =>
-        props.active
-            ? "linear-gradient(to right, #30cfd0 0%, #330867 100%)"
-            : "#343a40"};
+    background: #343a40;
     color: #fff;
     font-size: 1.2rem;
     font-weight: 600;
@@ -41,29 +38,33 @@ const OrderStep = styled.div`
     align-items: center;
     font-size: 1.1rem;
     font-weight: 600;
-
+    :nth-of-type(${(props) => props.activeNum}) {
+        div {
+            background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+        }
+    }
     p {
         margin-top: 0.2rem;
         font-size: 0.8rem;
     }
 `;
 
-const OrderSteps = () => {
+const ShoppingPath = ({ active }) => {
     return (
         <ShoppingPathContainer>
-            <OrderStep>
-                <OrderStepNum active>1</OrderStepNum>
+            <OrderStep activeNum={active}>
+                <OrderStepNum>1</OrderStepNum>
                 <p>Login/Register</p>
             </OrderStep>
-            <OrderStep>
+            <OrderStep activeNum={active}>
                 <OrderStepNum>2</OrderStepNum>
                 <p>Your Data</p>
             </OrderStep>
-            <OrderStep>
+            <OrderStep activeNum={active}>
                 <OrderStepNum>3</OrderStepNum>
                 <p>Summary</p>
             </OrderStep>
-            <OrderStep>
+            <OrderStep activeNum={active}>
                 <OrderStepNum>4</OrderStepNum>
                 <p>Confirmation</p>
             </OrderStep>
@@ -71,4 +72,4 @@ const OrderSteps = () => {
     );
 };
 
-export default OrderSteps;
+export default ShoppingPath;

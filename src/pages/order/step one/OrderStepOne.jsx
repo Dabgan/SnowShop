@@ -9,11 +9,12 @@ import {
     OrderBtn,
     OrderForm,
 } from "./stepOneStyles";
+import { Link } from "react-router-dom";
 
 const OrderStepOne = () => {
     return (
-        <div>
-            <ShoppingPath />
+        <>
+            <ShoppingPath active={1} />
             <OrderOptionsContainer>
                 <OrderOption>
                     <OrderTitle>Order as a Guest</OrderTitle>
@@ -21,7 +22,7 @@ const OrderStepOne = () => {
                         You don't have to create an account in our shop. Click
                         here to order:
                     </p>
-                    <OrderBtn href="/order/step2" className="my-btn">
+                    <OrderBtn as={Link} to="/order/step2" className="my-btn">
                         Order
                     </OrderBtn>
                 </OrderOption>
@@ -68,7 +69,7 @@ const OrderStepOne = () => {
                     <OrderDisabledTitle>Work in progress</OrderDisabledTitle>
                 </OrderOption>
             </OrderOptionsContainer>
-        </div>
+        </>
     );
 };
 

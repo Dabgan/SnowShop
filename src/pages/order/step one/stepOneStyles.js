@@ -76,7 +76,7 @@ const OrderTitle = styled.h2`
     text-align: center;
     margin-bottom: 0.8rem;
 `;
-const OrderBtn = styled.a`
+const OrderBtn = styled.button`
     margin: 0 1rem;
     justify-content: center;
 `;

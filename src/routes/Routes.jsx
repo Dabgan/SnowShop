@@ -19,6 +19,7 @@ import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import OrderStepOne from "../pages/order/step one/OrderStepOne";
 import Products from "../components/Products";
+import OrderStepTwo from "../pages/order/step two/OrderStepTwo";
 
 export const ProductsContext = React.createContext();
 
@@ -116,8 +117,12 @@ const Routes = () => {
                             </Route>
                             <Route exact path="/order/step1">
                                 <CloseBasketModal>
-                                    {/* <Order /> */}
                                     <OrderStepOne />
+                                </CloseBasketModal>
+                            </Route>
+                            <Route exact path="/order/step2">
+                                <CloseBasketModal>
+                                    <OrderStepTwo />
                                 </CloseBasketModal>
                             </Route>
                             {/* <Route exact path="/admin">
