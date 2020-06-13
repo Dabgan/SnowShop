@@ -16,6 +16,8 @@ import "../../basket/basket summary/basketSummary.css";
 const OrderStepThree = () => {
     const basketContext = useContext(BasketProductsContext);
     const [productsCost, deliveryCost, totalCost] = useBasketCost();
+
+    // collect data from previous step form
     const history = useHistory();
     const formData = history.location.state || {
         name: "please submit your shipping information first",
@@ -83,18 +85,29 @@ const OrderStepThree = () => {
                     </OrderSummaryInfo>
                     <OrderSummaryInfo>
                         <OrderTitle>Comments:</OrderTitle>
-                        <OrderDataItem>{formData.comments}</OrderDataItem>
+                        <OrderDataItem>
+                            <p>{formData.comments}</p>
+                        </OrderDataItem>
                     </OrderSummaryInfo>
                     <OrderSummaryInfo>
                         <OrderTitle>Information:</OrderTitle>
                         <OrderDataItem>
-                            Expected time of shipment : <span>2-3 days</span>
+                            <p>
+                                Expected time of shipment :{" "}
+                                <span>2-3 days</span>
+                            </p>
                         </OrderDataItem>
                         <OrderDataItem>
-                            Form of delivery: <span>personal collection</span>
+                            <p>
+                                Form of delivery:{" "}
+                                <span>personal collection</span>
+                            </p>
                         </OrderDataItem>
                         <OrderDataItem>
-                            Payment method: <span>cash on delivery</span>
+                            <p>
+                                {" "}
+                                Payment method: <span>cash on delivery</span>
+                            </p>
                         </OrderDataItem>
                     </OrderSummaryInfo>
                 </OrderSummaryPanel>

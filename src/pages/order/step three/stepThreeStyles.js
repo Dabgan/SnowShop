@@ -1,6 +1,6 @@
 import styled from "styled-components";
+
 const OrderSummary = styled.div`
-    /* border: 2px solid #069cc8; */
     display: flex;
     flex-flow: row wrap;
     @media (min-width: 320px) and (max-width: 1181px) {
@@ -11,7 +11,6 @@ const OrderSummary = styled.div`
     }
 `;
 const OrderSummaryPanel = styled.div`
-    /* border: 2px solid #f11b1b; */
     display: flex;
     flex-flow: ${(props) => (props.flexRow ? "row wrap" : "column")};
     align-items: flex-start;
@@ -33,17 +32,18 @@ const OrderSummaryPanel = styled.div`
         list-style: none;
     }
     @media (min-width: 320px) and (max-width: 1181px) {
+        flex-flow: column;
         margin: 1rem 1rem;
         flex: auto;
         width: 80%;
     }
 `;
 const OrderSummaryInfo = styled.div`
-    /* border: 2px solid #069cc8; */
     display: flex;
     flex-flow: column;
     align-items: flex-start;
     flex: 1;
+    height: 100%;
     min-width: ${(props) => (props.fullWidth ? "100%" : "auto")};
     .summary-row {
         width: 100%;
@@ -51,21 +51,28 @@ const OrderSummaryInfo = styled.div`
     p {
         display: flex;
         width: 100%;
-        /* border: 2px solid #2ce90a; */
     }
     span {
         font-weight: 600;
         margin: 0 auto;
     }
+    @media (min-width: 320px) and (max-width: 1181px) {
+        padding: 0.4rem;
+        width: 100%;
+        align-items: center;
+    }
 `;
 const OrderDataItem = styled.div`
     display: flex;
     justify-content: flex-start;
-    width: 100%;
-    /* border: 2px solid #f11b1b; */
+    span {
+        margin: 0 0 0 auto;
+    }
     p {
-        min-width: 60%;
-        /* border: 2px solid #069cc8; */
+        margin-bottom: 0.3rem;
+    }
+    @media (min-width: 320px) and (max-width: 1181px) {
+        justify-content: center;
     }
 `;
 
@@ -74,9 +81,12 @@ const OrderTitle = styled.p`
     font-family: "Ubuntu", sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
+    @media (min-width: 320px) and (max-width: 1181px) {
+        display: flex;
+        justify-content: center;
+    }
 `;
 const ButtonPannel = styled.div`
-    /* border: 2px solid #f11b1b; */
     display: flex;
     flex-flow: row;
     justify-content: space-around;
@@ -86,8 +96,9 @@ const ButtonPannel = styled.div`
         border: 2px solid #000;
     }
     @media (min-width: 320px) and (max-width: 1181px) {
-        margin: 1rem 1rem;
-        width: 80%;
+        margin: 1rem 0;
+        width: 100%;
+        justify-content: space-between;
     }
 `;
 
