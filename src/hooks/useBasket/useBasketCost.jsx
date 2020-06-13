@@ -10,7 +10,7 @@ const useBasketCost = () => {
                 return accumulator + product.price * product.quantity;
             }, 0) * 100
         ) / 100;
-    const discount = (productsCost + deliveryCost) * 0.05;
+    const discount = (productsCost + deliveryCost) * 0.0;
     const totalCost =
         productsCost === 0
             ? 0

@@ -12,14 +12,12 @@ const OrderInput = ({ name, formik, type = "text", title = name }) => {
         <FormControl>
             <FormLabel htmlFor={`data-${name}`}>{title}</FormLabel>
             <StyledInput
+                as={name === "comments" ? StyledTextArea : "input"}
                 autoComplete={`off`}
                 type={type}
                 id={`data-${name}`}
                 name={name}
-                onChange={formik.handleChange}
-                value={formik.values[name]}
-                onBlur={formik.handleBlur}
-                as={name === "comments" ? StyledTextArea : "input"}
+                {...formik.getFieldProps(name)}
             />
             <FormError
                 error={formik.errors[name]}

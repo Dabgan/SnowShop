@@ -66,7 +66,7 @@ const OrderStepTwo = () => {
     };
 
     const formik = useFormik({
-        initialValues: initialValues,
+        initialValues,
         onSubmit,
         validate,
     });
