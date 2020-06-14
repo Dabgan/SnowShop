@@ -6,10 +6,13 @@ import { useHistory } from "react-router-dom";
 const SummaryText = styled.div`
     padding: 2rem;
     border-radius: 5px;
-    margin: 1rem auto;
+    margin: 1rem;
     background-color: #ffffff;
     p {
         margin: 0.5rem auto;
+    }
+    @media (min-width: 320px) and (max-width: 1181px) {
+        margin: 1rem;
     }
 `;
 const Title = styled.h1`
@@ -18,8 +21,11 @@ const Title = styled.h1`
     font-family: "Ubuntu", sans-serif;
     font-size: 2.5rem;
     font-weight: 600;
+    @media (min-width: 320px) and (max-width: 1181px) {
+        font-size: 1.5rem;
+    }
 `;
-const Price = styled.span`
+const Bold = styled.span`
     font-weight: 600;
 `;
 
@@ -38,7 +44,7 @@ const OrderStepFour = () => {
                 </p>
                 <p>
                     Total purchase value, including shipping costs:{" "}
-                    <Price>{totalCost.totalCost} $</Price>
+                    <Bold>{totalCost.totalCost} $</Bold>
                 </p>
                 <p>To pay for your order we invite you to our office.</p>
                 <p>
@@ -47,7 +53,8 @@ const OrderStepFour = () => {
                 </p>
                 <p>
                     In case of any questions or doubts, please contact us by
-                    phone: 420 213 769 or e-mail shop@snowshop.pl
+                    phone: <Bold>420 213 769</Bold> or e-mail{" "}
+                    <Bold>shop@snowshop.pl</Bold>.
                 </p>
             </SummaryText>
         </>

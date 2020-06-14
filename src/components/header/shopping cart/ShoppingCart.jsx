@@ -6,7 +6,7 @@ import { BasketProductsContext, BasketModalContext } from "../../app/App";
 const ShoppingCart = () => {
     const basketContext = useContext(BasketProductsContext);
     const basketModal = useContext(BasketModalContext);
-    const checkIfMobile = window.innerWidth > 320 && window.innerWidth < 1181;
+    const checkIfMobile = window.innerWidth > 300 && window.innerWidth < 1181;
     const basketLength = basketContext.basketProducts.length;
     return (
         <>

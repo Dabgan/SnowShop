@@ -6,15 +6,15 @@ import OrderInput from "./OrderInput";
 import { withRouter, useHistory, Link } from "react-router-dom";
 
 const initialValues = {
-    name: "Gabriel",
-    lastName: "Daniluk",
+    name: "",
+    lastName: "Test",
     number: 420692137,
     email: "shop@snowshop.pl",
-    address: "Lalaland",
-    addressComplement: "xd st. 19",
+    address: "Test adress",
+    addressComplement: "2/13",
     zip: "21-370",
-    city: "wadowice",
-    state: "busy",
+    city: "Testtown",
+    state: "Testylvania",
     comments: "lol no comment, so bad",
 };
 

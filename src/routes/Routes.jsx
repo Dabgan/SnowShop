@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import About from "../pages/informations/About/About";
 import Contact from "../pages/informations/Contact/Contact";
 import firebase from "../firebase";
+import "../components/Products";
 import InformationComponent from "../pages/informations/others/InformationComponent";
 import BasketComponent from "../pages/basket/BasketComponent";
 import DailyPromotion from "../components/daily promotion/DailyPromotion";
@@ -18,7 +19,7 @@ import DisplayCategory from "../components/display category/DisplayCategory";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import OrderStepOne from "../pages/order/step one/OrderStepOne";
-import Products from "../components/Products";
+
 import OrderStepTwo from "../pages/order/step two/OrderStepTwo";
 import OrderStepThree from "../pages/order/step three/OrderStepThree";
 import OrderStepFour from "../pages/order/step four/OrderStepFour";
@@ -73,9 +74,8 @@ const Routes = () => {
                     id: dbProduct,
                 });
             }
-
             setProducts(newProducts);
-            setErrorPage(!errorPage);
+            setErrorPage(true);
             setIsPageLoaded(false);
         });
     }, []);

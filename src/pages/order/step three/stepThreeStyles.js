@@ -12,9 +12,9 @@ const OrderSummary = styled.div`
 `;
 const OrderSummaryPanel = styled.div`
     display: flex;
-    flex-flow: ${(props) => (props.flexRow ? "row wrap" : "column")};
+    flex-flow: ${(props) => (props.flexRow ? "row wrap" : "column wrap")};
     align-items: flex-start;
-    flex: 1 0 50%;
+    flex: 1 0 40%;
     padding: 1.5rem;
     margin: 1rem auto;
     background-color: #ffffff;
@@ -23,6 +23,7 @@ const OrderSummaryPanel = styled.div`
     .basket-product {
         width: 100%;
         min-height: 90px;
+        max-height: 90px;
         margin: 0.6rem 0;
     }
     .cost-total {

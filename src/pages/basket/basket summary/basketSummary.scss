@@ -7,8 +7,10 @@
 .basket-summary {
     flex: 1 0 50%;
     padding: 0 !important;
+    h2 {
+        padding: 1rem;
+    }
 }
-
 .summary-info {
     font-size: 1rem;
     display: flex;
@@ -39,6 +41,9 @@
     }
     .basket-summary {
         margin-top: 20px;
+        h2 {
+            padding: 1rem;
+        }
     }
     .summary-info {
         padding: 20px;

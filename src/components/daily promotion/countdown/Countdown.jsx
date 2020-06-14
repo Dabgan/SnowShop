@@ -53,11 +53,13 @@ export class Countdown extends Component {
         return number < 10 ? "0" + number : number;
     };
 
+    myInterval = 0;
+
     componentDidMount() {
-        setInterval(this.setCountdownTimer, 1000);
+        this.myInterval = setInterval(this.setCountdownTimer, 1000);
     }
     componentWillUnmount() {
-        return setInterval(this.setCountdownTimer, 1000);
+        clearInterval(this.myInterval);
     }
     render() {
         const { addLeadingZeros } = this;

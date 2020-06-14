@@ -13,7 +13,11 @@ const basketReducerLocalStorage = (state, action) => {
     // find an item in the cart by its id
     const find = () => {
         const match = localBasketProducts.filter((item) => {
-            if (item.id === action.product.id) return true;
+            if (item.id === action.product.id) {
+                return true;
+            } else {
+                return false;
+            }
         });
         if (match && match[0]) return match[0];
     };
@@ -65,6 +69,8 @@ const basketReducerLocalStorage = (state, action) => {
             if (item.id === find().id && item.quantity === 0) {
                 remove(find().id);
                 return true;
+            } else {
+                return false;
             }
         });
         sync();
