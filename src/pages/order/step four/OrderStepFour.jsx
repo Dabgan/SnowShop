@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ShoppingPath from "../ShoppingPath";
 import styled from "styled-components";
-import useBasketCost from "../../../hooks/useBasket/useBasketCost";
-import useBasketLocal from "../../../hooks/useBasket/useBasketLocal";
+import { useHistory } from "react-router-dom";
 
 const SummaryText = styled.div`
     padding: 2rem;
@@ -25,18 +24,12 @@ const Price = styled.span`
 `;
 
 const OrderStepFour = () => {
-    const [, , totalCost] = useBasketCost();
-    // const [basketProducts, dispatch] = useBasketLocal();
-
-    // useEffect(() => {
-    //     console.log(`lol`);
-    //     dispatch({ operation: "clear" });
-    //     return dispatch({ operation: "clear" });
-    // }, [dispatch]);
-
+    // collect data from previous step form
+    const history = useHistory();
+    const totalCost = history.location.state || { totalCost: "0.00" };
     return (
         <>
-            <ShoppingPath active={4} />
+            <ShoppingPath active={4} activeLink={"-n + 3"} />
             <SummaryText>
                 <Title>Thank you for your order!</Title>
                 <p>
@@ -45,7 +38,7 @@ const OrderStepFour = () => {
                 </p>
                 <p>
                     Total purchase value, including shipping costs:{" "}
-                    <Price>{totalCost} $</Price>
+                    <Price>{totalCost.totalCost} $</Price>
                 </p>
                 <p>To pay for your order we invite you to our office.</p>
                 <p>

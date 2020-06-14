@@ -23,9 +23,16 @@ const OrderStepThree = () => {
         name: "please submit your shipping information first",
     };
 
+    const confirmOrder = () => {
+        // add total cost to the history, and use it in OrderStepFour
+        history.push("/order/step4", { totalCost: totalCost });
+        // empty shopping cart
+        basketContext.manageBasket({ operation: "clear" });
+    };
+
     return (
         <>
-            <ShoppingPath active={3} />
+            <ShoppingPath active={3} activeLink={"n + 4"} />
             <OrderSummary>
                 <OrderSummaryPanel>
                     {basketContext.basketProducts.map((product) => (
@@ -117,9 +124,9 @@ const OrderStepThree = () => {
                     Go Back
                 </Link>
 
-                <Link to="/order/step4" className="my-btn">
+                <button onClick={confirmOrder} className="my-btn">
                     Confirm Order
-                </Link>
+                </button>
             </ButtonPannel>
         </>
     );

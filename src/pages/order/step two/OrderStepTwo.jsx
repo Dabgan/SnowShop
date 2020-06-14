@@ -73,7 +73,7 @@ const OrderStepTwo = () => {
 
     return (
         <>
-            <ShoppingPath active={2} />
+            <ShoppingPath active={2} activeLink={"n + 3"} />
             <StyledForm onSubmit={formik.handleSubmit}>
                 <FormData>
                     <FormTitle>Your Data</FormTitle>

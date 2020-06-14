@@ -25,6 +25,7 @@ const OrderStepNum = styled.div`
     font-size: 1.2rem;
     font-weight: 600;
     user-select: none;
+
     @media (min-width: 320px) and (max-width: 1181px) {
         height: 0.7rem;
         width: 0.7rem;
@@ -51,35 +52,41 @@ const OrderStep = styled.div`
             background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
         }
     }
+    :nth-of-type(${(props) => props.activeLink}) {
+        a {
+            pointer-events: none;
+            filter: opacity(25%);
+        }
+    }
 `;
 const StepLabel = styled.p`
     margin-top: 0.2rem;
     font-size: 0.8rem;
 `;
 
-const ShoppingPath = ({ active }) => {
+const ShoppingPath = ({ active, activeLink }) => {
     return (
         <ShoppingPathContainer>
-            <OrderStep activeNum={active}>
+            <OrderStep activeNum={active} activeLink={activeLink}>
                 <OrderStepNum as={Link} to={"/order/step1"}>
                     1
                 </OrderStepNum>
 
                 <StepLabel>Login/Register</StepLabel>
             </OrderStep>
-            <OrderStep activeNum={active}>
+            <OrderStep activeNum={active} activeLink={activeLink}>
                 <OrderStepNum as={Link} to={"/order/step2"}>
                     2
                 </OrderStepNum>
                 <StepLabel>Your Data</StepLabel>
             </OrderStep>
-            <OrderStep activeNum={active}>
+            <OrderStep activeNum={active} activeLink={activeLink}>
                 <OrderStepNum as={Link} to={"/order/step3"}>
                     3
                 </OrderStepNum>
                 <StepLabel>Confirmation</StepLabel>
             </OrderStep>
-            <OrderStep activeNum={active}>
+            <OrderStep activeNum={active} activeLink={activeLink}>
                 <OrderStepNum as={Link} to={"/order/step4"}>
                     4
                 </OrderStepNum>

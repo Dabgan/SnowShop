@@ -91,7 +91,8 @@ const ButtonPannel = styled.div`
     flex-flow: row;
     justify-content: space-around;
     padding: 1.5rem;
-    a {
+    a,
+    button {
         margin: 0;
         border: 2px solid #000;
     }

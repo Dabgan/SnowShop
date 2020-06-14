@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 const OrderStepOne = () => {
     return (
         <>
-            <ShoppingPath active={1} />
+            <ShoppingPath active={1} activeLink={"n+2"} />
             <OrderOptionsContainer>
                 <OrderOption>
                     <OrderTitle>Order as a Guest</OrderTitle>
