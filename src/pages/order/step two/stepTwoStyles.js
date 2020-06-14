@@ -84,11 +84,20 @@ const FormError = styled.div`
 `;
 const BtnContainer = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-flow: row;
+    justify-content: space-around;
     flex: 1 0 100%;
+    padding: 1.5rem;
+    a {
+        border: 2px solid #000;
+    }
     button {
-        margin-top: 0;
+        border: 2px solid #000;
+    }
+    @media (min-width: 320px) and (max-width: 1181px) {
+        margin: 1rem 0;
+        width: 100%;
+        justify-content: space-between;
     }
 `;
 

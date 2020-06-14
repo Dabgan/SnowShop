@@ -78,6 +78,7 @@ const OrderTitle = styled.h2`
 const OrderBtn = styled.button`
     margin: 0 1rem;
     justify-content: center;
+    border: 2px solid #000;
 `;
 const OrderForm = styled.form`
     display: flex;

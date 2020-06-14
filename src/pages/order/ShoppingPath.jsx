@@ -77,13 +77,13 @@ const ShoppingPath = ({ active }) => {
                 <OrderStepNum as={Link} to={"/order/step3"}>
                     3
                 </OrderStepNum>
-                <StepLabel>Summary</StepLabel>
+                <StepLabel>Confirmation</StepLabel>
             </OrderStep>
             <OrderStep activeNum={active}>
                 <OrderStepNum as={Link} to={"/order/step4"}>
                     4
                 </OrderStepNum>
-                <StepLabel>Confirmation</StepLabel>
+                <StepLabel>Summary</StepLabel>
             </OrderStep>
         </ShoppingPathContainer>
     );

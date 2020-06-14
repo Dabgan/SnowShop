@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import ShoppingPath from "../ShoppingPath";
 import { StyledForm, FormData, FormTitle, BtnContainer } from "./stepTwoStyles";
 import OrderInput from "./OrderInput";
-import { withRouter, useHistory } from "react-router-dom";
+import { withRouter, useHistory, Link } from "react-router-dom";
 
 const initialValues = {
     name: "Gabriel",
@@ -112,6 +112,10 @@ const OrderStepTwo = () => {
                     <OrderInput name="comments" formik={formik} />
                 </FormData>
                 <BtnContainer>
+                    <Link to="/order/step1" type="button" className="my-btn">
+                        Go Back
+                    </Link>
+
                     <button type="submit" className="my-btn">
                         Submit
                     </button>

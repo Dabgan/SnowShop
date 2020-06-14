@@ -70,6 +70,12 @@ const basketReducerLocalStorage = (state, action) => {
         sync();
     };
 
+    // delete all items from basket
+    const clearAll = () => {
+        localBasketProducts = [];
+        sync();
+    };
+
     switch (action.operation) {
         case "init":
             const basketProducts = localStorage.getItem("basket_products");
@@ -89,6 +95,9 @@ const basketReducerLocalStorage = (state, action) => {
                 decrease();
             }
             sync();
+            return localBasketProducts;
+        case "clear":
+            clearAll();
             return localBasketProducts;
         default:
             sync();
