@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import "./productActions.css";
+import "./productActions.scss";
 import { BasketProductsContext } from "../../../../../components/app/App";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

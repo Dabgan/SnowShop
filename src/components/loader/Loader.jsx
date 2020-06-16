@@ -1,6 +1,6 @@
 import React from "react";
 import Icons from "../../icons";
-import "./loader.css";
+import "./loader.scss";
 
 const Loader = ({ isPageLoaded }) => {
     return (

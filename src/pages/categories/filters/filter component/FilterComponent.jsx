@@ -1,6 +1,6 @@
 import React from "react";
 import FilterItem from "./FilterItem";
-import "./filters.css";
+import "./filters.scss";
 
 function FilterComponent({ filterName, filterLabels }) {
     return (

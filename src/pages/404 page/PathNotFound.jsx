@@ -1,7 +1,7 @@
 import React from "react";
 import Icons from "../../icons";
 import { Link } from "react-router-dom";
-import "./pathNotFound.css";
+import "./pathNotFound.scss";
 const PathNotFound = () => {
     return (
         <div className="container-404">

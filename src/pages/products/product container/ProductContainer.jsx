@@ -1,5 +1,5 @@
 import React from "react";
-import "./productContainer.css";
+import "./productContainer.scss";
 import ProductProperties from "./product properties/ProductProperties";
 import ProductDescription from "./product description/ProductDescription";
 

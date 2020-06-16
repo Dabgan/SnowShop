@@ -1,5 +1,5 @@
 import React from "react";
-import "./../informations.css";
+import "./../informations.scss";
 import Newsletter from "../../../components/newsletter/Newsletter";
 import ScrollToTopOnMount from "../../../components/ScrollToTopOnMount";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import ProductActions from "./product actions/ProductActions";
-import "./productProperties.css";
+import "./productProperties.scss";
 import Icons from "../../../../icons";
 
 const ProductProperties = ({ productInfo }) => {

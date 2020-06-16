@@ -1,7 +1,7 @@
 import React from "react";
-import "./../informations.css";
-import "./contact.css";
-import ContactForm from "./contact form/ContactForm";
+import "./../informations.scss";
+import "./contact.scss";
+import ContactForm from "./ContactForm";
 import ScrollToTopOnMount from "../../../components/ScrollToTopOnMount";
 import Icons from "../../../icons";
 

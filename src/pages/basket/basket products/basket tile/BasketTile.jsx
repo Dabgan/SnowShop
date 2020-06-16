@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import "./basketTile.css";
+import "./basketTile.scss";
 import { BasketProductsContext } from "../../../../components/app/App";
 import Icons from "../../../../icons";
 import { Link } from "react-router-dom";

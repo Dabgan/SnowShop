@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./displayProducts.css";
+import "./displayProducts.scss";
 import ProductTile from "../product tile/ProductTile";
 import { ProductsContext } from "../../routes/Routes";
 

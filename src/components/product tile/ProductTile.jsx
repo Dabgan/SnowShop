@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./productTile.css";
+import "./productTile.scss";
 
 const ProductTile = ({ productInfo, newClass = "" }) => {
     const { img, title, price, crossedPrice } = productInfo;

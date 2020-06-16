@@ -1,5 +1,5 @@
 import React from "react";
-import "./basketSummary.css";
+import "./basketSummary.scss";
 import useBasketCost from "../../../hooks/useBasket/useBasketCost.jsx";
 import { Link } from "react-router-dom";
 

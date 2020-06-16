@@ -1,5 +1,5 @@
 import React from "react";
-import "./displayCategory.css";
+import "./displayCategory.scss";
 import DisplayCategoryTile from "./DisplayCategoryTile";
 
 const DisplayCategory = () => {

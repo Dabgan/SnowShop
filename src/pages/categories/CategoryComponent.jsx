@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from "react";
 import FiltersContainer from "./filters/FiltersContainer";
 import CategoryProductsContainer from "./category products container/CategoryProductsContainer";
-import "./filters/filtersContainer.css";
+import "./filters/filtersContainer.scss";
 
 export const FilteredProductsContext = React.createContext();
 

@@ -4,7 +4,7 @@ import {
     BasketModalContext,
     BasketProductsContext,
 } from "../../../components/app/App";
-import "./basketModal.css";
+import "./basketModal.scss";
 import BasketTile from "../basket products/basket tile/BasketTile";
 
 const BasketModal = () => {

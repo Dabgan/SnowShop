@@ -12,7 +12,7 @@ import {
     OrderTitle,
     ButtonPannel,
 } from "./stepThreeStyles";
-import "../../basket/basket summary/basketSummary.css";
+import "../../basket/basket summary/basketSummary.scss";
 const OrderStepThree = () => {
     const basketContext = useContext(BasketProductsContext);
     const [productsCost, deliveryCost, totalCost] = useBasketCost();

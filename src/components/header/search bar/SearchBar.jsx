@@ -1,5 +1,5 @@
 import React from "react";
-import "./searchBar.css";
+import "./searchBar.scss";
 import Icons from "../../../icons";
 
 const SearchBar = () => {

@@ -27,7 +27,6 @@ const StyledBurger = styled.div`
         flex-flow: column nowrap;
     }
     span {
-        /* border: 2px solid #2ce90a; */
         width: 2rem;
         height: 0.33rem;
         background-color: ${({ open }) => (open ? "#ccc" : "#4b4b4b")};
