@@ -24,10 +24,12 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 5px;
+  cursor: pointer;
 }
 
 .filter-label {
   font-size: 0.8rem;
   margin: 0 0 0 5px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=filters.css.map */

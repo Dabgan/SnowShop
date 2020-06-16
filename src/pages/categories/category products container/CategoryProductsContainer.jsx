@@ -6,6 +6,14 @@ import { FilteredProductsContext } from "../CategoryComponent";
 const CategoryProductsContainer = ({ name }) => {
     const filterContext = useContext(FilteredProductsContext);
     const productsOfThisCategory = filterContext.filteredProducts;
+
+    const handleSort = (e) => {
+        filterContext.filterProducts({
+            myFilter: "sort",
+            val: e.target.value,
+        });
+    };
+
     return (
         <section className="products-container">
             <h1 className="category-title">{name}</h1>
@@ -16,12 +24,7 @@ const CategoryProductsContainer = ({ name }) => {
                 </span>
                 <span>Sort by:</span>
                 <select
-                    onChange={(e) =>
-                        filterContext.filterProducts({
-                            filtr: "sort",
-                            val: e.target.value,
-                        })
-                    }
+                    onChange={(e) => handleSort(e)}
                     className="sortbar"
                     name="sortbar"
                     id="sortbar"

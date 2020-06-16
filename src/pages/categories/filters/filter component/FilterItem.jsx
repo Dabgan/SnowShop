@@ -7,17 +7,18 @@ function FilterItem({ name, filterName, range }) {
     return (
         <li className="filter-item">
             <input
+                id={name}
                 type="radio"
                 name={filterName}
                 onClick={() => {
                     filterContext.filterProducts({
                         name,
-                        filtr: filterName,
+                        myFilter: filterName,
                         range,
                     });
                 }}
             />
-            <label className="filter-label" htmlFor="">
+            <label className="filter-label" htmlFor={name}>
                 {name}
             </label>
         </li>

@@ -44,7 +44,7 @@ function FiltersContainer({ name }) {
                 <button
                     className="my-btn"
                     onClick={() => {
-                        filterContext.filterProducts({ filtr: "clear" });
+                        filterContext.filterProducts({ myFilter: "clear" });
                     }}
                 >
                     Clear filters

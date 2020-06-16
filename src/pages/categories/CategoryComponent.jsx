@@ -7,12 +7,12 @@ export const FilteredProductsContext = React.createContext();
 
 const CategoryComponent = ({ categoryName, products }) => {
     useEffect(() => {
-        dispatch({ filtr: "clear" });
-        return dispatch({ filtr: "clear" });
+        dispatch({ myFilter: "clear" });
+        return dispatch({ myFilter: "clear" });
     }, []);
 
     const reducer = (state, action) => {
-        switch (action.filtr) {
+        switch (action.myFilter) {
             case "brand":
                 return filtrProductsBy(productsOfThisCategory, action, {
                     type: "name",

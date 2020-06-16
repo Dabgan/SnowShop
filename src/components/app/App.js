@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "../../routes/Routes.jsx";
 import ScrollToTopOnMount from "../ScrollToTopOnMount.jsx";
 import ToTopButton from "../ToTopButton.jsx";
-import "./App.css";
+import "./App.scss";
 
 import useSetModalVisibility from "../../hooks/useSetModalVisibility/useSetModalVisibility.jsx";
 

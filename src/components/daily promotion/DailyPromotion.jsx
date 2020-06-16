@@ -1,5 +1,5 @@
 import React from "react";
-import "./dailyPromotion.css";
+import "./dailyPromotion.scss";
 import dailyItem from "./../../assets/images/products/snowboard_set.jpg";
 import Countdown from "./countdown/Countdown";
 import Icons from "../../icons";
