@@ -12,7 +12,7 @@ The basic assumptions were to create imitation of an online shop where you can s
 
 In this project I used:
 
--   React.js
+-   [React](https://pl.reactjs.org/)
 -   [Firebase](https://firebase.google.com/) as my backend
 -   [Formik](https://jaredpalmer.com/formik/) to build the forms and validate them
 -   [Styled-Components](https://styled-components.com/) to style some of the components (Navbar, Hamburger menu and shopping path)
@@ -32,7 +32,11 @@ In this project I used:
 
 Use the package manager [npm](https://www.npmjs.com/) to intall SnowShop.
 
-first, clone this repo to your local machine using: _https://github.com/Dabgan/Project07-React_SnowShop_
+first, clone this repo to your local machine using:
+
+```
+git clone https://github.com/Dabgan/SnowShop.git
+```
 
 then install all necessary packages:
 
