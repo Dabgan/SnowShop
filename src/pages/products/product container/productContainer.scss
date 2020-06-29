@@ -9,10 +9,11 @@
     justify-content: center;
 }
 .product-photo-container {
-    cursor: pointer;
     display: flex;
     flex: 1 0 50%;
     justify-content: center;
+    background: $page-background-color;
+    cursor: pointer;
     img {
         max-height: 500px;
     }
