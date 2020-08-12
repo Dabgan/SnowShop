@@ -41,7 +41,13 @@ const Footer = () => {
                     >
                         <Icons.FaFacebook size="1.5rem" />
                     </a>
-                    <Icons.FaLinkedin size="1.5rem" />
+                    <a
+                        href="https://www.linkedin.com/in/gabrieldaniluk/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Icons.FaLinkedin size="1.5rem" />
+                    </a>
                 </div>
             </div>
             <div className="footer-copyright">

@@ -47,7 +47,13 @@ const Contact = () => {
                         >
                             <Icons.FaFacebook size="2rem" />
                         </a>
-                        <Icons.FaLinkedin size="2rem" />
+                        <a
+                            href="https://www.linkedin.com/in/gabrieldaniluk/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Icons.FaLinkedin size="2rem" />
+                        </a>
                     </div>
                 </div>
 
