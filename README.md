@@ -1,10 +1,10 @@
 # SnowShop
 
-This project is an online snowboarding shop based on the React.js library. Check the live version [here](https://snow-shop.netlify.app).
+This project is an online shop with snowboard equipment, based on the React.js library. Check the live version [here](https://snow-shop.netlify.app).
 
 ![main view](https://i.imgur.com/YIF0kwX.png "main page preview")
 
-The basic assumptions were to create imitation of an online shop where you can select and sort products at categories / prices and then add them to your shopping cart. The shopping cart is based on localStorage. I also plan to implement a login/registration system where you will be able to add products to the shopping cart assigned to your account.
+The basic assumptions were to create imitation of an online shop where you can select and sort products at categories / prices and then add them to your shopping cart. The shopping cart is based on localStorage.
 
 ![basket](https://i.imgur.com/Mk4JuyZ.png "shopping cart preview")
 
@@ -24,7 +24,7 @@ In this project I used:
 -   how to create and use my own Hooks
 -   what Styled-Components are and why it is so convenient to use them
 -   how to manage routes and page rendering with react-router
--   how to use terminal for Git instead of GUI (finally!)
+-   how to use terminal for Git instead of GUI
 -   how to work with a database (firebase)
 -   how to properly import images/fonts/icons in React
 
