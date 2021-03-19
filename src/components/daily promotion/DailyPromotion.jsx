@@ -1,9 +1,9 @@
-import React from "react";
-import "./dailyPromotion.scss";
-import dailyItem from "./../../assets/images/products/snowboard_set.jpg";
-import Countdown from "./countdown/Countdown";
-import Icons from "../../icons";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaLongArrowAltRight } from 'react-icons/fa';
+import Countdown from './countdown/Countdown';
+import dailyItem from './../../assets/images/products/snowboard_set.jpg';
+import './dailyPromotion.scss';
 
 const DailyPromotion = () => {
     return (
@@ -21,19 +21,15 @@ const DailyPromotion = () => {
             <div className="daily-promotion-info">
                 <div className="daily-description">
                     <p className="h4">Eagle Slash Snowboard set:</p>
-                    Goggles + Helmet + Shoes +{" "}
-                    <span className="text-gradient">Gloves FREE</span>
+                    Goggles + Helmet + Shoes + <span className="text-gradient">Gloves FREE</span>
                 </div>
                 <span className="daily-price">
                     <span className="text-gradient">$399,99</span>
                     <span className="price-crossed">$699,99</span>
                 </span>
 
-                <Link
-                    to="/boots/-M7iN00LVf6_KG2GXnwe"
-                    className="my-btn daily-btn"
-                >
-                    Check promotion <Icons.FaLongArrowAltRight />
+                <Link to="/boots/-M7iN00LVf6_KG2GXnwe" className="my-btn daily-btn">
+                    Check promotion <FaLongArrowAltRight></FaLongArrowAltRight>
                 </Link>
             </div>
         </div>

@@ -1,13 +1,13 @@
-import React from "react";
-import "./searchBar.scss";
-import Icons from "../../../icons";
+import React from 'react';
+import { FaSearch } from 'react-icons/fa';
+import './searchBar.scss';
 
 const SearchBar = () => {
     return (
         <form className="search-bar">
             <input type="text" placeholder="Search" />
             <button type="submit" className="search-icon">
-                <Icons.FaSearch />
+                <FaSearch />
             </button>
         </form>
     );
