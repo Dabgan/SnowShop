@@ -91,4 +91,4 @@ const CategoryComponent = ({ categoryName, products }) => {
     );
 };
 
-export default CategoryComponent;
+export default React.memo(CategoryComponent);

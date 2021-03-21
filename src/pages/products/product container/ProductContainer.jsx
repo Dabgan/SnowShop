@@ -41,4 +41,4 @@ const ProductContainer = ({ productInfo }) => {
     );
 };
 
-export default ProductContainer;
+export default React.memo(ProductContainer);

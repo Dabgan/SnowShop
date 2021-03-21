@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaFacebook, FaLinkedin, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
-import ScrollToTopOnMount from '../../../components/ScrollToTopOnMount';
+import ScrollToTopOnMount from '../../../components/app/ScrollToTopOnMount';
 import ContactForm from './ContactForm';
 import './../informations.scss';
 import './contact.scss';
@@ -51,4 +51,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default React.memo(Contact);

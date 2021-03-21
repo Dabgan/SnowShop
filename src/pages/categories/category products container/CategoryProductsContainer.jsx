@@ -37,15 +37,11 @@ const CategoryProductsContainer = ({ name }) => {
             </div>
             <div className="category-products">
                 {productsOfThisCategory.map((product) => (
-                    <ProductTile
-                        productInfo={product}
-                        newClass="category-tile"
-                        key={product.id}
-                    />
+                    <ProductTile productInfo={product} newClass="category-tile" key={product.id} />
                 ))}
             </div>
         </section>
     );
 };
 
-export default CategoryProductsContainer;
+export default React.memo(CategoryProductsContainer);

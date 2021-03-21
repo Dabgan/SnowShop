@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { FilteredProductsContext } from "../../CategoryComponent";
+import React, { useContext } from 'react';
+import { FilteredProductsContext } from '../../CategoryComponent';
 
 function FilterItem({ name, filterName, range }) {
     const filterContext = useContext(FilteredProductsContext);
@@ -25,4 +25,4 @@ function FilterItem({ name, filterName, range }) {
     );
 }
 
-export default FilterItem;
+export default React.memo(FilterItem);

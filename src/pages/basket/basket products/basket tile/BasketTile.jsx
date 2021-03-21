@@ -54,4 +54,4 @@ const BasketTile = ({ productInfo, quantityOptions, orderTile }) => {
     );
 };
 
-export default BasketTile;
+export default React.memo(BasketTile);

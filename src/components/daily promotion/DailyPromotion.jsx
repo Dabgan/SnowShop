@@ -36,4 +36,4 @@ const DailyPromotion = () => {
     );
 };
 
-export default DailyPromotion;
+export default React.memo(DailyPromotion);

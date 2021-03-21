@@ -24,4 +24,4 @@ const DisplayProducts = ({ title, randomProducts }) => {
     );
 };
 
-export default DisplayProducts;
+export default React.memo(DisplayProducts);

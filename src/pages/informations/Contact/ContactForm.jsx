@@ -1,15 +1,13 @@
-import React from "react";
+import React from 'react';
 
 const ContactForm = () => {
     const testValue = (element, pattern) => {
         const regex = new RegExp(pattern);
-        element.classList.add("is-valid");
-        if (element.value !== "") {
+        element.classList.add('is-valid');
+        if (element.value !== '') {
             return regex.test(element.value)
-                ? (element.classList.add("is-valid"),
-                  element.classList.remove("is-invalid"))
-                : (element.classList.add("is-invalid"),
-                  element.classList.remove("is-valid"));
+                ? (element.classList.add('is-valid'), element.classList.remove('is-invalid'))
+                : (element.classList.add('is-invalid'), element.classList.remove('is-valid'));
         }
     };
 
@@ -31,15 +29,11 @@ const ContactForm = () => {
                         name="name"
                         id="contact-name"
                         className="form-control"
-                        onKeyUp={(e) =>
-                            testValue(e.target, /^[\p{L} -]{2,}$/gu)
-                        }
+                        onKeyUp={(e) => testValue(e.target, /^[\p{L} -]{2,}$/gu)}
                         required
                         minLength="2"
                     />
-                    <div className="invalid-feedback">
-                        Incorrect name (at least 2 characters)
-                    </div>
+                    <div className="invalid-feedback">Incorrect name (at least 2 characters)</div>
                 </div>
             </div>
             <div className="form-row">
@@ -51,29 +45,16 @@ const ContactForm = () => {
                         name="email"
                         id="contact-email"
                         className="form-control"
-                        onKeyUp={(e) =>
-                            testValue(
-                                e.target,
-                                /^([\w.-])+@([a-zA-Z0-9-]+)\.([a-z.]+)$/g
-                            )
-                        }
+                        onKeyUp={(e) => testValue(e.target, /^([\w.-])+@([a-zA-Z0-9-]+)\.([a-z.]+)$/g)}
                     />
-                    <div className="invalid-feedback">
-                        Please provide valid email adress
-                    </div>
+                    <div className="invalid-feedback">Please provide valid email adress</div>
                 </div>
             </div>
             <div className="form-row">
                 <div className="form-group col-md-5 mx-2">
                     <label htmlFor="contact-message">Your Message:</label>
-                    <textarea
-                        id="contact-message"
-                        className="form-control contact-form-message"
-                        rows="6"
-                    />
-                    <div className="invalid-feedback">
-                        This field can not be empty
-                    </div>
+                    <textarea id="contact-message" className="form-control contact-form-message" rows="6" />
+                    <div className="invalid-feedback">This field can not be empty</div>
                 </div>
             </div>
             <button type="submit" className="my-btn mx-2">
@@ -83,4 +64,4 @@ const ContactForm = () => {
     );
 };
 
-export default ContactForm;
+export default React.memo(ContactForm);
