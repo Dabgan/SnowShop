@@ -1,9 +1,9 @@
-@import "../../styles/global_variables.module.scss";
+@import '../../styles/global_variables.module.scss';
 
 .newsletter-container {
     margin: 20px 20px;
     padding: 50px 70px;
-    background-image: url("./../../assets/images/banner.jpg");
+    background-image: url('./../../assets/images/banners/banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 5px;
@@ -26,11 +26,12 @@
 /* ---------------------------------------------------
     MEDIA QUERIES
 ----------------------------------------------------- */
-@media (min-width: 320px) and (max-width: 1181px) {
+@media (min-width: 300px) and (max-width: 1181px) {
     .newsletter-container {
         height: auto;
-        margin: 40px 20px;
+        margin: 40px auto;
         padding: 0px 0px;
         background-size: cover;
+        width: 90%;
     }
 }

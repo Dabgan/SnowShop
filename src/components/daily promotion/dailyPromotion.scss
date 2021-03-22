@@ -1,4 +1,4 @@
-@import "../../styles/global_variables.module.scss";
+@import '../../styles/global_variables.module.scss';
 
 .daily-promotion {
     display: flex;
@@ -61,13 +61,12 @@
 /* ---------------------------------------------------
     MEDIA QUERIES
 ----------------------------------------------------- */
-@media (min-width: 320px) and (max-width: 1181px) {
+@media (min-width: 300px) and (max-width: 1181px) {
     .daily-promotion {
         flex-flow: row wrap;
-        width: auto;
+        width: 90%;
         padding: 20px;
-        margin: 20px;
-        margin: 0 3rem;
+        margin: 0 auto;
     }
     .daily-promotion-item {
         display: flex;

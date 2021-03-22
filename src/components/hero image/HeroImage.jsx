@@ -1,10 +1,12 @@
 import React from 'react';
+import Img from 'react-cool-img';
+import banner from '../../assets/images/banners/banner5.jpg';
 
 import './heroImage.scss';
 
 const HeroImage = () => {
     return (
-        <div className="hero-img">
+        <div className="hero-container">
             <div className="hero-text">
                 <h1 className="hero-header">Enjoy the best quality of products</h1>
                 <p className="hero-paragraph">

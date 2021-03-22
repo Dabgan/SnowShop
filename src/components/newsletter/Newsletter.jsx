@@ -31,4 +31,4 @@ const Newsletter = () => {
     );
 };
 
-export default Newsletter;
+export default React.memo(Newsletter);

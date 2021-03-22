@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
-import "./displayProducts.scss";
-import ProductTile from "../product tile/ProductTile";
-import { ProductsContext } from "../../routes/Routes";
+import React, { useContext } from 'react';
+import './displayProducts.scss';
+import ProductTile from '../product tile/ProductTile';
+import { ProductsContext } from '../../routes/Routes';
 
 const DisplayProducts = ({ title, randomProducts }) => {
     const products = useContext(ProductsContext);
