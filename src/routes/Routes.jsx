@@ -13,7 +13,6 @@ import ProductComponent from '../pages/products/ProductComponent';
 import PathNotFound from '../pages/404 page/PathNotFound';
 import CloseBasketModal from '../pages/basket/CloseBasketModal';
 import HeroImage from '../components/hero image/HeroImage';
-import Loader from '../components/loader/Loader';
 import DisplayCategory from '../components/display category/DisplayCategory';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
@@ -32,7 +31,6 @@ const Routes = () => {
     const [categories, setCategories] = useState([]);
     const [products, setProducts] = useState([]);
     const [errorPage, setErrorPage] = useState(false);
-    const [isPageLoaded, setIsPageLoaded] = useState(true);
 
     useEffect(() => {
         const routesRef = firebase.database().ref('other routes');
@@ -77,97 +75,93 @@ const Routes = () => {
             }
             setProducts(newProducts);
             setErrorPage(true);
-            setIsPageLoaded(false);
         });
     }, []);
 
     return (
         <>
             <ProductsContext.Provider value={products}>
-                <div className={`main-wrapper ${isPageLoaded && 'flex-center'}`}>
-                    <Loader isPageLoaded={isPageLoaded} />
-                    <div style={{ display: isPageLoaded ? 'none' : 'block' }}>
-                        <Header />
-                        <Switch>
-                            <Route path="/" exact>
-                                <HeroImage />
+                <div className={`main-wrapper `}>
+                    <Header />
+                    <Switch>
+                        <Route path="/" exact>
+                            <HeroImage />
+                            <CloseBasketModal>
+                                <DisplayProducts title={'Featured products'} random={false} />
+                                <DailyPromotion />
+                                <DisplayCategory />
+                                <Newsletter />
+                            </CloseBasketModal>
+                        </Route>
+                        <Route exact path="/basket">
+                            <CloseBasketModal>
+                                <BasketComponent />
+                            </CloseBasketModal>
+                        </Route>
+                        <Route exact path="/about">
+                            <CloseBasketModal>
+                                <About />
+                            </CloseBasketModal>
+                        </Route>
+                        <Route exact path="/contact">
+                            <CloseBasketModal>
+                                <Contact />
+                            </CloseBasketModal>
+                        </Route>
+                        <Route exact path="/order/step1">
+                            <CloseBasketModal>
+                                <OrderStepOne />
+                            </CloseBasketModal>
+                        </Route>
+                        <Route exact path="/order/step2">
+                            <CloseBasketModal>
+                                <OrderStepTwo />
+                            </CloseBasketModal>
+                        </Route>
+                        <Route exact path="/order/step3">
+                            <CloseBasketModal>
+                                <OrderStepThree />
+                            </CloseBasketModal>
+                        </Route>
+                        <Route exact path="/order/step4">
+                            <CloseBasketModal>
+                                <OrderStepFour />
+                            </CloseBasketModal>
+                        </Route>
+                        {otherRoutes.map((link) => (
+                            <Route exact path={`/${link.path}`} key={link.id}>
                                 <CloseBasketModal>
-                                    <DisplayProducts title={'Featured products'} random={false} />
-                                    <DailyPromotion />
-                                    <DisplayCategory />
-                                    <Newsletter />
+                                    <InformationComponent headerName={link.name} />
                                 </CloseBasketModal>
                             </Route>
-                            <Route exact path="/basket">
+                        ))}
+                        {products.map((product) => (
+                            <Route exact path={`/${product.category}/${product.id}`} key={product.id}>
                                 <CloseBasketModal>
-                                    <BasketComponent />
+                                    <ProductComponent productInfo={product} />
                                 </CloseBasketModal>
                             </Route>
-                            <Route exact path="/about">
+                        ))}
+                        {categories.map((category) => (
+                            <Route exact path={`/${category.name}`} key={category.id}>
                                 <CloseBasketModal>
-                                    <About />
+                                    <CategoryComponent
+                                        categoryName={category.name}
+                                        key={category.id}
+                                        products={products}
+                                    />
                                 </CloseBasketModal>
                             </Route>
-                            <Route exact path="/contact">
+                        ))}
+                        {errorPage && (
+                            <Route to="*">
                                 <CloseBasketModal>
-                                    <Contact />
+                                    <PathNotFound />
                                 </CloseBasketModal>
                             </Route>
-                            <Route exact path="/order/step1">
-                                <CloseBasketModal>
-                                    <OrderStepOne />
-                                </CloseBasketModal>
-                            </Route>
-                            <Route exact path="/order/step2">
-                                <CloseBasketModal>
-                                    <OrderStepTwo />
-                                </CloseBasketModal>
-                            </Route>
-                            <Route exact path="/order/step3">
-                                <CloseBasketModal>
-                                    <OrderStepThree />
-                                </CloseBasketModal>
-                            </Route>
-                            <Route exact path="/order/step4">
-                                <CloseBasketModal>
-                                    <OrderStepFour />
-                                </CloseBasketModal>
-                            </Route>
-                            {otherRoutes.map((link) => (
-                                <Route exact path={`/${link.path}`} key={link.id}>
-                                    <CloseBasketModal>
-                                        <InformationComponent headerName={link.name} />
-                                    </CloseBasketModal>
-                                </Route>
-                            ))}
-                            {products.map((product) => (
-                                <Route exact path={`/${product.category}/${product.id}`} key={product.id}>
-                                    <CloseBasketModal>
-                                        <ProductComponent productInfo={product} />
-                                    </CloseBasketModal>
-                                </Route>
-                            ))}
-                            {categories.map((category) => (
-                                <Route exact path={`/${category.name}`} key={category.id}>
-                                    <CloseBasketModal>
-                                        <CategoryComponent
-                                            categoryName={category.name}
-                                            key={category.id}
-                                            products={products}
-                                        />
-                                    </CloseBasketModal>
-                                </Route>
-                            ))}
-                            {errorPage && (
-                                <Route to="*">
-                                    <CloseBasketModal>
-                                        <PathNotFound />
-                                    </CloseBasketModal>
-                                </Route>
-                            )}
-                        </Switch>
-                        <Footer />
-                    </div>
+                        )}
+                    </Switch>
+                    <Footer />
                 </div>
             </ProductsContext.Provider>
         </>
