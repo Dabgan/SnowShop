@@ -1,4 +1,4 @@
-@import "../../styles/global_variables.module.scss";
+@import '../../styles/global_variables.module.scss';
 
 .product-tile {
     display: flex;
@@ -53,10 +53,10 @@
     MEDIA QUERIES
 ----------------------------------------------------- */
 
-@media (min-width: 320px) and (max-width: 900px) {
+@media (min-width: 320px) and (max-width: 1025px) {
     .product-tile {
         margin: 10px auto;
-        width: 9.5rem;
+        width: 40%;
         padding: 5px 10px;
     }
     .product-img-container {

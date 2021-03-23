@@ -9,7 +9,6 @@
 }
 .hero-img {
     position: absolute;
-    top: -50%;
     left: 0;
     z-index: -1;
     width: 100%;
@@ -67,5 +66,25 @@
     .hero-text {
         margin: 25% 21% 0 10%;
         padding: 25px;
+    }
+}
+@media (min-width: 760px) and (max-width: 1181px) {
+    .hero-container {
+        min-height: 70vh;
+    }
+    .hero-img {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+@media (min-width: 1600px) {
+    .hero-img {
+        position: absolute;
+        top: -50%;
+        left: 0;
+        z-index: -1;
+        width: 100%;
     }
 }
