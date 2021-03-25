@@ -28,8 +28,40 @@ export const ProductsContext = React.createContext();
 
 const Routes = () => {
     const [otherRoutes, setOtherRoutes] = useState([]);
-    const [categories, setCategories] = useState([]);
-    const [products, setProducts] = useState([]);
+    const [categories, setCategories] = useState([
+        { name: 'boots', id: 1 },
+        { name: 'snowboards', id: 2 },
+        { name: 'goggles', id: 3 },
+        { name: 'gloves', id: 4 },
+        { name: 'helmets', id: 5 },
+    ]);
+    const [products, setProducts] = useState([
+        { id: 1, category: 'snowboards' },
+        { id: 2, category: 'snowboards' },
+        { id: 3, category: 'snowboards' },
+        { id: 4, category: 'snowboards' },
+        { id: 5, category: 'boots' },
+        { id: 6, category: 'boots' },
+        { id: 7, category: 'boots' },
+        { id: 8, category: 'boots' },
+        { id: 9, category: 'boots' },
+        { id: 10, category: 'boots' },
+        { id: 11, category: 'boots' },
+        { id: 12, category: 'boots' },
+        { id: 13, category: 'goggles' },
+        { id: 14, category: 'goggles' },
+        { id: 15, category: 'goggles' },
+        { id: 16, category: 'goggles' },
+        { id: 17, category: 'goggles' },
+        { id: 18, category: 'goggles' },
+        { id: 19, category: 'gloves' },
+        { id: 20, category: 'gloves' },
+        { id: 21, category: 'gloves' },
+        { id: 22, category: 'helmets' },
+        { id: 23, category: 'helmets' },
+        { id: 24, category: 'helmets' },
+        { id: 25, category: 'helmets' },
+    ]);
     const [errorPage, setErrorPage] = useState(false);
 
     useEffect(() => {

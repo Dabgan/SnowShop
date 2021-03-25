@@ -5,6 +5,8 @@ import BasketModal from '../../pages/basket/basket modal/BasketModal';
 import ShoppingCart from './shopping cart/ShoppingCart';
 import Navbar from './nav bar/Navbar';
 import logo from './../../assets/images/logo.png';
+import Img from 'react-cool-img';
+
 import './header.scss';
 
 const Header = () => {
@@ -19,7 +21,7 @@ const Header = () => {
             <header>
                 <nav className="header-top navbar navbar-expand-lg navbar-light bg-light">
                     <a href="/">
-                        <img src={logo} alt="logo" className="logo" />
+                        <Img src={logo} alt="logo" className="logo" />
                     </a>
                     <div className="header-top-menu-container">
                         <div className="header-top-menu collapse navbar-collapse">

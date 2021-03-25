@@ -1,21 +1,16 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import "./categoriesMenuItem.scss";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import './categoriesMenuItem.scss';
 
 const CategoriesMenuItem = (props) => {
     const { name } = props;
     return (
         <li className="nav-item categories-item">
-            <NavLink
-                exact
-                activeClassName="categories-selected"
-                className="categories-link"
-                to={`/${name}`}
-            >
+            <NavLink exact activeClassName="categories-selected" className="categories-link" to={`/${name}`}>
                 {name}
             </NavLink>
         </li>
     );
 };
 
-export default CategoriesMenuItem;
+export default React.memo(CategoriesMenuItem);

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { FaTrashAlt } from 'react-icons/fa';
 import { BasketProductsContext } from '../../../../components/app/App';
 import QuantityCounter from '../../../../components/quantity counter/QuantityCounter';
+import Img from 'react-cool-img';
+
 import './basketTile.scss';
 
 const BasketTile = ({ productInfo, quantityOptions, orderTile }) => {
@@ -12,7 +14,7 @@ const BasketTile = ({ productInfo, quantityOptions, orderTile }) => {
     return (
         <div className="basket-product">
             <Link to={`/${productInfo.category}/${productInfo.oldId}`} className="basket-product-img">
-                <img src={productInfo.img} alt={productInfo.category} />
+                <Img src={productInfo.img} alt={productInfo.category} />
             </Link>
             <div className="basket-product-info">
                 <div className="basket-product-title">{productInfo.title}</div>

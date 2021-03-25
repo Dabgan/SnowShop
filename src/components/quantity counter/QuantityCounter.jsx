@@ -1,21 +1,15 @@
-import React, { useContext } from "react";
-import { BasketProductsContext } from "../app/App";
-import "./quantityCounter.scss";
+import React, { useContext } from 'react';
+import { BasketProductsContext } from '../app/App';
+import './quantityCounter.scss';
 
-const QuantityCounter = ({
-    quantity,
-    setQuantity,
-    updateQuantity,
-    productInfo,
-    bigFontSize,
-}) => {
+const QuantityCounter = ({ quantity, setQuantity, updateQuantity, productInfo, bigFontSize }) => {
     const basketContext = useContext(BasketProductsContext);
-    const fontSize = bigFontSize ? "1.5rem" : "1rem";
+    const fontSize = bigFontSize ? '1.5rem' : '1rem';
 
     const updateBasket = (action) => {
         if (updateQuantity) {
             basketContext.manageBasket({
-                operation: "update",
+                operation: 'update',
                 product: productInfo,
                 quantity,
                 update: action,
@@ -26,23 +20,19 @@ const QuantityCounter = ({
     const formatQuantity = (e) => {
         let inputValue = 1;
         const receivedValue = e.target.value;
-        isNaN(receivedValue) || receivedValue === ""
-            ? (inputValue = 1)
-            : (inputValue = receivedValue);
+        isNaN(receivedValue) || receivedValue === '' ? (inputValue = 1) : (inputValue = receivedValue);
         setQuantity(parseInt(inputValue));
-        updateBasket("increment");
+        updateBasket('increment');
     };
 
     const handleQuantityDecrement = () => {
-        setQuantity((prevQuantity) =>
-            prevQuantity > 1 ? prevQuantity - 1 : prevQuantity
-        );
-        updateBasket("decrement");
+        setQuantity((prevQuantity) => (prevQuantity > 1 ? prevQuantity - 1 : prevQuantity));
+        updateBasket('decrement');
     };
 
     const handleQuantityIncrement = () => {
         setQuantity((prevQuantity) => prevQuantity + 1);
-        updateBasket("increment");
+        updateBasket('increment');
     };
 
     return (
@@ -69,4 +59,4 @@ const QuantityCounter = ({
     );
 };
 
-export default QuantityCounter;
+export default React.memo(QuantityCounter);

@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import CategoriesMenuItem from "../categories menu/CategoriesMenuItem";
+import React from 'react';
+import styled from 'styled-components';
+import CategoriesMenuItem from '../categories menu/CategoriesMenuItem';
 
 const Ul = styled.ul`
     display: flex;

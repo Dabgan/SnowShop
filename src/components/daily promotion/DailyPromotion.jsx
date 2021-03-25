@@ -2,7 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import Countdown from './countdown/Countdown';
+import Img from 'react-cool-img';
 import dailyItem from './../../assets/images/products/snowboard_set.jpg';
+import placeholder from '../../assets/images/products/image-placeholder.png';
+
 import './dailyPromotion.scss';
 
 const DailyPromotion = () => {
@@ -16,7 +19,7 @@ const DailyPromotion = () => {
                 <Countdown />
             </div>
             <div className="daily-promotion-item">
-                <img src={dailyItem} alt="daily promotion item" />
+                <Img src={dailyItem} alt="daily promotion item" placeholder={placeholder} />
             </div>
             <div className="daily-promotion-info">
                 <div className="daily-description">

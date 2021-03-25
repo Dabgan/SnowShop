@@ -5,6 +5,7 @@
     margin: 10px 0;
     display: flex;
     flex-flow: column;
+    align-items: center;
     p {
         align-self: flex-start;
         font-weight: 600;
@@ -16,7 +17,7 @@
 }
 .display-products-tiles {
     display: flex;
-    margin: 10px auto;
+    // margin: 10px auto;
     padding: 0px;
 }
 

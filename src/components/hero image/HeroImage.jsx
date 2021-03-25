@@ -11,9 +11,10 @@ const HeroImage = () => {
                 <h1 className="hero-header">Enjoy the best quality of products</h1>
                 <p className="hero-paragraph">
                     In our shop we offer only proven products of the highest quality, which will provide you with the
-                    best experience on the snow!
+                    best experience on thesnow!
                 </p>
             </div>
+            <Img className="hero-img" src={banner} alt="guy snowboarding on ski slope" />
         </div>
     );
 };
