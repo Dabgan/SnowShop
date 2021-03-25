@@ -1,4 +1,4 @@
-@import "../../styles/global_variables.module.scss";
+@import '../../styles/global_variables.module.scss';
 
 .footer {
     position: relative;
@@ -63,19 +63,20 @@
     MEDIA QUERIES
 ----------------------------------------------------- */
 
-@media (min-width: 320px) and (max-width: 800px) {
+@media (min-width: 300px) and (max-width: 800px) {
     .footer-container {
         flex-flow: column nowrap;
     }
 }
 
-@media (min-width: 320px) and (max-width: 900px) {
+@media (min-width: 300px) and (max-width: 900px) {
     .footer-nav {
         flex: 1 0 auto;
         justify-content: center;
     }
     .footer-nav-item {
-        min-width: 150px;
+        min-width: 120px;
+        width: 40%;
     }
     .footer-socials {
         flex: 1 0 auto;

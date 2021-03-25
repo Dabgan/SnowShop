@@ -1,4 +1,4 @@
-@import "../../styles/global_variables.module.scss";
+@import '../../styles/global_variables.module.scss';
 .display-category {
     display: flex;
     padding: 10px;
@@ -27,10 +27,10 @@
     }
 }
 .display-category1 {
-    background-image: url("../../assets/images/category1.jpg");
+    background-image: url('../../assets/images/banners/category1.jpg');
 }
 .display-category2 {
-    background-image: url("../../assets/images/category2.jpg");
+    background-image: url('../../assets/images/banners/category2.jpg');
 }
 
 .display-category-title {

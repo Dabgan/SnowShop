@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import Routes from "../../routes/Routes.jsx";
-import ScrollToTopOnMount from "../ScrollToTopOnMount.jsx";
-import ToTopButton from "../ToTopButton.jsx";
-import "./App.scss";
+import React, { useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from '../../routes/Routes.jsx';
+import ScrollToTopOnMount from './ScrollToTopOnMount.jsx';
+import ToTopButton from './ToTopButton';
+import './App.scss';
 
-import useSetModalVisibility from "../../hooks/useSetModalVisibility/useSetModalVisibility.jsx";
+import useSetModalVisibility from '../../hooks/useSetModalVisibility/useSetModalVisibility.jsx';
 
-import { toast } from "react-toastify";
-import useBasketLocal from "../../hooks/useBasket/useBasketLocal.jsx";
+import { toast } from 'react-toastify';
+import useBasketLocal from '../../hooks/useBasket/useBasketLocal.jsx';
 toast.configure();
 
 export const BasketProductsContext = React.createContext();
@@ -30,12 +30,8 @@ function App() {
                     manageBasket: dispatch,
                 }}
             >
-                <BasketModalContext.Provider
-                    value={{ isModalVisible, setIsModalVisible }}
-                >
-                    <BurgerMenuContext.Provider
-                        value={{ openBurger, setOpenBurger }}
-                    >
+                <BasketModalContext.Provider value={{ isModalVisible, setIsModalVisible }}>
+                    <BurgerMenuContext.Provider value={{ openBurger, setOpenBurger }}>
                         <Routes />
                     </BurgerMenuContext.Provider>
                 </BasketModalContext.Provider>

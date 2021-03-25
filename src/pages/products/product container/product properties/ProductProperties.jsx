@@ -1,7 +1,7 @@
-import React from "react";
-import ProductActions from "./product actions/ProductActions";
-import "./productProperties.scss";
-import Icons from "../../../../icons";
+import React from 'react';
+import { FaArchive, FaTruck, FaClock } from 'react-icons/fa';
+import ProductActions from './product actions/ProductActions';
+import './productProperties.scss';
 
 const ProductProperties = ({ productInfo }) => {
     const deliveryDate = new Date();
@@ -28,21 +28,18 @@ const ProductProperties = ({ productInfo }) => {
         <div className="product-info-container">
             <h1 className="product-name">{productInfo.title}</h1>
             <h2 className="product-info-price">
-                ${productInfo.price}{" "}
-                <span className="product-info-price-crossed">
-                    ${productInfo.crossedPrice}
-                </span>
+                ${productInfo.price} <span className="product-info-price-crossed">${productInfo.crossedPrice}</span>
             </h2>
             <p className="product-properties product-availability">
-                <Icons.FaArchive />
-                In Store: {productInfo.availability ? "available" : "sold out"}
+                <FaArchive />
+                In Store: {productInfo.availability ? 'available' : 'sold out'}
             </p>
             <p className="product-properties delivery-info-price">
-                <Icons.FaTruck />
+                <FaTruck />
                 Free delivery
             </p>
             <p className="product-properties delivery-info-date">
-                <Icons.FaClock />
+                <FaClock />
                 At your place on {getDeliveryDate()}
             </p>
             <ProductActions productInfo={productInfo} />

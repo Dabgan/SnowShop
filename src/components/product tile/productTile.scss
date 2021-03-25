@@ -1,4 +1,4 @@
-@import "../../styles/global_variables.module.scss";
+@import '../../styles/global_variables.module.scss';
 
 .product-tile {
     display: flex;
@@ -25,6 +25,7 @@
         box-shadow: 4px 4px 6px 6px $shadow-color;
         transform: translateY(-5px);
     }
+    min-height: 339px;
 }
 .product-img-container {
     height: 12rem;
@@ -53,13 +54,18 @@
     MEDIA QUERIES
 ----------------------------------------------------- */
 
-@media (min-width: 320px) and (max-width: 900px) {
+@media (min-width: 320px) and (max-width: 1025px) {
     .product-tile {
         margin: 10px auto;
-        width: 9.5rem;
+        width: 40%;
         padding: 5px 10px;
+        min-width: 120px;
+        min-height: 234px;
     }
     .product-img-container {
         height: 8rem;
+    }
+    .product-info {
+        min-height: 54px;
     }
 }

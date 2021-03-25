@@ -1,6 +1,5 @@
-@import "../../../styles/global_variables.module.scss";
+@import '../../../styles/global_variables.module.scss';
 
-// Link styles
 .categories-item {
     display: flex;
     justify-content: center;
@@ -27,7 +26,7 @@
     &::after {
         background: none repeat scroll 0 0 transparent;
         bottom: 0;
-        content: "";
+        content: '';
         display: block;
         height: 2px;
         left: 50%;
@@ -50,4 +49,11 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 600;
+}
+
+@media (min-width: 320px) and (max-width: 1020px) {
+    .categories-item {
+        min-width: 150px;
+        margin: 0 auto;
+    }
 }

@@ -1,30 +1,30 @@
-import React, { useEffect, useReducer } from "react";
-import FiltersContainer from "./filters/FiltersContainer";
-import CategoryProductsContainer from "./category products container/CategoryProductsContainer";
-import "./filters/filtersContainer.scss";
+import React, { useEffect, useReducer } from 'react';
+import FiltersContainer from './filters/FiltersContainer';
+import CategoryProductsContainer from './category products container/CategoryProductsContainer';
+import './filters/filtersContainer.scss';
 
 export const FilteredProductsContext = React.createContext();
 
 const CategoryComponent = ({ categoryName, products }) => {
     useEffect(() => {
-        dispatch({ myFilter: "clear" });
-        return dispatch({ myFilter: "clear" });
+        dispatch({ myFilter: 'clear' });
+        return dispatch({ myFilter: 'clear' });
     }, []);
 
     const reducer = (state, action) => {
         switch (action.myFilter) {
-            case "brand":
+            case 'brand':
                 return filtrProductsBy(productsOfThisCategory, action, {
-                    type: "name",
+                    type: 'name',
                 });
-            case "price":
+            case 'price':
                 return filtrProductsBy(productsOfThisCategory, action, {
-                    type: "price",
+                    type: 'price',
                     range: action.range,
                 });
-            case "sort":
+            case 'sort':
                 return sortProductsBy(state, action.val);
-            case "clear":
+            case 'clear':
                 return productsOfThisCategory;
             default:
                 return state;
@@ -33,13 +33,10 @@ const CategoryComponent = ({ categoryName, products }) => {
 
     const filtrProductsBy = (state, action, param) => {
         const newState = state.filter((product) => {
-            if (param.type === "name") {
+            if (param.type === 'name') {
                 return product.mark === action.name;
-            } else if (param.type === "price") {
-                return (
-                    product.price > param.range.min &&
-                    product.price < param.range.max
-                );
+            } else if (param.type === 'price') {
+                return product.price > param.range.min && product.price < param.range.max;
             }
             return newState;
         });
@@ -50,10 +47,10 @@ const CategoryComponent = ({ categoryName, products }) => {
         const compare = (a, b) => {
             let varA, varB;
 
-            if (val === "az" || val === "za") {
+            if (val === 'az' || val === 'za') {
                 varA = a.title.toUpperCase();
                 varB = b.title.toUpperCase();
-            } else if (val === "desc" || val === "asc") {
+            } else if (val === 'desc' || val === 'asc') {
                 varA = a.price;
                 varB = b.price;
             }
@@ -61,7 +58,7 @@ const CategoryComponent = ({ categoryName, products }) => {
             let comparison = 0;
             varA > varB ? (comparison = 1) : (comparison = -1);
             // sort items alphabetically, else invert value (by multiplying by -1)
-            return val === "asc" || val === "az" ? comparison : comparison * -1;
+            return val === 'asc' || val === 'az' ? comparison : comparison * -1;
         };
         const sortedArray = [...state].sort(compare);
         return sortedArray;
@@ -71,10 +68,7 @@ const CategoryComponent = ({ categoryName, products }) => {
         return product.category === categoryName;
     });
 
-    const [filteredProducts, dispatch] = useReducer(
-        reducer,
-        productsOfThisCategory
-    );
+    const [filteredProducts, dispatch] = useReducer(reducer, productsOfThisCategory);
 
     return (
         <FilteredProductsContext.Provider
@@ -91,4 +85,4 @@ const CategoryComponent = ({ categoryName, products }) => {
     );
 };
 
-export default CategoryComponent;
+export default React.memo(CategoryComponent);

@@ -1,15 +1,15 @@
-import React, { useRef, useContext } from "react";
-import useOnClickOutside from "../../../hooks/useOnClickOutside/useOnClickOutside";
-import { BurgerMenuContext } from "../../app/App";
-import styled from "styled-components";
-import RightNav from "./RightNav";
+import React, { useRef, useContext } from 'react';
+import useOnClickOutside from '../../../hooks/useOnClickOutside/useOnClickOutside';
+import { BurgerMenuContext } from '../../app/App';
+import styled from 'styled-components';
+import RightNav from './RightNav';
 
 const BurgerContainer = styled.div`
     width: 100%;
 `;
 
 const StyledBurger = styled.div`
-    border: 2px solid #069cc8;
+    // border: 2px solid #069cc8;
     height: 2rem;
     position: fixed;
     top: 21px;
@@ -29,20 +29,19 @@ const StyledBurger = styled.div`
     span {
         width: 2rem;
         height: 0.33rem;
-        background-color: ${({ open }) => (open ? "#ccc" : "#4b4b4b")};
+        background-color: ${({ open }) => (open ? '#ccc' : '#4b4b4b')};
         border-radius: 10px;
         transform-origin: 1px;
         transition: all 0.3s linear;
         &:nth-child(1) {
-            transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+            transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
         }
         &:nth-child(2) {
-            transform: ${({ open }) =>
-                open ? "translateX(100%)" : "translateX(0)"};
+            transform: ${({ open }) => (open ? 'translateX(100%)' : 'translateX(0)')};
             opacity: ${({ open }) => (open ? 0 : 1)};
         }
         &:nth-child(3) {
-            transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+            transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
         }
     }
 `;
@@ -65,4 +64,4 @@ const Burger = () => {
         </BurgerContainer>
     );
 };
-export default Burger;
+export default React.memo(Burger);

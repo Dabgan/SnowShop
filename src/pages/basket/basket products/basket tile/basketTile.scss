@@ -1,4 +1,4 @@
-@import "../../../../styles/global_variables.module.scss";
+@import '../../../../styles/global_variables.module.scss';
 
 .basket-products-wrapper {
     padding: 0 !important;
@@ -85,6 +85,9 @@
 ----------------------------------------------------- */
 
 @media (min-width: 320px) and (max-width: 1181px) {
+    .basket-product-info {
+        padding: 0 0;
+    }
     .basket-products-container {
         font-size: 0.9rem;
         padding: 0 !important;

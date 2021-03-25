@@ -1,6 +1,6 @@
-import React from "react";
-import ProductContainer from "./product container/ProductContainer";
-import DisplayProducts from "../../components/display products/DisplayProducts";
+import React from 'react';
+import ProductContainer from './product container/ProductContainer';
+import DisplayProducts from '../../components/display products/DisplayProducts';
 
 const ProductComponent = ({ productInfo }) => {
     return (
@@ -11,4 +11,4 @@ const ProductComponent = ({ productInfo }) => {
     );
 };
 
-export default ProductComponent;
+export default React.memo(ProductComponent);

@@ -1,12 +1,10 @@
-import React, { useState } from "react";
-import Icons from "../../icons";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { FaLongArrowAltRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const DisplayCategoryTile = ({ title, imgNum, category }) => {
     const [isCategoryHovered, setIsCategoryHovered] = useState(false);
-    const hoveredClass = isCategoryHovered
-        ? "display-category-arrow-hovered"
-        : "";
+    const hoveredClass = isCategoryHovered ? 'display-category-arrow-hovered' : '';
 
     return (
         <Link
@@ -15,13 +13,9 @@ const DisplayCategoryTile = ({ title, imgNum, category }) => {
             onMouseEnter={() => setIsCategoryHovered(!isCategoryHovered)}
             onMouseLeave={() => setIsCategoryHovered(!isCategoryHovered)}
         >
-            <div
-                className={`display-category-image display-category${imgNum}`}
-            ></div>
+            <div className={`display-category-image display-category${imgNum}`}></div>
             <p className="display-category-title">{title}</p>
-            <Icons.FaLongArrowAltRight
-                className={`display-category-arrow ${hoveredClass}`}
-            />
+            <FaLongArrowAltRight className={`display-category-arrow ${hoveredClass}`} />
         </Link>
     );
 };

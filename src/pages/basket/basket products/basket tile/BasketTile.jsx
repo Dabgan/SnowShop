@@ -1,9 +1,11 @@
-import React, { useState, useContext } from "react";
-import "./basketTile.scss";
-import { BasketProductsContext } from "../../../../components/app/App";
-import Icons from "../../../../icons";
-import { Link } from "react-router-dom";
-import QuantityCounter from "../../../../components/quantity counter/QuantityCounter";
+import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { FaTrashAlt } from 'react-icons/fa';
+import { BasketProductsContext } from '../../../../components/app/App';
+import QuantityCounter from '../../../../components/quantity counter/QuantityCounter';
+import Img from 'react-cool-img';
+
+import './basketTile.scss';
 
 const BasketTile = ({ productInfo, quantityOptions, orderTile }) => {
     const basketProducts = useContext(BasketProductsContext);
@@ -11,11 +13,8 @@ const BasketTile = ({ productInfo, quantityOptions, orderTile }) => {
     const totalPrice = quantity * productInfo.price;
     return (
         <div className="basket-product">
-            <Link
-                to={`/${productInfo.category}/${productInfo.oldId}`}
-                className="basket-product-img"
-            >
-                <img src={productInfo.img} alt={productInfo.category} />
+            <Link to={`/${productInfo.category}/${productInfo.oldId}`} className="basket-product-img">
+                <Img src={productInfo.img} alt={productInfo.category} />
             </Link>
             <div className="basket-product-info">
                 <div className="basket-product-title">{productInfo.title}</div>
@@ -33,25 +32,19 @@ const BasketTile = ({ productInfo, quantityOptions, orderTile }) => {
             </div>
             <div className="basket-product-actions">
                 <div className="basket-product-prices">
-                    <div className="basket-product-total-price">
-                        ${Math.floor(totalPrice * 100) / 100}
-                    </div>
+                    <div className="basket-product-total-price">${Math.floor(totalPrice * 100) / 100}</div>
                     {productInfo.quantity > 1 && (
                         <>
-                            <div className="basket-product-price">
-                                per item:
-                            </div>
-                            <div className="basket-product-price">
-                                ${productInfo.price}
-                            </div>
+                            <div className="basket-product-price">per item:</div>
+                            <div className="basket-product-price">${productInfo.price}</div>
                         </>
                     )}
                 </div>
                 {!orderTile && (
-                    <Icons.FaTrashAlt
+                    <FaTrashAlt
                         onClick={() =>
                             basketProducts.manageBasket({
-                                operation: "delete",
+                                operation: 'delete',
                                 productId: productInfo.id,
                                 title: productInfo.title,
                             })
@@ -63,4 +56,4 @@ const BasketTile = ({ productInfo, quantityOptions, orderTile }) => {
     );
 };
 
-export default BasketTile;
+export default React.memo(BasketTile);

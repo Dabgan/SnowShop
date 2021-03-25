@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
-import "./categoryProductsContainer.scss";
-import ProductTile from "../../../components/product tile/ProductTile";
-import { FilteredProductsContext } from "../CategoryComponent";
+import React, { useContext } from 'react';
+import './categoryProductsContainer.scss';
+import ProductTile from '../../../components/product tile/ProductTile';
+import { FilteredProductsContext } from '../CategoryComponent';
 
 const CategoryProductsContainer = ({ name }) => {
     const filterContext = useContext(FilteredProductsContext);
@@ -9,7 +9,7 @@ const CategoryProductsContainer = ({ name }) => {
 
     const handleSort = (e) => {
         filterContext.filterProducts({
-            myFilter: "sort",
+            myFilter: 'sort',
             val: e.target.value,
         });
     };
@@ -19,16 +19,10 @@ const CategoryProductsContainer = ({ name }) => {
             <h1 className="category-title">{name}</h1>
             <div className="sorting-container">
                 <span className="category-products-counter">
-                    Found {productsOfThisCategory.length} products in this
-                    category
+                    Found {productsOfThisCategory.length} products in this category
                 </span>
                 <span>Sort by:</span>
-                <select
-                    onChange={(e) => handleSort(e)}
-                    className="sortbar"
-                    name="sortbar"
-                    id="sortbar"
-                >
+                <select onChange={(e) => handleSort(e)} className="sortbar" name="sortbar" id="sortbar">
                     <option value="desc">Price: descending</option>
                     <option value="asc">Price: ascending</option>
                     <option value="az">Name: A to Z</option>
@@ -37,15 +31,11 @@ const CategoryProductsContainer = ({ name }) => {
             </div>
             <div className="category-products">
                 {productsOfThisCategory.map((product) => (
-                    <ProductTile
-                        productInfo={product}
-                        newClass="category-tile"
-                        key={product.id}
-                    />
+                    <ProductTile productInfo={product} newClass="category-tile" key={product.id} />
                 ))}
             </div>
         </section>
     );
 };
 
-export default CategoryProductsContainer;
+export default React.memo(CategoryProductsContainer);

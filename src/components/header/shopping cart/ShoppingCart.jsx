@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
-import Icons from "../../../icons";
-import { Link } from "react-router-dom";
-import { BasketProductsContext, BasketModalContext } from "../../app/App";
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { FaShoppingCart } from 'react-icons/fa';
+import { BasketProductsContext, BasketModalContext } from '../../app/App';
 
 const ShoppingCart = () => {
     const basketContext = useContext(BasketProductsContext);
@@ -12,11 +12,11 @@ const ShoppingCart = () => {
         <>
             {checkIfMobile ? (
                 <Link to="/basket" className="shopping-cart">
-                    <Icons.FaShoppingCart />
+                    <FaShoppingCart />
                     <p>Basket</p>
                     <span
                         style={{
-                            display: basketLength ? "block" : "none",
+                            display: basketLength ? 'block' : 'none',
                         }}
                         className="badge badge-info shopping-cart-badge"
                     >
@@ -24,15 +24,12 @@ const ShoppingCart = () => {
                     </span>
                 </Link>
             ) : (
-                <div
-                    className="shopping-cart"
-                    onClick={() => basketModal.setIsModalVisible()}
-                >
-                    <Icons.FaShoppingCart />
+                <div className="shopping-cart" onClick={() => basketModal.setIsModalVisible()}>
+                    <FaShoppingCart />
                     <p>Basket</p>
                     <span
                         style={{
-                            display: basketLength ? "block" : "none",
+                            display: basketLength ? 'block' : 'none',
                         }}
                         className="badge badge-info shopping-cart-badge"
                     >
