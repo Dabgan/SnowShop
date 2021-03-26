@@ -1,6 +1,6 @@
-import React from "react";
-import BasketProducts from "./basket products/BasketProducts";
-import BasketSummary from "./basket summary/BasketSummary";
+import React from 'react';
+import BasketProducts from './basket products/BasketProducts';
+import BasketSummary from './basket summary/BasketSummary';
 
 const BasketComponent = () => {
     return (

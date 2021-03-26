@@ -1,8 +1,8 @@
-import { useReducer, useEffect } from "react";
+import { useReducer, useEffect } from 'react';
 
 let localBasketProducts = [];
 const basketReducerLocalStorage = (state, action) => {
-    const KEY = "basket_products";
+    const KEY = 'basket_products';
 
     // update localStorage
     const sync = () => {
@@ -83,26 +83,26 @@ const basketReducerLocalStorage = (state, action) => {
     };
 
     switch (action.operation) {
-        case "init":
-            const basketProducts = localStorage.getItem("basket_products");
+        case 'init':
+            const basketProducts = localStorage.getItem('basket_products');
             localBasketProducts = JSON.parse(basketProducts) || [];
             sync();
             return localBasketProducts;
-        case "add":
+        case 'add':
             add();
             return localBasketProducts;
-        case "delete":
+        case 'delete':
             remove(action.productId);
             return localBasketProducts;
-        case "update":
-            if (action.update === "increment") {
+        case 'update':
+            if (action.update === 'increment') {
                 increase();
-            } else if (action.update === "decrement") {
+            } else if (action.update === 'decrement') {
                 decrease();
             }
             sync();
             return localBasketProducts;
-        case "clear":
+        case 'clear':
             clearAll();
             return localBasketProducts;
         default:
@@ -113,13 +113,10 @@ const basketReducerLocalStorage = (state, action) => {
 
 const useBasketLocal = () => {
     useEffect(() => {
-        dispatch({ operation: "init" });
+        dispatch({ operation: 'init' });
     }, []);
 
-    const [basketProducts, dispatch] = useReducer(
-        basketReducerLocalStorage,
-        []
-    );
+    const [basketProducts, dispatch] = useReducer(basketReducerLocalStorage, []);
 
     return [basketProducts, dispatch];
 };
