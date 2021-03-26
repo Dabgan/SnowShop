@@ -2,11 +2,11 @@
 
 This project is an online shop with snowboard equipment, based on the React.js library. Check the live version [here](https://snow-shop.netlify.app).
 
-![main view](https://i.imgur.com/YIF0kwX.png "main page preview")
+![main view](https://i.imgur.com/YIF0kwX.png 'main page preview')
 
-The basic assumptions were to create imitation of an online shop where you can select and sort products at categories / prices and then add them to your shopping cart. The shopping cart is based on localStorage.
+The basic assumptions were to create an imitation of an online shop where you can select and sort products at categories/prices and then add them to your shopping cart. The shopping cart is based on localStorage.
 
-![basket](https://i.imgur.com/Mk4JuyZ.png "shopping cart preview")
+![basket](https://i.imgur.com/Mk4JuyZ.png 'shopping cart preview')
 
 ## Technologies
 
@@ -15,8 +15,8 @@ In this project I used:
 -   [React](https://pl.reactjs.org/)
 -   [Firebase](https://firebase.google.com/) as my backend
 -   [Formik](https://jaredpalmer.com/formik/) to build the forms and validate them
--   [Styled-Components](https://styled-components.com/) to style some of the components (Navbar, Hamburger menu and shopping path)
--   Some other minor packages like: node-sass, react-icon, react-scroll-up-button, react-tostify
+-   [Styled-Components](https://styled-components.com/) to style some of the components (Navbar, Hamburger menu, and shopping path)
+-   Some other minor packages like node-sass, react-icon, react-scroll-up-button, react-tostify
 
 ## What did I learn?
 

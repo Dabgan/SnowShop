@@ -20,4 +20,4 @@ const DisplayCategoryTile = ({ title, imgNum, category }) => {
     );
 };
 
-export default DisplayCategoryTile;
+export default React.memo(DisplayCategoryTile);

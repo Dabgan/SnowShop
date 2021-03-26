@@ -1,5 +1,5 @@
-import React from "react";
-import ShoppingPath from "../ShoppingPath";
+import React from 'react';
+import ShoppingPath from '../ShoppingPath';
 import {
     OrderOptionsContainer,
     OrderOption,
@@ -8,20 +8,17 @@ import {
     OrderTitle,
     OrderBtn,
     OrderForm,
-} from "./stepOneStyles";
-import { Link } from "react-router-dom";
+} from './stepOneStyles';
+import { Link } from 'react-router-dom';
 
 const OrderStepOne = () => {
     return (
         <>
-            <ShoppingPath active={1} activeLink={"n+2"} />
+            <ShoppingPath active={1} activeLink={'n+2'} />
             <OrderOptionsContainer>
                 <OrderOption>
                     <OrderTitle>Order as a Guest</OrderTitle>
-                    <p>
-                        You don't have to create an account in our shop. Click
-                        here to order:
-                    </p>
+                    <p>You don't have to create an account in our shop. Click here to order:</p>
                     <OrderBtn as={Link} to="/order/step2" className="my-btn">
                         Order
                     </OrderBtn>
@@ -31,22 +28,10 @@ const OrderStepOne = () => {
                     <p>You have an account already? Log in!</p>
                     <OrderForm action="">
                         <label htmlFor="order-email">Email</label>
-                        <input
-                            type="email"
-                            id="order-email"
-                            name="email"
-                            // onChange={formik.handleChange}
-                            // value={formik.values.email}
-                        />
+                        <input type="email" id="order-email" name="email" />
 
                         <label htmlFor="order-password">Password</label>
-                        <input
-                            type="password"
-                            id="order-password"
-                            name="password"
-                            // onChange={formik.handleChange}
-                            // value={formik.values.password}
-                        />
+                        <input type="password" id="order-password" name="password" />
                     </OrderForm>
                     <OrderBtn className="my-btn">Login</OrderBtn>
                     <OrderDisabled />
@@ -56,12 +41,9 @@ const OrderStepOne = () => {
                     <OrderTitle>Register</OrderTitle>
 
                     <ul>
-                        Create an account to take advantage of privileges for
-                        permanent of customers
+                        Create an account to take advantage of privileges for permanent of customers
                         <li> preview of order status and history shopping</li>
-                        <li>
-                            no need to enter your data when subsequent purchases
-                        </li>
+                        <li>no need to enter your data when subsequent purchases</li>
                     </ul>
 
                     <OrderBtn className="my-btn">Register</OrderBtn>
@@ -73,4 +55,4 @@ const OrderStepOne = () => {
     );
 };
 
-export default OrderStepOne;
+export default React.memo(OrderStepOne);

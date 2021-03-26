@@ -47,4 +47,4 @@ const ProductProperties = ({ productInfo }) => {
     );
 };
 
-export default ProductProperties;
+export default React.memo(ProductProperties);

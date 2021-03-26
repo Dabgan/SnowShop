@@ -44,4 +44,4 @@ const ProductActions = ({ productInfo }) => {
     );
 };
 
-export default ProductActions;
+export default React.memo(ProductActions);
