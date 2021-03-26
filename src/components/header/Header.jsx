@@ -29,7 +29,7 @@ const Header = () => {
                             <div className="contact-container">
                                 <div>
                                     <FaPhoneAlt />
-                                    <p>420 213 769</p>
+                                    <p>420 777 777</p>
                                 </div>
                                 <div>
                                     <FaEnvelope size="20px" />
